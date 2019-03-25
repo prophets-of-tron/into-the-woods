@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="Tile" type="Node2D"]
+scale = Vector2( 4, 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+scale = Vector2( 0.05, 0.05 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
