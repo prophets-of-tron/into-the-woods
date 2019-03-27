@@ -3,7 +3,7 @@
 ## Game Overview
 
 ### Game Concept
-After having an office job for a few decades, you decided to start a new life. Wandering around in forests and meadows.
+After having an office job for a few decades, you decide to start a new life, wandering around in forests and meadows.
 
 ### Genre
 Exploration
