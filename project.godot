@@ -15,8 +15,13 @@ _global_script_class_icons={
 
 [application]
 
-config/name="decivilization_"
+config/name="decivilization"
 config/icon="res://icon.png"
+
+[autoload]
+
+Constants="*res://constants/Constants.tscn"
+State="*res://state/State.tscn"
 
 [rendering]
 
