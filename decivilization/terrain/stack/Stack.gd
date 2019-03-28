@@ -53,7 +53,6 @@ func on_Terrain_stack_generated(stack):
 		
 		for y in range(height):
 			var existing_tile = get_child(y)
-			print(existing_tile.filename)
 			if terrain.is_tile_exposed(x, y):
 				var new_tile = Grass.instance()
 				# replace `existing_tile` with `new_tile`
