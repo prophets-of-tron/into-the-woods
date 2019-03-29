@@ -23,7 +23,6 @@ Exploration
 #### Game Progression
 
 #### Mission/challenge Structure
-Find different terrain features or biomes.
 
 #### Puzzle Structure
 
