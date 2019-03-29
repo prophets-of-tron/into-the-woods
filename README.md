@@ -1,5 +1,5 @@
 # Into the Woods
-> A game about someone who chose the wilderness over his office job
+> A game about choosing the wilderness over your office job
 
 You reach your third decade working in your office job, and you can't do it anymore. So, you leave everyone and everything you know and go into the wilderness...
 
@@ -13,7 +13,7 @@ There are currently no releases of the game, as it is in very early development.
 
 ## Development setup
 
-This game is built in the [Godot game engine](https://godotengine.org/), so you will need that installed. Then, just clone the repo, and start open-sourcing.
+This game is built in the [Godot game engine](https://godotengine.org/), so you will need that installed. Then, just clone and start open-sourcing.
 
 <!--## Release History
 
