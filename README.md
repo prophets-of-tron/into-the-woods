@@ -1,4 +1,4 @@
-# Decivilization
+# Into the Woods
 > A game about someone who chose the wilderness over his office job
 
 You reach your third decade working in your office job, and you can't do it anymore. So, you leave everyone and everything you know and go into the wilderness...
@@ -52,4 +52,3 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
 [wiki]: https://github.com/yourname/yourproject/wiki-->
-
