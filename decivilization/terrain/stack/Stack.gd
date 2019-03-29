@@ -16,6 +16,7 @@ var terrain
 
 var x:int setget x_set, x_get	# TODO? replace with get_index()
 var height:int
+var tiles = {}
 
 func x_set(value):
 	x = value
@@ -31,6 +32,7 @@ func gen():
 		var type = Dirt
 		var tile = type.instance()
 		add_child(tile)
+		tiles[y] = tile
 		# after _ready (add_child)
 		tile.y = y
 		emit_signal("tile_generated", tile)
@@ -45,11 +47,12 @@ func _ready():
 	terrain = get_parent()
 	
 func on_Terrain_stack_generated(stack):
-	if stack.x == x + 1:
-		# it is the stack to the right
-		# now we can calculate if the tile is exposed to air or not
+	if stack.x == x + 1 or stack.x == x - 1:
+		# It is the stack to the left or right.
+		# We can conclude that all stacks around it are generated, right?
+		# Now we can calculate if the tile is exposed to air or not
 		# if exposed to air, replace with a grass tile 
-		# 	(we can't do this in tile for ovious reasons)
+		# 	(we can't do this in tile for ovious reasons).
 		
 		for y in range(height):
 			var existing_tile = get_child(y)
@@ -60,15 +63,11 @@ func on_Terrain_stack_generated(stack):
 				new_tile.y = y
 				remove_child(existing_tile)
 
-"""Util"""
-
 func get_tile(y):
+	# if y < 0, error should be called, and I hope
+	# querying a key that does not exist will raise an error
+	# so don't do anything
 	if y >= height:
-		return null
-	var tile = get_child(y)
+		return null		# air
 	
-	if tile.y != y:
-		# todo: error
-		print("Invalid terrain tile order")
-		return null
-	return tile
+	return tiles[y]
