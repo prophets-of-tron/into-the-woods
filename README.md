@@ -1,7 +1,7 @@
 # Into the Woods
 > A game about choosing the wilderness over your office job
 
-You reach your third decade working in your office job, and you can't do it anymore. So, you leave everyone and everything you know and go into the wilderness...
+You reach your third decade working in your office job, and you can't do it anymore. So, you leave everything and everyone you know and enter the wilderness...
 
 <!--![](header.png)-->
 
