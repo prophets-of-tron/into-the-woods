@@ -15,6 +15,8 @@ Procedural generation looks like this:
   1. Generate a height for that stack (using [Perlin noise][noise]).
   2. Populate the stack with tiles (for now, just with dirt; but we will [make this more complex][terrain notes] in future updates).
   3. Send `stack_generated` signal to existing stacks. The previous stack will then replace all its dirt tiles that are exposed to air with grass tiles. (If we were to simply turn the top-most tile to grass, than steep hills would look distorted; we will handle cliffs in later updates.)
+- **Terrain** (placeholder algorithm, until player movement is fine-tuned):
+  1. Generate stacks from x=0 to x=150
 
 [tile]: /into-the-woods/terrain/stack/tile
 [stacks]: /into-the-woods/terrain/stack
