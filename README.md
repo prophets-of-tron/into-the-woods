@@ -35,7 +35,7 @@ This game is built in the [Godot game engine](https://godotengine.org/), so you 
 Caleb Sacks – [@clabe45](https://twitter.com/clabe45)
 <!-- your name here -->
 
-Distributed under the MIT license. See ``LICENSE`` for more information.
+Distributed under the GNU GPLv3 license. See ``LICENSE`` for more information.
 
 ## Contributing
 
