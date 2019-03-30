@@ -59,4 +59,4 @@ Distributed under the GNU GPLv3 license. See ``LICENSE`` for more information.
 [wiki]: https://github.com/yourname/yourproject/wiki-->
 
 [godot]: https://godotengine.org/
-[discord-server]: https://discord.gg/RwvBmrd
+[discord server]: https://discord.gg/RwvBmrd
