@@ -12,9 +12,9 @@ This is a tile-based game, meaning that all [terrain] and structures are represe
 
 The content in this game is generated procedurally. When the player traverses the new 2d landscape, more content is generated and certain parts of the old content is unloaded (such as terrain, which can be regenerated to be exactly the same).
 
-## Reference
+## Guides
 
-- [Terrain][terrain]
+- [Chunks][chunks]
 
 [game design doc]: /DESIGN.md
-[terrain]: terrain.md
+[chunk]: chunk.md
