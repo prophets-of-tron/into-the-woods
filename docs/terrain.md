@@ -23,8 +23,7 @@ Procedural generation looks like this:
   1. Generate chunks as the player moves (not implemented yet).
 
 ## See Also
-* [Terrain](terrain.md)
-
+* [Chunks](chunks.md)
 
 [tile]: /into-the-woods/chunk/terrain/tile
 [chunks]: /into-the-woods/chunk/
