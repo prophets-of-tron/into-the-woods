@@ -10,4 +10,4 @@ When generating, every chunk uses the following root nodes:
 - **/root/World/Generators/TerrainGenerator** - for populating the tile map with [terrain](/into-the-woods/chunk/terrain) tiles
 
 ## See Also
-* [Terrain][terrain.md]
+* [Terrain](terrain.md)
