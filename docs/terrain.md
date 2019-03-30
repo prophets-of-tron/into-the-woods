@@ -22,8 +22,11 @@ Procedural generation looks like this:
 - **Terrain**:
   1. Generate chunks as the player moves (not implemented yet).
 
+## See Also
+* [Terrain](terrain.md)
+
+
 [tile]: /into-the-woods/chunk/terrain/tile
 [chunks]: /into-the-woods/chunk/
-[terrain]: /into-the-woods/chunk/terrain
 [noise]: /into-the-woods/util/softnoise.gd
 [terrain notes]: /into-the-woods/chunk/terrain/notes.md
