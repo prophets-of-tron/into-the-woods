@@ -14,7 +14,7 @@ The content in this game is generated procedurally. When the player traverses th
 
 ## Reference
 
-- [**Terrain**][terrain]
+- [Terrain][terrain]
 
 [game design doc]: /DESIGN.md
 [terrain]: terrain.md
