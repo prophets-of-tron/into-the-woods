@@ -13,7 +13,7 @@ There are currently no releases of the game, as it is in very early development.
 
 ## Development setup
 
-This game is built in the [Godot game engine][godot], so you will need that installed. Then, just clone and start open-sourcing. The developer documentation can be found [here](/docs).
+This game is built in the [Godot game engine][godot], so you will need that installed. Then, just clone and start open-sourcing. The game's developer documentation can be found [here](/docs).
 
 <!--## Release History
 
