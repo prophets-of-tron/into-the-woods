@@ -1,3 +1,3 @@
 extends Node
 
-export(int) var tile_size
+export(int) var chunk_width

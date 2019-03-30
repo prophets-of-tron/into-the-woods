@@ -8,7 +8,7 @@ radius = 8.0
 height = 0.0
 
 [sub_resource type="RayShape2D" id=2]
-length = 13.3333
+length = 16.0
 
 [node name="Player" type="KinematicBody2D"]
 scale = Vector2( 1.5, 1.5 )

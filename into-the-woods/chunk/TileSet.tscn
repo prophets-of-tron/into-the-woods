@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://chunk/terrain/tile/dirt/Dirt.tscn" type="PackedScene" id=1]
+[ext_resource path="res://chunk/terrain/tile/grass/Grass.tscn" type="PackedScene" id=2]
+
+[node name="TileSet" type="Node"]
+
+[node name="Dirt" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 8, 8 )
+
+[node name="Grass" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, 0 )
+scale = Vector2( 8, 8 )
+
