@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://player/Player.gd" type="Script" id=1]
 [ext_resource path="res://player/Player.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8, 16 )
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 8.0
+height = 0.0
+
+[sub_resource type="RayShape2D" id=2]
+length = 13.3333
 
 [node name="Player" type="KinematicBody2D"]
 scale = Vector2( 1.5, 1.5 )
@@ -14,9 +18,16 @@ acceleration = 50
 max_speed = 200
 jump_height = 550
 friction_coeff = 0.2
+width = 16
+height = 32
+snap_dist = 16.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CapsuleShape" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -8 )
 shape = SubResource( 1 )
+
+[node name="RayShape" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
