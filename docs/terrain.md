@@ -2,7 +2,7 @@
 
 ## Overview
 
-As a tile-based game, the most primitive unit of terrain is the [tile]. Columns of tiles are called stacks, and those stacks are grouped into [chunks]. Chunks are laid side-by-side to produce smooth terrain. Note that the chunk is the only true node that's instanced into the scene. Tiles are members of the tile map, and stacks only describe *the order in which the tiles are generated*.
+As a tile-based game, the most primitive unit of terrain is the [tile]. Columns of tiles are called stacks, and those stacks are grouped into the terrain for [chunks]. Chunks are laid side-by-side to produce the procedural world. Note that the chunk is the only true node that's instanced into the scene. Tiles are members of the tile map, and stacks only describe *the order in which the tiles are generated*.
 
 ## Properties
 
@@ -22,7 +22,8 @@ Procedural generation looks like this:
 - **Terrain**:
   1. Generate chunks as the player moves (not implemented yet).
 
-[tile]: /into-the-woods/terrain/stack/tile
-[terrain]: /into-the-woods/terrain
+[tile]: /into-the-woods/chunk/terrain/tile
+[chunks]: /into-the-woods/chunk/
+[terrain]: /into-the-woods/chunk/terrain
 [noise]: /into-the-woods/util/softnoise.gd
-[terrain notes]: /into-the-woods/terrain/stack/notes.md
+[terrain notes]: /into-the-woods/chunk/terrain/notes.md
