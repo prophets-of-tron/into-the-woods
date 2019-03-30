@@ -13,7 +13,7 @@ There are currently no releases of the game, as it is in very early development.
 
 ## Development setup
 
-This game is built in the [Godot game engine](https://godotengine.org/), so you will need that installed. Then, just clone and start open-sourcing. The developer documentation can be found [here](/docs).
+This game is built in the [Godot game engine][godot], so you will need that installed. Then, just clone and start open-sourcing. The developer documentation can be found [here](/docs).
 
 <!--## Release History
 
@@ -30,6 +30,10 @@ This game is built in the [Godot game engine](https://godotengine.org/), so you 
 * 0.0.1
     * Work in progress-->
 
+## Community
+
+Feel free to join [the Discord server][discord server]!
+
 ## Meta
 
 Caleb Sacks – [@clabe45](https://twitter.com/clabe45)
@@ -41,9 +45,10 @@ Distributed under the GNU GPLv3 license. See ``LICENSE`` for more information.
 
 1. Fork it (<https://github.com/yourname/yourproject/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`, [emoji guide](http://gitmoji.carloscuesta.me/))
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
+3. Discuss your changes with an admin in the Discord server.
+4. Commit your changes (`git commit -am 'Add some fooBar'`, [emoji guide](http://gitmoji.carloscuesta.me/))
+5. Push to the branch (`git push origin feature/fooBar`)
+6. Create a new Pull Request
 
 <!-- Markdown link & img dfn's -->
 <!--[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
@@ -52,3 +57,6 @@ Distributed under the GNU GPLv3 license. See ``LICENSE`` for more information.
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
 [wiki]: https://github.com/yourname/yourproject/wiki-->
+
+[godot]: https://godotengine.org/
+[discord-server]: https://discord.gg/RwvBmrd
