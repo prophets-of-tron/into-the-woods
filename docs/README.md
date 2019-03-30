@@ -14,7 +14,7 @@ The content in this game is generated procedurally. When the player traverses th
 
 ## Guides
 
-- [Chunks][chunks]
+- [Chunks]
 
 [game design doc]: /DESIGN.md
-[chunk]: chunk.md
+[chunks]: chunks.md
