@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="decivilization"
+config/name="into-the-woods"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
