@@ -5,6 +5,10 @@ You reach your third decade working in your office job, and you can't do it anym
 
 <!--![](header.png)-->
 
+## Overview
+
+Into the Woods is an open-world tile-based game, where spending enough time in the wilderness means winning the game. See the WIP [design doc](DESIGN.md) for more info.
+
 ## Installation
 
 There are currently no releases of the game, as it is in very early development.
