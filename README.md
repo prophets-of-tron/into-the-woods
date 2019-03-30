@@ -49,7 +49,7 @@ Distributed under the GNU GPLv3 license. See ``LICENSE`` for more information.
 
 1. Fork it (<https://github.com/yourname/yourproject/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. (Optional) Discuss your changes with dev on the Discord server.
+3. (Optional) Discuss your changes with someone on the Discord server.
 4. Commit your changes (`git commit -am 'Add some fooBar'`, [commit message emoji guide](http://gitmoji.carloscuesta.me/))
 5. Push to the branch (`git push origin feature/fooBar`)
 6. Create a new Pull Request
