@@ -162,7 +162,8 @@ The player has to learn as she goes, so there is no training level.
 
 ## Interface
 
-### Visual System.  If you have a HUD, what is on it?  What menus are you displaying? What is the camera model?
+### Visual System.
+<!-- If you have a HUD, what is on it?  What menus are you displaying? What is the camera model? -->
 
 ### Control System
 <!-- How does the game player control the game?   What are the specific commands? -->
