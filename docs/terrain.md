@@ -1,9 +1,5 @@
 # Terrain
 
-## Overview
-
-As a tile-based game, the most primitive unit of terrain is the [tile]. Columns of tiles are called stacks. Stacks are laid side-by-side to produce the terrain. Note that a [tilemap] contains all tiles in the game. Stacks only describe *the order in which the tiles are generated*.
-
 ## Properties
 
 - Terrain stacks resemble literal stacks. There are no caves or overhanging land, so there is only one height value per terrain stack.
@@ -19,6 +15,8 @@ Procedural generation looks like this:
 - **Terrain**:
   - Generate stacks around the player as he moves.
 
-[tile]: /into-the-woods/tiles/terrain/tile
+## See Also
+* [Tile Map](map.md)
+
 [tilemap]: /into-the-woods/tiles
 [terrain notes]: /into-the-woods/tiles/terrain/notes.md

@@ -14,7 +14,9 @@ The content in this game is generated procedurally. When the player traverses th
 
 ## Guides
 
+- [Tile Map]
 - [Terrain]
 
+[tile map]: map.md
 [game design doc]: /DESIGN.md
 [terrain]: terrain.md
