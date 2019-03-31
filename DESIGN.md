@@ -69,7 +69,7 @@ A and D, and Space
 
 #### Actions
 - Definition:
-  - *An action is anything that would give someone experience with nature IRL.*
+  - *An action is anything that would give someone noticeable experience (out of the norm) with nature IRL.*
 - Properties:
   - Every action has an experience value, which is rewarded to the player every time it is completed.
 - List (experience values TBD):
@@ -84,6 +84,8 @@ A and D, and Space
     - Build (any structure)
     - Plant (foliage)
     - Pick (off foliage)
+    - Chop up (any object)
+    - Burn (any object)
 <!-- Including whatever switches and buttons are used, interacting with objects, and what means of communication are used -->
 
 #### Combat
@@ -96,6 +98,8 @@ No combat *yet*
   - Used for winning the game.
 
 #### Screen Flow
+- Main screen
+- Inventory screen
 <!-- A graphical description of how each screen is related to every other and a description of the purpose of each screen. -->
 
 ### Game Options
@@ -134,13 +138,15 @@ No combat *yet*
       - *Sand*
       - *Water*
     - Mechanics
-      - Indestructible
-      - Blocking (cannot be walked past)
+      - Indestructible, though certain terrain tiles can be transformed into other terrain tiles after terrain generation (such as grass -> dirt and dirt -> grass).
+      - Blocking (cannot be walked through)
 
   - **Structure tiles**:
     - List:
       - *Log*
       - *Leaves*
+      - *Corn plant*
+      - *Corn*
     - Mechanics
       - Destructible
       - Not blocking (can be walked past)
@@ -194,6 +200,8 @@ Animals would be a cool feature, or some sort of NPC. [TODO]
 ### Network requirements
 
 ## Game Art
+
+### Sprites
 
 - Player
 - (All tiles)
