@@ -27,5 +27,5 @@ The content in this game is generated procedurally. When the player traverses th
 [autoloaded scenes]: overview/autoloads.md
 [terrain]: overview/map/terrain.md
 [tile map]: overview/map/map.md
-[creating a tile](guides/create-tile.md)
-[creating a structure](guides/create-structure.md)
+[creating a tile]: guides/create-tile.md
+[creating a structure]: guides/create-structure.md
