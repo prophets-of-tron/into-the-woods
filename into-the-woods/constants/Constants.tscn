@@ -4,5 +4,4 @@
 
 [node name="Constants" type="Node"]
 script = ExtResource( 1 )
-chunk_width = 256
 
