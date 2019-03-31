@@ -1,13 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_resource type="TileSet" load_steps=4 format=2]
 
-[ext_resource path="res://chunk/terrain/tile/dirt/Dirt.png" type="Texture" id=1]
-[ext_resource path="res://chunk/terrain/tile/grass/Grass.png" type="Texture" id=2]
-[ext_resource path="res://chunk/Chunk.gd" type="Script" id=3]
+[ext_resource path="res://tiles/terrain/tile/dirt/Dirt.png" type="Texture" id=1]
+[ext_resource path="res://tiles/terrain/tile/grass/Grass.png" type="Texture" id=2]
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4, 4 )
 
-[sub_resource type="TileSet" id=2]
+[resource]
 0/name = "Dirt"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -40,10 +41,4 @@ extents = Vector2( 4, 4 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 4, 4 )
 } ]
 1/z_index = 0
-
-[node name="Chunk" type="TileMap"]
-tile_set = SubResource( 2 )
-cell_size = Vector2( 8, 8 )
-format = 1
-script = ExtResource( 3 )
 

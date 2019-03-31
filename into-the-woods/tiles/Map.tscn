@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://tiles/tile_set.tres" type="TileSet" id=1]
+[ext_resource path="res://tiles/Map.gd" type="Script" id=2]
+[ext_resource path="res://tiles/terrain/TerrainGenerator.tscn" type="PackedScene" id=3]
+
+[node name="Map" type="TileMap"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 8, 8 )
+format = 1
+script = ExtResource( 2 )
+
+[node name="TerrainGenerator" parent="." instance=ExtResource( 3 )]
+
