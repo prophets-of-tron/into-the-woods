@@ -19,6 +19,6 @@ The content in this game is generated procedurally. When the player traverses th
 - [Tile Map]
 
 [game design doc]: /DESIGN.md
-[autoloaded nodes]: autoloads.md
+[autoloaded scenes]: autoloads.md
 [terrain]: terrain.md
 [tile map]: map.md
