@@ -10,6 +10,7 @@ The [tile map] is a (`TileMap`) scene which holds all tiles in the game. All til
 
 ## See Also
 * [Terrain](terrain.md)
+* [Creating a tile]
 
 [tile]: /into-the-woods/tiles/terrain/tile
 [tile map]: /into-the-woods/tiles
