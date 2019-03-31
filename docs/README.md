@@ -14,9 +14,7 @@ The content in this game is generated procedurally. When the player traverses th
 
 ## Guides
 
-- [Chunks]
 - [Terrain]
 
 [game design doc]: /DESIGN.md
-[chunks]: chunks.md
 [terrain]: terrain.md
