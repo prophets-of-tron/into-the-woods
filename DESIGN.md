@@ -69,21 +69,22 @@ A and D, and Space
 
 #### Actions
 - Definition:
-  - *An action is anything that would give someone noticeable experience (out of the norm) with nature IRL.*
+  - *An action is anything that would give someone noticeable (out-of-the-norm) experience with nature IRL.*
 - Properties:
   - Every action has an experience value, which is rewarded to the player every time it is completed.
 - List (experience values TBD):
-  - **Internal actions** (to self):
+  - *Actions directed to self*:
     - Eat
     - Sleep
     - Warp
-  - **External actions** (to nature):
+  - *Actions directed to structures*:
     - Cut down (any structure)
       - Removes structure
       - Drops a percentage of the structure's tiles
-    - Build (any structure)
-    - Plant (foliage)
-    - Pick (off foliage)
+    - Build (certain structures)
+    - Plant (plant structures)
+    - Pick (off plant structures)
+  - *Actions directed to objects*:
     - Chop up (any object)
     - Burn (any object)
 <!-- Including whatever switches and buttons are used, interacting with objects, and what means of communication are used -->
