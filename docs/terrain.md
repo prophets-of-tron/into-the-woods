@@ -19,9 +19,6 @@ Procedural generation looks like this:
 - **Terrain**:
   - Generate stacks around the player as he moves.
 
-## See Also
-* [Chunks](chunks.md)
-
 [tile]: /into-the-woods/tiles/terrain/tile
 [tilemap]: /into-the-woods/tiles
 [noise]: /into-the-woods/util/softnoise.gd
