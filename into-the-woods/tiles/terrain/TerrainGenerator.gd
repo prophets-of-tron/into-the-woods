@@ -18,7 +18,7 @@ var constants
 var state
 
 func gen_stack(x):
-	var nz = state.noise.perlin_noise2d(height_harshness * x, state.seed_hash)
+	var nz = state.noise.get_noise_2d(height_harshness * x, 0)
 	var height = floor(min_height + (max_height - min_height) * (nz + 1) / 2)
 	heights[x] = height
 	for y in range(height):

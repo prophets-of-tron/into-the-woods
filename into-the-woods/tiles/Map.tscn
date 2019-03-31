@@ -11,4 +11,5 @@ format = 1
 script = ExtResource( 2 )
 
 [node name="TerrainGenerator" parent="." instance=ExtResource( 3 )]
+height_harshness = 1.0
 

@@ -7,7 +7,6 @@ func gen_stack(x):
 	if x >= left and x <= right:
 		# already generated
 		return
-		
 	
 	$TerrainGenerator.gen_stack(x)
 	left = min(left, x)
