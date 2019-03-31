@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://map/base-tile/Tile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://map/terrain/tiles/grass/Grass.png" type="Texture" id=2]
+
+
+
+
+
+
+
+
+
+
+
+[node name="Grass" instance=ExtResource( 1 )]
+texture = ExtResource( 2 )
+

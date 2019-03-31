@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="into-the-woods"
+config/name="Into the Woods"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 

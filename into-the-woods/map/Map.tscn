@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://tiles/tile_set.tres" type="TileSet" id=1]
-[ext_resource path="res://tiles/Map.gd" type="Script" id=2]
-[ext_resource path="res://tiles/terrain/TerrainGenerator.tscn" type="PackedScene" id=3]
+[ext_resource path="res://map/tile_set.tres" type="TileSet" id=1]
+[ext_resource path="res://map/Map.gd" type="Script" id=2]
+[ext_resource path="res://map/terrain/generator/TerrainGenerator.tscn" type="PackedScene" id=3]
 
 [node name="Map" type="TileMap"]
 tile_set = ExtResource( 1 )
