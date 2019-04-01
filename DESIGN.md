@@ -202,7 +202,11 @@ Animals would be a cool feature, or some sort of NPC. [TODO]
 
 ## Game Art
 
+This is an open source and open asset project. If you don't feel comfortable making your asset contributions open, please open a pull request, and we will reconsider it!
+
 ### Sprites
+
+*The game will use a pixel art style.*
 
 - Player
 - (All tiles)
