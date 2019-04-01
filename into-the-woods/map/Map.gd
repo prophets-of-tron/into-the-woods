@@ -15,7 +15,8 @@ func gen_stack(x):
 func _ready():
 	var constants = get_node("/root/Constants")
 	# set cell size
-	cell_size = Vector2(constants.tile_size, constants.tile_size)
+	# set manually to 8, because problems with cell scaling
+	#cell_size = Vector2(constants.tile_size, constants.tile_size)
 	
 	# flip y-axis
 	scale.y = -1

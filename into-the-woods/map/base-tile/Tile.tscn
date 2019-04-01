@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://map/base-tile/Tile.gd" type="Script" id=1]
-
-[node name="Tile" type="Sprite"]
-script = ExtResource( 1 )
-
