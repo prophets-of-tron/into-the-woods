@@ -6,7 +6,7 @@ export(int) var gravity
 export(int) var acceleration
 export(int) var max_speed
 export(int) var jump_height
-export(float) var friction_coeff
+export(float) var friction_coeff	# is this really the friction coeff.?
 
 # TODO: get actual width with code (definitely)
 export(int) var width
