@@ -54,7 +54,7 @@ func _physics_process(delta):
 		motion.x = lerp(motion.x, 0, friction_coeff)
 		
 	if is_on_floor():
-		if Input.is_key_pressed(KEY_SPACE):
+		if Input.is_key_pressed(KEY_SPACE) or Input.is_key_pressed(KEY_W):
 			motion.y = jump_height
 			jumping = true
 		else:
