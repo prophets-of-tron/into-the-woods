@@ -52,10 +52,12 @@ Player Attributes:
 
 #### Physics
 Earth physics
+
+*Note: A tile is .5 meters long.*
 <!-- How does the physical universe work? -->
 
 #### Movement in the game
-A and D, and Space
+A and D to move, space / W for jump (TODO sneak ...?)
 
 #### Objects
 - Definition:
