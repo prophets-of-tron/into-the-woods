@@ -2,12 +2,9 @@
 
 [ext_resource path="res://map/terrain/generator/TerrainGenerator.gd" type="Script" id=1]
 
-
-
-
 [node name="TerrainGenerator" type="Node"]
 script = ExtResource( 1 )
-height_harshness = 0.04
+height_harshness = 1.0
 min_height = 25
 max_height = 50
 
