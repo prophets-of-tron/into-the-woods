@@ -1,30 +1,44 @@
-extends Node
+extends "res://map/generator/TileGenerator.gd"
 
-signal chunk_generated(chunk_x)
-signal stack_generated(chunk_x, x)
-signal tile_generated(chunk_x, x, y)	# we probably won't need to use this
+signal stack_generated(x)
+signal tile_generated(x, y)	# we probably won't need to use this
 
 export(float) var height_harshness
 export(int) var min_height
 export(int) var max_height
 
-const DIRT = 0
-const GRASS = 1
+var dirt
+var grass
 
-var heights = {}	# 1d heightmap
-var map		# 2d tilemap
+var heights = {}	# 1d heightmap cache
 
 var constants
 var state
 
-func gen_stack(x):
+func _ready():
+	._ready()
+	
+	constants = get_node("/root/Constants")
+	state = get_node("/root/State")
+	
+	var tileset = map.tile_set
+	dirt = tileset.find_tile_by_name("Dirt")
+	grass = tileset.find_tile_by_name("Grass")
+
+func sample_height(x):
+	# cache
+	if heights.has(x):
+		return heights[x]
+		
 	var nz = state.noise.get_noise_2d(height_harshness * x, 0)
 	var height = floor(min_height + (max_height - min_height) * (nz + 1) / 2)
 	heights[x] = height
+	return height
 
-	for y in range(height):
+func gen_stack(x):
+	for y in range(sample_height(x)):
 		# replace dirt that's exposed to air to grass after next stack's generation
-		var type = DIRT
+		var type = dirt
 		map.set_cell(x, y, type)
 		# after _ready (add_child)
 		emit_signal("tile_generated", x, y)
@@ -49,15 +63,10 @@ func gen_stack(x):
 func update_dirt_grass_stack(x):
 	# Calculate if the tile is exposed to air or not.
 	# If exposed to air, replace with a grass tile.
+	# (Stack should already be generated!)
 	for y in range(heights[x]):
-		if _is_tile_exposed(x, y) and map.get_cell(x, y) == DIRT:
-			map.set_cell(x, y, GRASS)
-
-func _ready():
-	constants = get_node("/root/Constants")
-	state = get_node("/root/State")
-	
-	map = get_parent()
+		if _is_tile_exposed(x, y) and map.get_cell(x, y) == dirt:
+			map.set_cell(x, y, grass)
 
 """HELPER"""
 

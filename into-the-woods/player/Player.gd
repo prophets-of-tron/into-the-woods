@@ -33,10 +33,10 @@ func _check_load():
 		# start at map.left and go backwads; 
 		# 	otherwise map.left will get messed up by the calls to 
 		#	map.gen_stack (which updates map.left (and map.right))
-		for x in range(map.left, pos_left, -1):
+		for x in range(map.left - 1, pos_left, -1):
 			map.gen_stack(x)
 	if pos_right >= map.right:
-		for x in range(map.right, pos_right, +1):
+		for x in range(map.right + 1, pos_right, +1):
 			map.gen_stack(x)
 
 func _physics_process(delta):

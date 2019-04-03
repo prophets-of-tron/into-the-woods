@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://map/structure/tree/generator/TreeGenerator.gd" type="Script" id=1]
+[ext_resource path="res://map/structure/tree/Tree0.tscn" type="PackedScene" id=2]
+
+[node name="TreeGenerator" type="Node"]
+script = ExtResource( 1 )
+tree_distance = 10
+location_multiplier_exists = 10.0
+
+[node name="Tree0" parent="." instance=ExtResource( 2 )]
+

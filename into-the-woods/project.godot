@@ -8,9 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "TileMap",
+"class": "Map",
+"language": "GDScript",
+"path": "res://map/Map.gd"
+}, {
+"base": "Node",
+"class": "TileGenerator",
+"language": "GDScript",
+"path": "res://map/generator/TileGenerator.gd"
+} ]
 _global_script_class_icons={
-
+"Map": "",
+"TileGenerator": ""
 }
 
 [application]
