@@ -70,7 +70,7 @@ func update_dirt_grass_stack(x):
 
 """HELPER"""
 
-# Tests if tile is exposed to air
+# Tests if tile is exposed to air (structures are ignored)
 func _is_tile_exposed(x, y):
 	var pos = Vector2(x, y)
 	# check left, right, top and bottom of tile for air
@@ -84,8 +84,7 @@ func _is_tile_exposed(x, y):
 		# 	primary condition we're testing.
 		if position.x >= map.left and position.x <= map.right and position.y >= 0:
 			# Vector stores floats, so convert to int for dictionary keys.
-			# INVALID_CELL means no tile exists there 
-			#	(which means air, given the above conditions).
-			if map.get_cell(int(position.x), int(position.y)) == map.INVALID_CELL:
+			# post-processing, so cache should be filled
+			if heights[int(position.x)] == position.y:
 				return true
 	return false

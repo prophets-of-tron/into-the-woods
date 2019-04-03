@@ -8,11 +8,11 @@
 [node name="Map" type="TileMap"]
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 8, 8 )
+cell_quadrant_size = 8
 format = 1
 script = ExtResource( 2 )
 
 [node name="TerrainGenerator" parent="." instance=ExtResource( 3 )]
-height_harshness = 1.0
 
 [node name="Structure" type="Node" parent="."]
 
