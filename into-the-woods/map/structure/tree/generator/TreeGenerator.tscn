@@ -6,7 +6,7 @@
 [node name="TreeGenerator" type="Node"]
 script = ExtResource( 1 )
 tree_distance = 10
-noise_threshold = -1.0
+location_multiplier_exists = 1.0
 
 [node name="Tree0" parent="." instance=ExtResource( 2 )]
 
