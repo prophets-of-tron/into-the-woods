@@ -29,10 +29,10 @@ func _process_node(node:Node, x):
 		# give them the benefit of the doubt; it's a container node
 		return
 	
-	generator.gen_stack(x)
+	generator.process_stack(x)
 
 func gen_stack(x):
-	if is_stack_generated(x):
+	if is_stack_processed(x):
 		print("probably shouldn't be re-generating stack@x="+str(x))
 		# already generated
 		return
@@ -42,5 +42,5 @@ func gen_stack(x):
 	left = min(left, x)
 	right = max(right, x)
 	
-func is_stack_generated(x):
+func is_stack_processed(x):
 	return x >= left and x <= right

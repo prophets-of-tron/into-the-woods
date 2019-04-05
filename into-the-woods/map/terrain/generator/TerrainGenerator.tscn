@@ -7,4 +7,5 @@ script = ExtResource( 1 )
 height_harshness = 1.0
 min_height = 25
 max_height = 50
+water_level = 34
 
