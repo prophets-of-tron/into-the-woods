@@ -1,4 +1,4 @@
-# Creating a Tile
+# Designing Tiles
 
 All tiles are scenes that inherit from a base Tile scene. Most terrain tiles have static bodies, while structure tiles do not. Tiles are imported to a tile set, which is used by tile maps in the game.
 

@@ -1,4 +1,4 @@
-# Creating Procedural Structures
+# Designing Procedural Structures
 
 Structures are groups of structure tiles that form something recognizable, like a tree or a bush.
 
