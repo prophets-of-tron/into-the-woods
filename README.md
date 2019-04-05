@@ -3,7 +3,7 @@
 
 You reach your third decade working in your office job, and you can't do it anymore. So, you leave everything and everyone you know and enter the wilderness...
 
-<!--![](header.png)-->
+![Sample procedural generation](header.png)
 
 ## Overview
 
