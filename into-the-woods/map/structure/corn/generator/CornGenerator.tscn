@@ -7,7 +7,7 @@
 script = ExtResource( 1 )
 spread = 3
 location_multiplier = 1.0
-noise_threshold = 1.0
+noise_threshold = -0.25
 
 [node name="CornSample" parent="." instance=ExtResource( 2 )]
 visible = false
