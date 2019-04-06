@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://map/tile_set.tres" type="TileSet" id=1]
+[ext_resource path="res://map/structure/corn/maps/CornSample.gd" type="Script" id=2]
+
+[node name="CornSample" type="TileMap"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 8, 8 )
+format = 1
+tile_data = PoolIntArray( -589824, 8, 0, -589822, 6, 0, -458754, 7, 0, -458753, 6, 0, -524288, 8, 0, -524287, 7, 0, -393217, 7, 0, -458752, 7, 0, -327681, 7, 0, -393216, 7, 0, -393215, 6, 0, -327680, 8, 0, -327679, 7, 0, -262144, 8, 0, -262143, 7, 0, -196608, 8, 0, -131072, 8, 0, -65536, 8, 0 )
+script = ExtResource( 2 )
+radius = 2
+height = 9
+

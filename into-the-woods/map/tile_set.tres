@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=8 format=2]
+[gd_resource type="TileSet" load_steps=11 format=2]
 
 [ext_resource path="res://map/terrain/tiles/dirt/Dirt.png" type="Texture" id=1]
 [ext_resource path="res://map/terrain/tiles/grass/Grass.png" type="Texture" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://map/structure/tree/tiles/leaves/Leaves.png" type="Texture" id=4]
 [ext_resource path="res://map/terrain/tiles/water/Water.png" type="Texture" id=5]
 [ext_resource path="res://map/terrain/tiles/sand/Sand.png" type="Texture" id=6]
+[ext_resource path="res://map/structure/corn/tiles/corn/Corn.png" type="Texture" id=7]
+[ext_resource path="res://map/structure/corn/tiles/corn-leaf/Corn-Leaf.png" type="Texture" id=8]
+[ext_resource path="res://map/structure/corn/tiles/corn-stalk/Corn-Stalk.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4, 4 )
@@ -89,4 +92,34 @@ extents = Vector2( 4, 4 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 4, 4 )
 } ]
 5/z_index = 0
+6/name = "Corn"
+6/texture = ExtResource( 7 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 8, 8 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0.5, 0.5 )
+6/navigation_offset = Vector2( 0.5, 0.5 )
+6/shapes = [  ]
+6/z_index = 0
+7/name = "Corn Leaf"
+7/texture = ExtResource( 8 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 8, 8 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0.5, 0.5 )
+7/navigation_offset = Vector2( 0.5, 0.5 )
+7/shapes = [  ]
+7/z_index = 0
+8/name = "Corn Stalk"
+8/texture = ExtResource( 9 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 8, 8 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0.5, 0.5 )
+8/navigation_offset = Vector2( 0.5, 0.5 )
+8/shapes = [  ]
+8/z_index = 0
 
