@@ -30,7 +30,7 @@ func _ready():
 # 	(can be negative)
 func _get_tree_at(tree_x):
 	var top = terrain.get_top_tile(tree_x * spread)
-	if top != dirt and top != grass:
+	if top != DIRT and top != GRASS:
 		return null
 	var exists = state.noise.get_noise_2d(tree_x * location_multiplier_exists, 0)
 	if exists < noise_threshold:
@@ -51,9 +51,8 @@ func gen_structure(x):
 	# in tiles
 	var closest_tree_x = spread * closest_tree_tree_x
 
-	var spawn_tile = terrain.get_top_tile(closest_tree_x)
 	var tree = _get_tree_at(closest_tree_tree_x)
-	if not(spawn_tile == dirt or spawn_tile == grass) or tree == null:
+	if tree == null:
 		return
 
 	var base_elevation = terrain.sample_height(closest_tree_x) - 1

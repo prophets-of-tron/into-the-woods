@@ -18,7 +18,7 @@ script = ExtResource( 2 )
 [node name="Structure" type="Node" parent="."]
 
 [node name="TreeGenerator" parent="Structure" instance=ExtResource( 4 )]
-noise_threshold = 0.3
 
 [node name="CornGenerator" parent="Structure" instance=ExtResource( 5 )]
+spread = 4
 

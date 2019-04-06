@@ -25,13 +25,13 @@ func _ready():
 func _gen_stack(x):
 	for y in range(sample_height(x)):
 		# replace dirt that's exposed to air to grass after next stack's generation
-		var type = dirt
+		var type = DIRT
 		map.set_cell(x, y, type)
 		# after _ready (add_child)
 		emit_signal("terrain_tile_generated", x, y)
 
 	for y in range(sample_height(x), water_level):
-		map.set_cell(x, y, water)
+		map.set_cell(x, y, WATER)
 
 	emit_signal("terrain_stack_generated", x)
 
@@ -46,10 +46,10 @@ func _post_gen_stack(x):
 
 	for y in range(heights[x]):
 		if _is_tile_exposed_water_level(x, y):
-			map.set_cell(x, y, sand)
+			map.set_cell(x, y, SAND)
 		elif _is_tile_exposed_air(x, y):
-			if map.get_cell(x, y) == dirt:
-				map.set_cell(x, y, grass)
+			if map.get_cell(x, y) == DIRT:
+				map.set_cell(x, y, GRASS)
 
 func process_stack(x):
 	# generate current stack

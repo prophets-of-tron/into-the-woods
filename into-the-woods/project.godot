@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://player/actions/base/Action.gd"
 }, {
+"base": "Node2D",
+"class": "BaseObject",
+"language": "GDScript",
+"path": "res://object/BaseObject.gd"
+}, {
 "base": "TileMap",
 "class": "Map",
 "language": "GDScript",
@@ -36,6 +41,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Action": "",
+"BaseObject": "",
 "Map": "",
 "Player": "",
 "StructureGenerator": "",
@@ -52,6 +58,7 @@ config/icon="res://icon.png"
 
 Constants="*res://constants/Constants.tscn"
 State="*res://state/State.tscn"
+Tiles="*res://map/Tiles.tscn"
 
 [rendering]
 

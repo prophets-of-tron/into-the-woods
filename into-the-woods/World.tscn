@@ -7,6 +7,8 @@
 
 [node name="Map" parent="." instance=ExtResource( 1 )]
 
+[node name="Objects" type="Node" parent="."]
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 0, -500 )
 gravity = 20

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://player/Player.gd" type="Script" id=1]
-[ext_resource path="res://player/Player.png" type="Texture" id=2]
+[ext_resource path="res://player/actions/cut-down/CutDown.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player/Player.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 8.0
@@ -14,6 +15,7 @@ length = 16.0
 scale = Vector2( 1.5, 1.5 )
 script = ExtResource( 1 )
 load_distance = 70
+reach = 4
 gravity = -20
 acceleration = 50
 max_speed = 200
@@ -23,6 +25,10 @@ width = 16
 height = 32
 snap_dist = 16.0
 
+[node name="Actions" type="Node" parent="."]
+
+[node name="Cut Down" parent="Actions" instance=ExtResource( 2 )]
+
 [node name="CapsuleShape" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -8 )
 shape = SubResource( 1 )
@@ -31,8 +37,11 @@ shape = SubResource( 1 )
 shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="Camera" type="Camera2D" parent="."]
 current = true
+
+[node name="Arms" type="Node2D" parent="."]
+position = Vector2( 0, -8 )
 
