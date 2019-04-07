@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://map/base/TileLayer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://map/structure/trees/tree_tile_set.tres" type="TileSet" id=2]
+[ext_resource path="res://map/structure/trees/TreeTileSet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://map/structure/trees/generator/TreeGenerator.tscn" type="PackedScene" id=4]
+
+[node name="TreeLayer" instance=ExtResource( 1 )]
+tile_set = ExtResource( 2 )
+
+[node name="TileSet" parent="." index="0" instance=ExtResource( 3 )]
+visible = false
+
+[node name="TreeGenerator" parent="." index="1" instance=ExtResource( 4 )]
+

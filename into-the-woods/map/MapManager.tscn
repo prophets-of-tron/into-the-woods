@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://map/MapManager.gd" type="Script" id=1]
+[ext_resource path="res://map/terrain/TerrainLayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://map/structure/trees/TreeLayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://map/structure/crops/CropLayer.tscn" type="PackedScene" id=4]
+
+[node name="MapManager" type="Node2D"]
+position = Vector2( -1, 0 )
+script = ExtResource( 1 )
+
+[node name="TerrainLayer" parent="." instance=ExtResource( 2 )]
+cell_quadrant_size = 16
+
+[node name="Structure" type="Node2D" parent="."]
+
+[node name="TreeLayer" parent="Structure" instance=ExtResource( 3 )]
+cell_quadrant_size = 16
+
+[node name="CropLayer" parent="Structure" instance=ExtResource( 4 )]
+cell_quadrant_size = 16
+

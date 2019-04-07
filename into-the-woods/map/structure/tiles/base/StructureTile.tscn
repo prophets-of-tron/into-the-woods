@@ -1,6 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://map/tiles/base/Tile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://map/base/tiles/Tile.tscn" type="PackedScene" id=1]
+
+
 
 
 
