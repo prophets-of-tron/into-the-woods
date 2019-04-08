@@ -30,6 +30,7 @@ Open world, exploration
 #### Puzzle Structure
 
 #### Objectives
+
 - **To win**: Gain a certain amount of experience.
 <!-- What are the objectives of the game? -->
 
@@ -37,8 +38,9 @@ Open world, exploration
 <!-- How does the game flow for the game player -->
 
 ### Mechanics
+Every structure is represented on the map as a group of tiles, but internally, is a single entity. For instance, a tree structure is represented on the map as bark and leaves tiles, but it is recognized as a tree. This can be seen when you cut down the tree, it doesn't merely drop its tiles, but wood and stick objects.
 
-Player Attributes:
+Numerical player attributes:
 - *hunger*
   - Used by time.
   - Obtained by eating.
@@ -48,6 +50,11 @@ Player Attributes:
 - *experience*
   - Used for winning the game.
   - Obtained by completing most actions.
+
+Other player attributes:
+- *inventory*
+  - Used for storing objects with player.
+  - Has finite space (objects take up this space with inventory cost).
 <!-- What are the rules to the game, both implicit and explicit.  This is the model of the universe that the game works under.  Think of it as a simulation of a world, how do all the pieces interact?  This actually can be a very large section. -->
 
 #### Physics
@@ -63,32 +70,86 @@ A and D to move, space / W for jump (TODO sneak ...?)
 - Definition:
   - *An object is any tangible thing that isn't in the form of a tile.*
 - Properties:
-  - Are affecting by gravity
-  - Can be picked up (on collision) and stored in the player's inventory (automatically)
+  - Are affecting by gravity (when in world)
+  - Can be stored in the player's inventory or in the world.
+  - Has an inventory cost.
 - List:
-  - (Every structure tile takes the form of an object when dropped.)
+  - Corn
+    - Obtained
+      - Harvest (corn plants)
+    - Used
+      - Split
+        - Corn seeds
+  - Corn seeds
+    - Obtained
+      - Split
+        - Corn
+    - Used
+      - Placed on map by farming (over tilled earth)
+  - Wood
+    - Obtained
+      - Cutting down tree
+    - Used
+      - Split
+        - Sticks
+  - Stick
+    - Obtained
+      - Finding in forest
+      - Cutting down tree
+      - Split
+        - Wood
+    - Used
+      - Assemble
+        - Axe
+        - Hoe
+  - Rock
+    - Obtained
+      - Finding in forest
+    - Used
+      - Assemble
+        - Axe
+        - Hoe
+  - Axe
+    - Obtained
+      - Assemble
+        - 2 sticks
+        - 1 stone
+    - Used
+      - Cut down tree
+  - Hoe
+    - Obtained
+      - Assemble
+        - 2 sticks
+        - 1 stone
+    - Used
+      - Convert dirt/grass to farmland
+
 <!-- how to pick them up and move them -->
 
 #### Actions
 - Definition:
-  - *An action is anything that would give someone noticeable (out-of-the-norm) experience with nature IRL.*
+  - *An action is anything that would give someone notable experience with nature IRL.*
 - Properties:
   - Every action has an experience value, which is rewarded to the player every time it is completed.
+- There is a main action key and a secondary action key
 - List (experience values TBD):
-  - *Actions directed to self*:
-    - Eat
-    - Sleep
-    - Warp
-  - *Actions directed to structures*:
-    - Cut down (any structure)
-      - Removes structure
-      - Drops a percentage of the structure's tiles
-    - Build (certain structures)
-    - Plant (plant structures)
-    - Pick (off plant structures)
-  - *Actions directed to objects*:
-    - Chop up (any object)
-    - Burn (any object)
+  - Eat
+  - Sleep
+  - Warp
+  - Assemble
+    - Craft multiple objects into one object (by binding them together)
+  - Split
+    - Take apart one object and get multiple objects
+  - Cut down tree
+    - After nth hit:
+      - Clears tree tiles
+      - Drops log and stick objects
+  - Build wood
+  - Plant
+  - Harvest (crops)
+  - Panning (for minerals in river)
+  - Chop up (log)
+  - Burn (log, stick)
 <!-- Including whatever switches and buttons are used, interacting with objects, and what means of communication are used -->
 
 #### Combat
