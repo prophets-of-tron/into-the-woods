@@ -1,5 +1,5 @@
 # Into the Woods
-> A game about choosing the wilderness over your office job
+> A game about a quest from the office to the woods
 
 You reach your third decade working in your office job, and you can't do it anymore. So, you leave everything and everyone you know and enter the wilderness...
 
@@ -7,7 +7,7 @@ You reach your third decade working in your office job, and you can't do it anym
 
 ## Overview
 
-Into the Woods is an open-world tile-based game, where spending enough time in the wilderness means winning the game. See the WIP [design doc](DESIGN.md) for more info.
+Into the Woods is an open-world tile-based game, where spending enough time in the woods means winning the game. See the WIP [design doc](DESIGN.md) for more info.
 
 ## Installation
 
