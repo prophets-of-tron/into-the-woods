@@ -15,17 +15,17 @@ The content in this game is generated procedurally. When the player traverses th
 ## Component Overviews
 
 - [Autoloaded Scenes]
-- [Terrain]
-- [Tile Map]
+- [Player]
+- [Map Manager]
 
 ## Guides
 
-- [Designing a tile]
-- [Designing a structure]
+- [Designing a Tile]
+- [Designing a Procedural Structure]
 
 [game design doc]: /DESIGN.md
 [autoloaded scenes]: overview/autoloads.md
-[terrain]: overview/map/terrain.md
-[tile map]: overview/map/map.md
+[player]: overview/player
+[map manager]: overview/tile
 [designing a tile]: guides/design-tile.md
-[designing a structure]: guides/design-proc-structure.md
+[designing a procedural structure]: guides/design-proc-structure.md
