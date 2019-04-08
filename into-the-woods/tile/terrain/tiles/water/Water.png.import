@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Leaves.png-7c948662aa095baf36cdb6dfd2038f7f.stex"
+path="res://.import/Water.png-7fc96a5c98fe640e1e1d8c2eb06be009.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/structure/trees/tiles/leaves/Leaves.png"
-dest_files=[ "res://.import/Leaves.png-7c948662aa095baf36cdb6dfd2038f7f.stex" ]
+source_file="res://tile/terrain/tiles/water/Water.png"
+dest_files=[ "res://.import/Water.png-7fc96a5c98fe640e1e1d8c2eb06be009.stex" ]
 
 [params]
 

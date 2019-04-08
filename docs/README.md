@@ -15,8 +15,8 @@ The content in this game is generated procedurally. When the player traverses th
 ## Component Overviews
 
 - [Autoloaded Scenes]
-- [Player]
 - [Map Manager]
+- [Player]
 
 ## Guides
 
@@ -25,7 +25,7 @@ The content in this game is generated procedurally. When the player traverses th
 
 [game design doc]: /DESIGN.md
 [autoloaded scenes]: overview/autoloads.md
-[player]: overview/player
 [map manager]: overview/tile
+[player]: overview/player
 [designing a tile]: guides/design-tile.md
 [designing a procedural structure]: guides/design-proc-structure.md

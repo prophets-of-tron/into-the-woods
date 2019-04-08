@@ -25,6 +25,6 @@ Structure generators take a different approach and generate the entire structure
 * [Designing a tile](docs/guides/design-tile.md)
 * [Designing a procedural structure](docs/guides/design-proc-structure.md)
 
-[tile]: /into-the-woods/map/tiles/base
-[map manager]: /into-the-woods/map
-[tree]: /into-the-woods/map/structure/tree
+[tile]: /into-the-woods/tile/tiles/base
+[map manager]: /into-the-woods/tile
+[tree]: /into-the-woods/tile/structure/tree

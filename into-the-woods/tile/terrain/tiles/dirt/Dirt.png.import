@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bark.png-f6eb725598be1b51fb4d7181c3957d5b.stex"
+path="res://.import/Dirt.png-dc70c8e2795f0c417cdb4ace11195448.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/structure/trees/tiles/bark/Bark.png"
-dest_files=[ "res://.import/Bark.png-f6eb725598be1b51fb4d7181c3957d5b.stex" ]
+source_file="res://tile/terrain/tiles/dirt/Dirt.png"
+dest_files=[ "res://.import/Dirt.png-dc70c8e2795f0c417cdb4ace11195448.stex" ]
 
 [params]
 

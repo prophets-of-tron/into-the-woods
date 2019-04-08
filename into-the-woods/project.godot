@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "MapManager",
 "language": "GDScript",
-"path": "res://map/MapManager.gd"
+"path": "res://tile/MapManager.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "Player",
@@ -32,22 +32,22 @@ _global_script_classes=[ {
 "base": "TileGenerator",
 "class": "StructureGenerator",
 "language": "GDScript",
-"path": "res://map/structure/base/generator/StructureGenerator.gd"
+"path": "res://tile/structure/base/generator/StructureGenerator.gd"
 }, {
 "base": "TileLayer",
 "class": "StructureLayer",
 "language": "GDScript",
-"path": "res://map/structure/base/StructureLayer.gd"
+"path": "res://tile/structure/base/StructureLayer.gd"
 }, {
 "base": "Node",
 "class": "TileGenerator",
 "language": "GDScript",
-"path": "res://map/base/generators/TileGenerator.gd"
+"path": "res://tile/base/generators/TileGenerator.gd"
 }, {
 "base": "TileMap",
 "class": "TileLayer",
 "language": "GDScript",
-"path": "res://map/base/TileLayer.gd"
+"path": "res://tile/base/TileLayer.gd"
 } ]
 _global_script_class_icons={
 "Action": "",
