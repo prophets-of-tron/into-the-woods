@@ -5,7 +5,6 @@
 [node name="TileLayer" type="TileMap"]
 cell_size = Vector2( 8, 8 )
 cell_quadrant_size = 8
-collision_use_kinematic = true
 format = 1
 script = ExtResource( 1 )
 

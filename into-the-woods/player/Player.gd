@@ -44,8 +44,8 @@ func _check_load():
 			map_manager.process_stack(x)
 
 func _physics_process(delta):
-	#motion.y += gravity
-	
+	motion.y += gravity
+
 	var moving = false
 	if Input.is_key_pressed(KEY_A):
 		motion.x = max(motion.x - acceleration, -max_speed)

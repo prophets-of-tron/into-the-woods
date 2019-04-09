@@ -11,13 +11,10 @@ script = ExtResource( 1 )
 
 [node name="TerrainLayer" parent="." instance=ExtResource( 2 )]
 cell_quadrant_size = 16
-collision_use_kinematic = false
 
 [node name="Structure" type="Node2D" parent="."]
 
 [node name="TreeLayer" parent="Structure" instance=ExtResource( 3 )]
-collision_use_kinematic = false
 
 [node name="CropLayer" parent="Structure" instance=ExtResource( 4 )]
-collision_use_kinematic = false
 
