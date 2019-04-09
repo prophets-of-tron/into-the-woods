@@ -70,9 +70,10 @@ A and D to move, space / W for jump (TODO sneak ...?)
 - Definition:
   - *An object is any tangible thing that isn't in the form of a tile.*
 - Properties:
-  - Are affecting by gravity (when in world)
+  - Are affected by gravity (when in world)
   - Can be stored in the player's inventory or in the world.
-  - Has an inventory cost.
+  - Have no size/shape limitations (that tiles have).
+  - Have an inventory cost.
 - List:
   - Corn
     - Obtained
