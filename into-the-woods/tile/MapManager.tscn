@@ -17,4 +17,7 @@ cell_quadrant_size = 16
 [node name="TreeLayer" parent="Structure" instance=ExtResource( 3 )]
 
 [node name="CropLayer" parent="Structure" instance=ExtResource( 4 )]
+cell_size = Vector2( 8, 8 )
+cell_quadrant_size = 8
+format = 1
 

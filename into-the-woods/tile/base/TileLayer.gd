@@ -12,12 +12,6 @@ func _find_map_manager(node:Node):
 		return node
 	return _find_map_manager(node.get_parent())
 
-func _ready():
-	# traverse up tree until the parent of all layers is found
-	map_manager = _find_map_manager(get_parent())
-	
-	_register_generator(self)	# register hierarchy
-
 # traverses hierarchy and calls generators
 # generator is a node
 func _register_generator(node:Node):
@@ -31,6 +25,12 @@ func _register_generator(node:Node):
 	
 	generators.append(generator)
 	
+func _ready():
+	# traverse up tree until the parent of all layers is found
+	map_manager = _find_map_manager(get_parent())
+	
+	_register_generator(self)	# register hierarchy
+
 func process_stack(x):
 	for generator in generators:
 		generator.process_stack(x)

@@ -4,6 +4,4 @@ extends StructureLayer
 var corn
 
 func _ready():
-	._ready()
-	
 	corn = tile_set.find_tile_by_name("Corn")

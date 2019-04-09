@@ -10,8 +10,6 @@ const TerrainGenerator = preload("res://tile/terrain/generator/TerrainGenerator.
 var terrain_generator:TerrainGenerator
 
 func _ready():
-	._ready()
-	
 	terrain_generator = map_manager.find_node("TerrainGenerator", true)
 
 func can_generate(x):

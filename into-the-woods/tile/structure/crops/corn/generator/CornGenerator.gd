@@ -15,8 +15,6 @@ export(float) var noise_threshold
 var state
 
 func _ready():
-	._ready()
-
 	#_calc_max_radius()
 
 	state = get_node("/root/State")
@@ -29,8 +27,8 @@ func _ready():
 # plant_x is the index of the potential tree on the tree grid
 # 	(can be negative)
 func _get_plant_at(plant_x):
-	var top = terrain.get_top_tile(plant_x * spread)
-	if top != DIRT and top != GRASS:
+	var top = terrain_generator.get_top_tile(plant_x * spread)
+	if top != terrain_generator.layer.dirt and top != terrain_generator.layer.grass:
 		return null
 	var exists = state.noise.get_noise_2d(plant_x * location_multiplier, 0)
 	if exists > noise_threshold:	# spawn where trees aren't (roughly)
@@ -45,7 +43,7 @@ func _get_plant_at(plant_x):
 func can_generate(x):
 	var closest_plant_x = spread * floor(float(x) / spread + 0.5)
 	# if stack is processed, then terrain is generated
-	return map.is_stack_processed(closest_plant_x)
+	return map_manager.is_stack_processed(closest_plant_x)
 
 func gen_structure(x):
 	# potential origin (on the tree grid)
@@ -57,7 +55,7 @@ func gen_structure(x):
 	if plant == null:
 		return
 
-	var base_elevation = terrain.sample_height(closest_plant_x) - 1
+	var base_elevation = terrain_generator.sample_height(closest_plant_x) - 1
 
 	for sample_x in range(-plant.radius, +plant.radius):
 		for sample_y in range(-plant.height, 0):
@@ -67,7 +65,7 @@ func gen_structure(x):
 				var world_x = closest_plant_x + sample_x
 				var world_y = base_elevation - sample_y
 				# flip y-axis (TODO it's gross, think about this)
-				map.set_cell(world_x, world_y, sample)
+				layer.set_cell(world_x, world_y, sample)
 				emit_signal("structure_tile_generated", world_x, world_y)
 
 	emit_signal("structure_generated", closest_plant_x)

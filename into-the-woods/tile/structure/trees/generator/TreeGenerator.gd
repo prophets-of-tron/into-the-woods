@@ -15,8 +15,6 @@ export(float) var noise_threshold
 var state
 
 func _ready():
-	._ready()
-
 	#_calc_max_radius()
 
 	state = get_node("/root/State")

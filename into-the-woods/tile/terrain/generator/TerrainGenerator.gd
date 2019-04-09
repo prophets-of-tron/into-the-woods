@@ -15,8 +15,6 @@ var constants
 var state
 
 func _ready():
-	._ready()
-
 	constants = get_node("/root/Constants")
 	state = get_node("/root/State")
 
