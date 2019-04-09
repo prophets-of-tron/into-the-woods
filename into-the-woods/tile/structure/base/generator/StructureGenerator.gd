@@ -5,7 +5,7 @@ class_name StructureGenerator
 signal structure_generated(x)
 signal structure_tile_generated(x, y)
 
-const TerrainGenerator = preload("res://map/terrain/generator/TerrainGenerator.gd")
+const TerrainGenerator = preload("res://tile/terrain/generator/TerrainGenerator.gd")
 
 var terrain_generator:TerrainGenerator
 

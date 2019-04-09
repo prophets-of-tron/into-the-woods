@@ -1,10 +1,11 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://map/base/TileLayer.gd" type="Script" id=1]
+[ext_resource path="res://tile/base/TileLayer.gd" type="Script" id=1]
 
 [node name="TileLayer" type="TileMap"]
 cell_size = Vector2( 8, 8 )
 cell_quadrant_size = 8
+collision_use_kinematic = true
 format = 1
 script = ExtResource( 1 )
 

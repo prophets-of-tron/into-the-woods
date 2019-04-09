@@ -25,7 +25,6 @@ func _gen_stack(x):
 		# replace dirt that's exposed to air to grass after next stack's generation
 		var type = layer.dirt
 		layer.set_cell(x, y, type)
-		# after _ready (add_child)
 		emit_signal("terrain_tile_generated", x, y)
 
 	for y in range(sample_height(x), water_level):

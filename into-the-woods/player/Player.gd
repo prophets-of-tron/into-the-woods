@@ -27,7 +27,7 @@ func _ready():
 
 func _check_load():
 	# Load chunks, if player is in semi-new territory
-	var pos_tile_x = int(position.x / constants.tile_size)
+	var pos_tile_x = int(floor(position.x / constants.tile_size))
 	var pos_left = pos_tile_x - load_distance
 	var pos_right = pos_tile_x + load_distance
 
@@ -44,8 +44,8 @@ func _check_load():
 			map_manager.process_stack(x)
 
 func _physics_process(delta):
-	motion.y += gravity
-
+	#motion.y += gravity
+	
 	var moving = false
 	if Input.is_key_pressed(KEY_A):
 		motion.x = max(motion.x - acceleration, -max_speed)

@@ -2,8 +2,8 @@ extends Node
 class_name TileGenerator
 
 # to prevent cyclic dependencies
-var TileLayer = load("res://map/base/TileLayer.gd")
-var MapManager = load("res://map/MapManager.gd")
+var TileLayer = load("res://tile/base/TileLayer.gd")
+var MapManager = load("res://tile/MapManager.gd")
 
 var layer
 var map_manager		# contains all TileGenerator s

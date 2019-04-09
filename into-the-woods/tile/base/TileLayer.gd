@@ -1,8 +1,9 @@
 extends TileMap
 class_name TileLayer
 
-var MapManager = load("res://map/MapManager.gd")
+var MapManager = load("res://tile/MapManager.gd")
 
+var generators = []
 var map_manager		# contains all TileGenerator s
 
 func _find_map_manager(node:Node):
@@ -14,19 +15,22 @@ func _find_map_manager(node:Node):
 func _ready():
 	# traverse up tree until the parent of all layers is found
 	map_manager = _find_map_manager(get_parent())
+	
+	_register_generator(self)	# register hierarchy
 
 # traverses hierarchy and calls generators
 # generator is a node
-func _process_node(node:Node, x):
+func _register_generator(node:Node):
 	if node.get_child_count() > 0:	# redundent but for readability
 		for child in node.get_children():
-			_process_node(child, x)	# our dear friend recursion
+			_register_generator(child)	# our dear friend recursion
 	var generator = node as TileGenerator
 	if generator == null:
 		# give them the benefit of the doubt; it's a container node
 		return
 	
-	generator.process_stack(x)
+	generators.append(generator)
 	
 func process_stack(x):
-	_process_node(self, x)
+	for generator in generators:
+		generator.process_stack(x)

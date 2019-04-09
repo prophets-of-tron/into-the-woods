@@ -1,10 +1,11 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://map/structure/base/StructureLayer.tscn" type="PackedScene" id=1]
-[ext_resource path="res://map/structure/crops/crop_tile_set.tres" type="TileSet" id=2]
-[ext_resource path="res://map/structure/crops/CropLayer.gd" type="Script" id=3]
-[ext_resource path="res://map/structure/crops/CropTileSet.tscn" type="PackedScene" id=4]
-[ext_resource path="res://map/structure/crops/corn/generator/CornGenerator.tscn" type="PackedScene" id=5]
+[ext_resource path="res://tile/structure/base/StructureLayer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tile/structure/crops/crop_tile_set.tres" type="TileSet" id=2]
+[ext_resource path="res://tile/structure/crops/CropLayer.gd" type="Script" id=3]
+[ext_resource path="res://tile/structure/crops/CropTileSet.tscn" type="PackedScene" id=4]
+[ext_resource path="res://tile/structure/crops/corn/generator/CornGenerator.tscn" type="PackedScene" id=5]
+
 
 [node name="CropLayer" instance=ExtResource( 1 )]
 tile_set = ExtResource( 2 )
