@@ -9,11 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node",
-"class": "Action",
-"language": "GDScript",
-"path": "res://player/actions/base/Action.gd"
-}, {
 "base": "Node2D",
 "class": "BaseObject",
 "language": "GDScript",
@@ -50,7 +45,6 @@ _global_script_classes=[ {
 "path": "res://tile/base/TileLayer.gd"
 } ]
 _global_script_class_icons={
-"Action": "",
 "BaseObject": "",
 "MapManager": "",
 "Player": "",
