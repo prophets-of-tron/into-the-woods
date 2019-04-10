@@ -50,6 +50,10 @@ Numerical player attributes:
 - *experience*
   - Used for winning the game.
   - Obtained by completing most actions.
+- *mentality*
+  - Can change the way the world looks and the way the player interacts with it as well.
+    - Affects dreams?
+  - Obtained by sleeping, meditating, interacting with certain things.
 
 Other player attributes:
 - *inventory*
