@@ -1,5 +1,7 @@
 # Game Design Doc
 
+*Note: This design doc contains all plans for current and future builds.*
+
 ## Game Overview
 
 ### Game Concept
@@ -79,55 +81,56 @@ A and D to move, space / W for jump (TODO sneak ...?)
   - Have no size/shape limitations (that tiles have).
   - Have an inventory cost.
 - List:
+  - String
+    - Obtained (TODO)
+    - Actions
+      - Primary: Assemble
+  - Map
+    - Obtained (TODO)
+    - Actions
+      - Primary: Warp
   - Corn
     - Obtained
       - Harvest (corn plants)
-    - Used
-      - Split
-        - Corn seeds
-  - Corn seeds
+    - Actions
+      - Primary: Eat
+  - Corn kernels
     - Obtained
       - Split
         - Corn
-    - Used
-      - Placed on map by farming (over tilled earth)
+    - Actions
+      - Primary: Plant
   - Wood
     - Obtained
       - Cutting down tree
-    - Used
-      - Split
-        - Sticks
+    - Actions
+      - Primary: Build
   - Stick
     - Obtained
       - Finding in forest
       - Cutting down tree
       - Split
         - Wood
-    - Used
-      - Assemble
-        - Axe
-        - Hoe
+    - Actions (none)
   - Rock
     - Obtained
       - Finding in forest
-    - Used
-      - Assemble
-        - Axe
-        - Hoe
+    - Actions (none)
   - Axe
     - Obtained
       - Assemble
         - 2 sticks
         - 1 stone
-    - Used
-      - Cut down tree
+    - Actions
+      - Primary: Cut down
+      - Secondary: Take apart
   - Hoe
     - Obtained
       - Assemble
         - 2 sticks
         - 1 stone
-    - Used
-      - Convert dirt/grass to farmland
+    - Actions
+      - Primary: Till
 
 <!-- how to pick them up and move them -->
 
@@ -136,25 +139,7 @@ A and D to move, space / W for jump (TODO sneak ...?)
   - *An action is anything that would give someone notable experience with nature IRL.*
 - Properties:
   - Every action has an experience value, which is rewarded to the player every time it is completed.
-- There is a main action key and a secondary action key
-- List (experience values TBD):
-  - Eat
-  - Sleep
-  - Warp
-  - Assemble
-    - Craft multiple objects into one object (by binding them together)
-  - Split
-    - Take apart one object and get multiple objects
-  - Cut down tree
-    - After nth hit:
-      - Clears tree tiles
-      - Drops log and stick objects
-  - Build wood
-  - Plant
-  - Harvest (crops)
-  - Panning (for minerals in river)
-  - Chop up (log)
-  - Burn (log, stick)
+- There is a primary action key and a secondary action key
 <!-- Including whatever switches and buttons are used, interacting with objects, and what means of communication are used -->
 
 #### Combat
