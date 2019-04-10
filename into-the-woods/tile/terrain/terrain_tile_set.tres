@@ -21,7 +21,7 @@ extents = Vector2( 4, 4 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": null,
 "shape_transform": Transform2D( 1, 0, 0, 1, 4, 4 )
 } ]
 0/z_index = 0
