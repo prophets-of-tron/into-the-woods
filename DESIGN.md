@@ -83,57 +83,57 @@ A and D to move, space / W for jump (TODO sneak ...?)
 - List:
   - String
     - Obtained (TODO)
-    - Actions
+    - Actions:
       - Primary: Assemble
   - Bucket
     - Obtained (TODO)
-    - Actions
+    - Actions:
       - Primary: Harvest
   - Map
     - Obtained (TODO)
-    - Actions
+    - Actions:
       - Primary: Warp
   - Corn
-    - Obtained
+    - Obtained:
       - Harvest (corn plants)
-    - Actions
+    - Actions:
       - Primary: Eat
   - Kernels
-    - Obtained
+    - Obtained:
       - Split
         - Corn
-    - Actions
+    - Actions:
       - Primary: Plant
   - Wood
-    - Obtained
+    - Obtained:
       - Cutting down tree
-    - Actions
+    - Actions:
       - Primary: Build
   - Stick
-    - Obtained
+    - Obtained:
       - Finding in forest
       - Cutting down tree
       - Split
         - Wood
     - Actions (none)
   - Rock
-    - Obtained
+    - Obtained:
       - Finding in forest
     - Actions (none)
   - Axe
-    - Obtained
+    - Obtained:
       - Assemble
         - 2 sticks
         - 1 stone
-    - Actions
+    - Actions:
       - Primary: Cut down
       - Secondary: Take apart
   - Hoe
-    - Obtained
+    - Obtained:
       - Assemble
         - 2 sticks
         - 1 stone
-    - Actions
+    - Actions:
       - Primary: Till
 
 <!-- how to pick them up and move them -->
@@ -194,19 +194,34 @@ No combat *yet*
       - *Stone*
       - *Sand*
       - *Water*
-    - Mechanics
+    - Mechanics:
       - Indestructible, though certain terrain tiles can be transformed into other terrain tiles after terrain generation (such as grass -> dirt and dirt -> grass).
       - Blocking (cannot be walked through)
 
-  - **Structure tiles**:
+  - **Structures**:
     - List:
-      - *Log*
-      - *Leaves*
-      - *Corn plant*
-      - *Corn*
-    - Mechanics
+      - Tree
+        - Design 0 (no types of trees until biomes):
+          - Tiles:
+            - *Log*
+            - *Leaves*
+          - Action results:
+            - Cut down:
+              - {n} wood
+              - {n} sticks
+      - Corn plants
+        - Tiles:
+          - *Corn plant*
+          - *Corn*
+        - Action results:
+          - Harvest
+            - {n} corn
+          - Cut down
+            - {n} corn plant
+            - {n} corn
+    - Tile mechanics:
       - Destructible
-      - Not blocking (can be walked past)
+      - Not blocking (can be walked past; except water)
 
 ### Characters
 <!-- Each character should include the back story, personality, appearance, animations, abilities, relevance to the story and relationship to other characters -->
