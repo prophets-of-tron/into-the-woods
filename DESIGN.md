@@ -273,7 +273,7 @@ Animals would be a cool feature, or some sort of NPC. [TODO]
 
 ## Game Art
 
-This is an open source and open asset project. If you don't feel comfortable making your asset contributions open, please open a pull request, and we will reconsider it!
+This is an open source and open asset project. If you don't feel comfortable making your asset contributions open, please open an issue or contact an admin on the Discord server, and we will reconsider the open asset aspect!
 
 ### Sprites
 
