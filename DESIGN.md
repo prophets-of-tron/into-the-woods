@@ -85,6 +85,10 @@ A and D to move, space / W for jump (TODO sneak ...?)
     - Obtained (TODO)
     - Actions
       - Primary: Assemble
+  - Bucket
+    - Obtained (TODO)
+    - Actions
+      - Primary: Harvest
   - Map
     - Obtained (TODO)
     - Actions
@@ -94,7 +98,7 @@ A and D to move, space / W for jump (TODO sneak ...?)
       - Harvest (corn plants)
     - Actions
       - Primary: Eat
-  - Corn kernels
+  - Kernels
     - Obtained
       - Split
         - Corn
@@ -137,9 +141,8 @@ A and D to move, space / W for jump (TODO sneak ...?)
 #### Actions
 - Definition:
   - *An action is anything that would give someone notable experience with nature IRL.*
-- Properties:
-  - Every action has an experience value, which is rewarded to the player every time it is completed.
-- There is a primary action key and a secondary action key
+- Every action has an experience value, which is rewarded to the player every time it is completed.
+- There is a primary action key and a secondary action key.
 <!-- Including whatever switches and buttons are used, interacting with objects, and what means of communication are used -->
 
 #### Combat
