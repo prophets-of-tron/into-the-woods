@@ -18,11 +18,12 @@ export(float) var snap_dist
 var motion = Vector2()
 var jumping = false
 
-var map_manager:MapManager
+var gen_manager:GeneratorManager
 var constants
 
 func _ready():
-	map_manager = get_node("/root/World/MapManager")
+	# TODO: is it ok to reference other scenes so much? lol
+	gen_manager = get_node("/root/World/Generator")
 	constants = get_node("/root/Constants")
 
 func _check_load():
@@ -33,15 +34,15 @@ func _check_load():
 
 	# note that the player can activate both triggers in the same frame
 	# 	(i.e. the first frame)
-	if pos_left <= map_manager.left:
+	if pos_left <= gen_manager.left:
 		# start at map.left and go backwads;
 		# 	otherwise map.left will get messed up by the calls to
 		#	map.gen_stack (which updates map.left (and map.right))
-		for x in range(map_manager.left - 1, pos_left, -1):
-			map_manager.process_stack(x)
-	if pos_right >= map_manager.right:
-		for x in range(map_manager.right + 1, pos_right, +1):
-			map_manager.process_stack(x)
+		for x in range(gen_manager.left - 1, pos_left, -1):
+			gen_manager.process_stack(x)
+	if pos_right >= gen_manager.right:
+		for x in range(gen_manager.right + 1, pos_right, +1):
+			gen_manager.process_stack(x)
 
 func _physics_process(delta):
 	motion.y += gravity

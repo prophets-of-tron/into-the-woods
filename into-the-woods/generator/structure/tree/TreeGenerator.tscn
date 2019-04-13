@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://generator/structure/base/StructureGenerator.tscn" type="PackedScene" id=1]
+[ext_resource path="res://generator/structure/tree/TreeGenerator.gd" type="Script" id=2]
+[ext_resource path="res://generator/structure/tree/datamaps/Tree0.tscn" type="PackedScene" id=3]
+
+[node name="TreeGenerator" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+spread = 10
+location_multiplier_exists = 1.0
+
+[node name="Tree0" parent="." index="0" instance=ExtResource( 3 )]
+

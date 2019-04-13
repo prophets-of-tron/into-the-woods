@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://info/base/Info.tscn" type="PackedScene" id=1]
+[ext_resource path="res://info/terrain/TerrainInfo.gd" type="Script" id=2]
+
+[node name="TerrainInfo" instance=ExtResource( 1 )]
+editor/display_folded = true
+script = ExtResource( 2 )
+height_harshness = 1.0
+min_height = 25
+max_height = 50
+water_level = 34
+

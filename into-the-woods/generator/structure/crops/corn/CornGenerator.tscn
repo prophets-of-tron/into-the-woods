@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://generator/structure/base/StructureGenerator.tscn" type="PackedScene" id=1]
+[ext_resource path="res://generator/structure/crops/corn/CornGenerator.gd" type="Script" id=2]
+[ext_resource path="res://generator/structure/crops/corn/datamaps/CornSample.tscn" type="PackedScene" id=3]
+
+[node name="CornGenerator" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+spread = 3
+location_multiplier = 1.0
+noise_threshold = -0.1
+
+[node name="CornSample" parent="." index="0" instance=ExtResource( 3 )]
+visible = false
+

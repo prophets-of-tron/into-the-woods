@@ -2,7 +2,7 @@
 
 [ext_resource path="res://tile/MapManager.gd" type="Script" id=1]
 [ext_resource path="res://tile/terrain/TerrainLayer.tscn" type="PackedScene" id=2]
-[ext_resource path="res://tile/structure/trees/TreeLayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://tile/structure/tree/TreeLayer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://tile/structure/crops/CropLayer.tscn" type="PackedScene" id=4]
 
 [node name="MapManager" type="Node2D"]
@@ -17,7 +17,4 @@ cell_quadrant_size = 16
 [node name="TreeLayer" parent="Structure" instance=ExtResource( 3 )]
 
 [node name="CropLayer" parent="Structure" instance=ExtResource( 4 )]
-cell_size = Vector2( 8, 8 )
-cell_quadrant_size = 8
-format = 1
 
