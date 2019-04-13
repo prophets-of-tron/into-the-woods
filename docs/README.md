@@ -12,20 +12,32 @@ This is a tile-based game, meaning that all [terrain] and structures are represe
 
 The content in this game is generated procedurally. When the player traverses the new 2d landscape, more content is generated and certain parts of the old content is unloaded (such as terrain, which can be regenerated to be exactly the same).
 
-## Component Overviews
+## Where to Go from Here
+
+### Component Overviews
 
 - [Autoloaded Scenes]
-- [Map Manager]
 - [Player]
+- [Info nodes]
+- [Tile maps]
+- [Structures]
+- [Objects]
+- [Generators]
 
-## Guides
+### Guides
 
 - [Designing a Tile]
 - [Designing a Procedural Structure]
 
 [game design doc]: /DESIGN.md
+
 [autoloaded scenes]: overview/autoloads.md
-[map manager]: overview/tile
 [player]: overview/player
+[info nodes]: overview/info
+[tile maps]: overview/tile
+[structures]: overview/structure
+[objects]: overview/object
+[generators]: overview/generator
+
 [designing a tile]: guides/design-tile.md
 [designing a procedural structure]: guides/design-proc-structure.md
