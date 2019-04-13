@@ -13,13 +13,11 @@ export(float) var noise_threshold
 #var max_radius
 
 var layer
-var terrain_layer
 var state
 
 func _ready():
 	#_calc_max_radius()
 	layer = get_node("/root/World/Map/Structure/CropLayer")
-	terrain_layer = get_node("/root/World/Map/TerrainLayer")
 	state = get_node("/root/State")
 
 #func _calc_max_radius():

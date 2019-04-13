@@ -13,6 +13,7 @@ var state
 func _ready():
 	state = get_node("/root/State")
 
+# Excludes water in calculation
 func sample_height(x):
 	# cache
 	if heights.has(x):

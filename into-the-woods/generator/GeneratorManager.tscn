@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://generator/GeneratorManager.gd" type="Script" id=1]
 [ext_resource path="res://generator/terrain/TerrainGenerator.tscn" type="PackedScene" id=2]
 [ext_resource path="res://generator/structure/tree/TreeGenerator.tscn" type="PackedScene" id=3]
 [ext_resource path="res://generator/structure/crops/corn/CornGenerator.tscn" type="PackedScene" id=4]
 [ext_resource path="res://generator/object/stick/StickGenerator.tscn" type="PackedScene" id=5]
+[ext_resource path="res://generator/object/rock/RockGenerator.tscn" type="PackedScene" id=6]
 
 [node name="GeneratorManager" type="Node"]
 script = ExtResource( 1 )
@@ -22,4 +23,6 @@ script = ExtResource( 1 )
 [node name="Object" type="Node" parent="."]
 
 [node name="StickGenerator" parent="Object" instance=ExtResource( 5 )]
+
+[node name="RockGenerator" parent="Object" instance=ExtResource( 6 )]
 

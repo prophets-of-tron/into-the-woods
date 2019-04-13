@@ -7,14 +7,12 @@ export(int) var spread
 #var max_radius
 
 var forest_info
-var terrain_generator
 var layer
 var state
 
 func _ready():
 	#_calc_max_radius()
 	forest_info = get_node("/root/World/Info/ForestInfo")
-	terrain_generator = get_node("/root/World/Generator/TerrainGenerator")
 	layer = get_node("/root/World/Map/Structure/TreeLayer")
 	state = get_node("/root/State")
 
