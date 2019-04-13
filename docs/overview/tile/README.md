@@ -13,5 +13,5 @@ The tiles for each type of feature is stored in a layer. Each layer is a `TileMa
 * [Layers](layer.md)
 * [Designing a tile](docs/guides/design-tile.md)
 
-[tile]: /into-the-woods/tile/tiles/base
+[tile]: /into-the-woods/tile/base/tiles
 [map manager]: /into-the-woods/tile
