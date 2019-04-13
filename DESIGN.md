@@ -277,7 +277,7 @@ This is an open source and open asset project. If you don't feel comfortable mak
 
 ### Sprites
 
-*The game will use a pixel art style.*
+*The game will use a pixel art style. I'm thinking, each texel should be 4px by 4px.*
 
 - Player
 - (All tiles)
