@@ -3,7 +3,7 @@
 [ext_resource path="res://tile/terrain/tiles/base/TerrainTile.tscn" type="PackedScene" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 4, 4 )
+extents = Vector2( 4, 16 )
 
 [node name="SolidTile" index="0" instance=ExtResource( 1 )]
 
@@ -11,5 +11,6 @@ extents = Vector2( 4, 4 )
 visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2( 0, 8 )
 shape = SubResource( 1 )
 

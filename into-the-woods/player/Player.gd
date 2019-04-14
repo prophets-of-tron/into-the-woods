@@ -32,6 +32,9 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("bypass_constraints"):
 		state.bypass_constraints = not state.bypass_constraints
+	if Input.is_action_just_pressed("screenshot_mode"):
+		state.screenshot_mode = not state.screenshot_mode
+		visible = not state.screenshot_mode
 
 func _check_load():
 	# Load chunks, if player is in semi-new territory

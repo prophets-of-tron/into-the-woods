@@ -3,6 +3,7 @@ extends ObjectGenerator
 const stick_scene = preload("res://object/stick/Stick.tscn")
 
 export(float) var harsh_noise_threshold
+
 export(int) var spread
 
 var forest_info

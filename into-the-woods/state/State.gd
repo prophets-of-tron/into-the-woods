@@ -2,6 +2,7 @@ extends Node
 
 # lol... dev cheats FTW
 var bypass_constraints = false
+var screenshot_mode = false
 
 # TODO? make more protected
 var seed_hash

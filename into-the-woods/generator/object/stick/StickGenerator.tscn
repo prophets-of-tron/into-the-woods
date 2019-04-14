@@ -5,5 +5,6 @@
 
 [node name="StickGenerator" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-spread = 6
+harsh_noise_threshold = 0.05
+spread = 4
 
