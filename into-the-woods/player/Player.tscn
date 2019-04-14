@@ -19,6 +19,7 @@ reach = 4
 gravity = -20
 acceleration = 50
 max_speed = 200
+max_speed_cheat = 600
 jump_height = 550
 friction_coeff = 0.2
 width = 16

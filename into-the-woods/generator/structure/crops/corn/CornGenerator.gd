@@ -3,37 +3,49 @@ extends StructureGenerator
 # distance between tree origins
 # Trees can never overlap, so don't let that haPPEN.
 export(int) var spread
-# noise input factors for location
-export(float) var location_multiplier
-#export(float) var location_multiplier_type
-# lowest noise that can generate a tree
-export(float) var noise_threshold
-#export(float) var random_threshold
+
+export(float) var smooth_noise_multiplier
+export(float) var smooth_noise_threshold	# lowest noise that can generate a tree
+export(float) var harsh_noise_offset	# to make unique from smooth noise calls
+export(float) var harsh_noise_threshold
 
 #var max_radius
 
+var forest_info
 var layer
-var state
 
 func _ready():
 	#_calc_max_radius()
+	forest_info = get_node("/root/World/Info/ForestInfo")
 	layer = get_node("/root/World/Map/Structure/CropLayer")
-	state = get_node("/root/State")
 
 #func _calc_max_radius():
 #	max_radius = 0
 #	for child in get_children():
 #		max_radius = max(max_radius, child.radius)
 
-# plant_x is the index of the potential tree on the tree grid
-# 	(can be negative)
-func _get_plant_at(plant_x):
-	var top = terrain_layer.get_top_tile(plant_x * spread)
+func _get_plant_at(x):
+	if x % spread != 0:
+		print("Invalid x value for corn plant origin!")
+		return
+	
+	# TEST EXISTANCE
+	
+	var top = terrain_layer.get_top_tile(x)
 	if top != terrain_layer.dirt and top != terrain_layer.grass:
 		return null
-	var exists = state.noise.get_noise_2d(plant_x * location_multiplier, 0)
-	if exists > noise_threshold:	# spawn where trees aren't (roughly)
+	if forest_info.is_forest(x):
+		return	# don't spawn in forest
+	
+	# define 'corn areas'
+	var smooth_true = state.smooth_noise.get_noise_2d(x * smooth_noise_multiplier, unique_seed) >= smooth_noise_threshold
+	# leave pseudo-random gaps
+	var harsh_true = state.harsh_noise.get_noise_2d(x + harsh_noise_offset, unique_seed) >= smooth_noise_threshold
+	if not (smooth_true and harsh_true):
 		return null
+		
+	# CHOOSE TYPE
+		
 	# for now just return the only tree;
 	# 	simplex noise isn't evenly distributed, so it would
 	#	be bad to choose from a list with thattt
@@ -42,19 +54,18 @@ func _get_plant_at(plant_x):
 	# Note: the list of trees == the children of TreeGenerator
 
 func can_generate(x):
-	var closest_plant_x = spread * floor(float(x) / spread + 0.5)
+	var closest_plant_x = int(spread * floor(float(x) / spread + 0.5))
 	# if stack is processed, then terrain is generated
-	return gen_manager.is_stack_processed(closest_plant_x)
+	return gen_manager.is_stack_processed(closest_plant_x) and _get_plant_at(closest_plant_x) != null
 
 func gen_structure(x):
-	# potential origin (on the tree grid)
-	var closest_plant_tree_x = floor(float(x) / spread + 0.5)
+	# potential origin (on the plant grid)
+	var closest_plant_plant_x = int(floor(float(x) / spread + 0.5))
 	# in tiles
-	var closest_plant_x = spread * closest_plant_tree_x
+	var closest_plant_x = int(spread * closest_plant_plant_x)
 
-	var plant = _get_plant_at(closest_plant_tree_x)
-	if plant == null:
-		return
+	var plant = _get_plant_at(closest_plant_x)
+	# shouldn't be null
 
 	var base_elevation = terrain_info.sample_height(closest_plant_x) - 1
 

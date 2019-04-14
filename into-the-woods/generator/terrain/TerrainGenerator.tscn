@@ -5,8 +5,4 @@
 
 [node name="TerrainGenerator" index="0" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-height_harshness = 1.0
-min_height = 25
-max_height = 50
-water_level = 34
 

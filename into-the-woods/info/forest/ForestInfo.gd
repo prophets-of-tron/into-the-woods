@@ -4,6 +4,7 @@ extends Node
 export(float) var location_multiplier
 #export(float) var location_multiplier_type
 # lowest noise that can generate a tree
+export(float) var noise_offset
 export(float) var noise_threshold
 #export(float) var random_threshold
 
@@ -19,4 +20,4 @@ func is_forest(x):
 	if top != terrain_layer.dirt and top != terrain_layer.grass:
 		return null
 	
-	return state.noise.get_noise_2d(x * location_multiplier, 0) >= noise_threshold
+	return state.smooth_noise.get_noise_2d(x * location_multiplier, noise_offset) >= noise_threshold

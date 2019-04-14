@@ -7,6 +7,7 @@ export(int) var reach
 export(int) var gravity
 export(int) var acceleration
 export(int) var max_speed
+export(int) var max_speed_cheat
 export(int) var jump_height
 export(float) var friction_coeff	# is this really the friction coeff.?
 
@@ -19,12 +20,18 @@ var motion = Vector2()
 var jumping = false
 
 var gen_manager:GeneratorManager
+var state
 var constants
 
 func _ready():
 	# TODO: is it ok to reference other scenes so much? lol
 	gen_manager = get_node("/root/World/Generator")
+	state = get_node("/root/State")
 	constants = get_node("/root/Constants")
+	
+func _process(delta):
+	if Input.is_action_just_pressed("bypass_constraints"):
+		state.bypass_constraints = not state.bypass_constraints
 
 func _check_load():
 	# Load chunks, if player is in semi-new territory
@@ -46,20 +53,22 @@ func _check_load():
 
 func _physics_process(delta):
 	motion.y += gravity
+	
+	var curr_max_speed = max_speed_cheat if state.bypass_constraints else max_speed
 
 	var moving = false
-	if Input.is_key_pressed(KEY_A):
-		motion.x = max(motion.x - acceleration, -max_speed)
+	if Input.is_action_pressed("move_left"):
+		motion.x = max(motion.x - acceleration, -curr_max_speed)
 		moving = true
-	if Input.is_key_pressed(KEY_D):
-		motion.x = min(motion.x + acceleration, +max_speed)
+	if Input.is_action_pressed("move_right"):
+		motion.x = min(motion.x + acceleration, +curr_max_speed)
 		moving = true
 	if not moving:
 		# apply friction
 		motion.x = lerp(motion.x, 0, friction_coeff)
 
 	if is_on_floor():
-		if Input.is_key_pressed(KEY_SPACE) or Input.is_key_pressed(KEY_W):
+		if Input.is_action_pressed("jump"):
 			motion.y = jump_height
 			jumping = true
 		else:

@@ -7,8 +7,10 @@
 [node name="CornGenerator" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 spread = 3
-location_multiplier = 1.0
-noise_threshold = -0.1
+smooth_noise_multiplier = 1.0
+smooth_noise_threshold = 0.1
+harsh_noise_offset = 1000.0
+harsh_noise_threshold = -0.3
 
 [node name="CornSample" parent="." index="0" instance=ExtResource( 3 )]
 visible = false

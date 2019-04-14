@@ -12,27 +12,6 @@ func _ready():
 	layer = get_node("/root/World/Map/TerrainLayer")
 	constants = get_node("/root/Constants")
 
-"""Local helpers"""
-
-# Tests if tile is exposed to air (structures are ignored)
-func _is_tile_exposed_air(x, y):
-	var pos = Vector2(x, y)
-	# check left, right, top and bottom of tile for air
-	var positions = [pos + Vector2.LEFT,
-		pos + Vector2.RIGHT,
-		pos + Vector2.UP,
-		pos + Vector2.DOWN]
-
-	for position in positions:
-		# Don't check if < height, because that's the
-		# 	primary condition we're testing.
-		if position.x >= gen_manager.left and position.x <= gen_manager.right and position.y >= 0:
-			# Vector stores floats, so convert to int for dictionary keys.
-			# post-processing, so cache should be filled
-			if terrain_info.heights[int(position.x)] == position.y:
-				return true
-	return false
-
 func _gen_stack(x):
 	for y in range(terrain_info.sample_height(x)):
 		# replace dirt that's exposed to air to grass after next stack's generation
@@ -79,6 +58,28 @@ func process_stack(x):
 			# uh-oh
 			pass	# let existing_neighbor_x remain underfined
 		_post_gen_stack(existing_neighbor_x)
+
+
+"""Local helpers"""
+
+# Tests if tile is exposed to air (structures are ignored)
+func _is_tile_exposed_air(x, y):
+	var pos = Vector2(x, y)
+	# check left, right, top and bottom of tile for air
+	var positions = [pos + Vector2.LEFT,
+		pos + Vector2.RIGHT,
+		pos + Vector2.UP,
+		pos + Vector2.DOWN]
+
+	for position in positions:
+		# Don't check if < height, because that's the
+		# 	primary condition we're testing.
+		if position.x >= gen_manager.left and position.x <= gen_manager.right and position.y >= 0:
+			# Vector stores floats, so convert to int for dictionary keys.
+			# post-processing, so cache should be filled
+			if terrain_info.heights[int(position.x)] <= position.y:
+				return true
+	return false
 
 # Tests if tile is exposed to water
 func _is_tile_exposed_water_level(x, y):

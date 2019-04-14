@@ -7,7 +7,6 @@
 [node name="TreeGenerator" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 spread = 10
-location_multiplier_exists = 1.0
 
 [node name="Tree0" parent="." index="0" instance=ExtResource( 3 )]
 

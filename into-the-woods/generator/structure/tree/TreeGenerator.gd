@@ -8,13 +8,11 @@ export(int) var spread
 
 var forest_info
 var layer
-var state
 
 func _ready():
 	#_calc_max_radius()
 	forest_info = get_node("/root/World/Info/ForestInfo")
 	layer = get_node("/root/World/Map/Structure/TreeLayer")
-	state = get_node("/root/State")
 
 #func _calc_max_radius():
 #	max_radius = 0
@@ -23,9 +21,9 @@ func _ready():
 
 # tree_x is the index of the potential tree on the tree grid
 # 	(can be negative)
-func _get_tree_at(tree_x):
+func _get_tree_at(x):
 	
-	if not forest_info.is_forest(tree_x):
+	if not forest_info.is_forest(x):
 		return null
 		
 	# for now don't proc-gen it but use a template
