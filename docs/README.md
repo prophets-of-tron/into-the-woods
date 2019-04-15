@@ -26,8 +26,11 @@ The content in this game is generated procedurally. When the player traverses th
 
 ### Guides
 
+- [Designing an Info Node]
 - [Designing a Tile]
-- [Designing a Procedural Structure]
+- [Designing an Object]
+- [Designing a Structure]
+- [Creating a Procedural Generator]
 
 [game design doc]: /DESIGN.md
 
@@ -39,5 +42,8 @@ The content in this game is generated procedurally. When the player traverses th
 [objects]: overview/object
 [generators]: overview/generator
 
+[designing an info node]: guides/create-info.md
 [designing a tile]: guides/design-tile.md
-[designing a procedural structure]: guides/design-proc-structure.md
+[designing an object]: guides/design-object.md
+[designing a structure]: guides/design-structure.md
+[creating a procedural generator]: guides/create-generator.md
