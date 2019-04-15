@@ -34,9 +34,9 @@ func _post_gen_stack(x):
 	# Turn dirt that is exposed to air to grass
 
 	for y in range(terrain_info.heights[x]):
-		if _is_tile_exposed_water_level(x, y):
+		if _is_tile_sand(x, y):
 			layer.set_cell(x, y, layer.sand)
-		elif _is_tile_exposed_air(x, y):
+		elif _is_tile_exposed(x, y):
 			if layer.get_cell(x, y) == layer.dirt:
 				layer.set_cell(x, y, layer.grass)
 
@@ -62,8 +62,8 @@ func process_stack(x):
 
 """Local helpers"""
 
-# Tests if tile is exposed to air (structures are ignored)
-func _is_tile_exposed_air(x, y):
+# Tests if tile is exposed to air (water, along with structures, is ignored)
+func _is_tile_exposed(x, y):
 	var pos = Vector2(x, y)
 	# check left, right, top and bottom of tile for air
 	var positions = [pos + Vector2.LEFT,
@@ -82,20 +82,12 @@ func _is_tile_exposed_air(x, y):
 	return false
 
 # Tests if tile is exposed to water
-func _is_tile_exposed_water_level(x, y):
-	var pos = Vector2(x, y)
-	# check left, right, top and bottom of tile for air
-	var positions = [pos + Vector2.LEFT,
-		pos + Vector2.RIGHT,
-		pos + Vector2.UP,
-		pos + Vector2.DOWN]
-
-	for position in positions:
-		# Don't check if < height, because that's the
-		# 	primary condition we're testing.
-		if position.x >= gen_manager.left and position.x <= gen_manager.right and position.y >= 0:
-			# Vector stores floats, so convert to int for dictionary keys.
-			# post-processing, so cache should be filled
-			if terrain_info.heights[int(position.x)] <= position.y and position.y <= terrain_info.water_level:
-				return true
-	return false
+func _is_tile_sand(x, y):
+	# this method must be called in post-processing, so cache should be filled
+	# we could have used terrain_info.sample_height(x) as well
+	var h = terrain_info.heights[x]
+	if y != h - 1:
+		return false	# must be top tile (currently)
+	
+	# Sand cannot exceed water_level, plus a constant (tiles_sand_above_water)
+	return h <= terrain_info.sand_level
