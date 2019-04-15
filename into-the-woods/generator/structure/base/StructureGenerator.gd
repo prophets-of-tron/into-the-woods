@@ -2,8 +2,8 @@ extends Generator
 class_name StructureGenerator
 
 # emitted when entire stucture is generated (x == structure origin's x)
-signal structure_generated(x)
-signal structure_tile_generated(x, y)
+signal structure_generated(structure, x, y)
+signal structure_tile_generated(tile, x, y)
 
 var structures
 var terrain_info
@@ -16,6 +16,9 @@ func _ready():
 
 func can_generate(x):
 	return false
+
+func _on_Structure_structure_tile_generated(tile, x, y):
+	emit_signal("structure_tile_generated", tile, x, y)
 
 func gen_structure(x):
 	pass

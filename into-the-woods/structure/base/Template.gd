@@ -1,5 +1,7 @@
 extends TileMap
 
+signal structure_tile_generated(tile, x, y)
+
 # must only contain integer values
 export(Rect2) var bounds
 
@@ -13,4 +15,4 @@ func place_tiles(layer, x, y):
 				var world_y = y - sample_y
 				# flip y-axis (TODO it's gross, think about this)
 				layer.set_cell(world_x, world_y, sample)
-				emit_signal("structure_tile_generated", world_x, world_y)
+				emit_signal("structure_tile_generated", sample, world_x, world_y)
