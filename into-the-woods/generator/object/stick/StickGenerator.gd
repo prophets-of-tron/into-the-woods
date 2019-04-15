@@ -1,6 +1,6 @@
 extends ObjectGenerator
 
-const stick_scene = preload("res://object/stick/Stick.tscn")
+const Stick = preload("res://object/stick/Stick.tscn")
 
 export(float) var harsh_noise_threshold
 
@@ -19,6 +19,6 @@ func process_stack(x):
 	if not state.harsh_noise.get_noise_2d(x, unique_seed) >= harsh_noise_threshold:
 		return
 		
-	var node = stick_scene.instance()
+	var node = Stick.instance()
 	node.position = constants.tile_size * Vector2(x, -(terrain_info.sample_height(x) + 1))
 	objects.add_child(node)

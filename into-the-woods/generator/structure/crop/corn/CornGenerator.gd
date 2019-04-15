@@ -68,6 +68,6 @@ func gen_structure(x):
 	structure.position = constants.tile_size * Vector2(closest_plant_x, -base_elevation)
 	# add to tree first (so _ready will be called)
 	structures.add_child(structure)		# register structure
-	structure.generate(layer)	# populate tilemap with template
+	structure.place_tiles(layer)	# populate tilemap with template
 
 	emit_signal("structure_generated", closest_plant_x)

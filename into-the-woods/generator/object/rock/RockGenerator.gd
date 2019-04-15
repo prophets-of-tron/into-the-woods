@@ -1,6 +1,6 @@
 extends ObjectGenerator
 
-const rock = preload("res://object/rock/Rock.tscn")
+const Rock = preload("res://object/rock/Rock.tscn")
 
 export(float) var harsh_noise_threshold
 export(int) var spread
@@ -17,6 +17,6 @@ func process_stack(x):
 	if not state.harsh_noise.get_noise_2d(x, unique_seed) >= harsh_noise_threshold:
 		return
 	
-	var node = rock.instance()
+	var node = Rock.instance()
 	node.position = constants.tile_size * Vector2(x, -(terrain_info.sample_height(x) + 1))
 	objects.add_child(node)

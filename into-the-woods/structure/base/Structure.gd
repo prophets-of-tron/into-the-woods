@@ -8,8 +8,8 @@ func _ready():
 	if (fmod(position.x, 1) != 0 or fmod(position.y, 1) != 0) \
 		or (int(position.x) % constants.tile_size != 0) or (int(position.y) % constants.tile_size != 0):
 		print("Structure not on grid: (", position.x, ", ", position.y, ")!")
-	
-func generate(layer):
+
+func place_tiles(layer):
 	var x = int(position.x / constants.tile_size)
 	var y = int(position.y / constants.tile_size)
-	$Template.generate(layer, x, y)
+	$Template.place_tiles(layer, x, y)

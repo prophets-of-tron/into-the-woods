@@ -3,7 +3,7 @@ extends TileMap
 # must only contain integer values
 export(Rect2) var bounds
 
-func generate(layer, x, y):
+func place_tiles(layer, x, y):
 	for sample_x in range(bounds.position.x, bounds.end.y):
 		for sample_y in range(bounds.position.y, bounds.end.y):
 			var sample = get_cell(sample_x, sample_y)
