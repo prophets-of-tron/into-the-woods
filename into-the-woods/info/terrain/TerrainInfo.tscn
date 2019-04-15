@@ -10,4 +10,5 @@ height_harshness = 1.0
 min_height = 25
 max_height = 50
 water_level = 34
+tiles_sand_above_water = 1
 
