@@ -80,6 +80,7 @@ A and D to move, space / W for jump (TODO sneak ...?)
   - Can be stored in the player's inventory or in the world.
   - Have no size/shape limitations (that tiles have).
   - Have an inventory cost.
+  - Have zero, one or two actions associated with it. These actions can only be performed while holding the corresponding object.
 - List:
   - String
     - Obtained (TODO)
@@ -139,10 +140,7 @@ A and D to move, space / W for jump (TODO sneak ...?)
 <!-- how to pick them up and move them -->
 
 #### Actions
-- Definition:
-  - *An action is anything that would give someone notable experience with nature IRL.*
-- Every action has an experience value, which is rewarded to the player every time it is completed.
-- There is a primary action key and a secondary action key.
+- See [Objects](#Objects)
 <!-- Including whatever switches and buttons are used, interacting with objects, and what means of communication are used -->
 
 #### Combat
