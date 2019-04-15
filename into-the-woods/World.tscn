@@ -11,9 +11,11 @@
 
 [node name="Map" parent="." instance=ExtResource( 2 )]
 
-[node name="Generator" parent="." instance=ExtResource( 3 )]
+[node name="Structures" type="Node2D" parent="."]
 
 [node name="Objects" type="Node2D" parent="."]
+
+[node name="Generator" parent="." instance=ExtResource( 3 )]
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, -500 )

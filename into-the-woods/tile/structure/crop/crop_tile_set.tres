@@ -1,8 +1,9 @@
 [gd_resource type="TileSet" load_steps=4 format=2]
 
-[ext_resource path="res://tile/structure/crops/tiles/corn/corn/Corn.png" type="Texture" id=1]
-[ext_resource path="res://tile/structure/crops/tiles/corn/corn-stalk/Corn-Stalk.png" type="Texture" id=2]
-[ext_resource path="res://tile/structure/crops/tiles/corn/corn-leaf/Corn-Leaf.png" type="Texture" id=3]
+[ext_resource path="res://tile/structure/crop/tiles/corn/corn/Corn.png" type="Texture" id=1]
+[ext_resource path="res://tile/structure/crop/tiles/corn/corn-stalk/Corn-Stalk.png" type="Texture" id=2]
+[ext_resource path="res://tile/structure/crop/tiles/corn/corn-leaf/Corn-Leaf.png" type="Texture" id=3]
+
 
 
 

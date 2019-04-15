@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://tile/structure/base/StructureLayer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tile/structure/crop/tiles/corn/corn/Corn.png" type="Texture" id=2]
+[ext_resource path="res://tile/structure/crop/tiles/corn/corn-stalk/Corn-Stalk.png" type="Texture" id=3]
+[ext_resource path="res://tile/structure/crop/tiles/corn/corn-leaf/Corn-Leaf.png" type="Texture" id=4]
+[ext_resource path="res://tile/structure/crop/CropLayer.gd" type="Script" id=5]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Corn"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 8, 8 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0.5, 0.5 )
+0/navigation_offset = Vector2( 0.5, 0.5 )
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Corn Stalk"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 8, 8 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0.5, 0.5 )
+1/navigation_offset = Vector2( 0.5, 0.5 )
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Corn Leaf"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 8, 8 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0.5, 0.5 )
+2/navigation_offset = Vector2( 0.5, 0.5 )
+2/shapes = [  ]
+2/z_index = 0
+
+[node name="CropLayer" index="0" instance=ExtResource( 1 )]
+tile_set = SubResource( 1 )
+script = ExtResource( 5 )
+

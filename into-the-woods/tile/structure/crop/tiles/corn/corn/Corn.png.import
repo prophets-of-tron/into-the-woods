@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Corn.png-9d0fabbc6ecb86fb0593ee8ca12fe4cb.stex"
+path="res://.import/Corn.png-1767f25eea610542ff8dc061784a1754.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tile/structure/crops/tiles/corn/corn/Corn.png"
-dest_files=[ "res://.import/Corn.png-9d0fabbc6ecb86fb0593ee8ca12fe4cb.stex" ]
+source_file="res://tile/structure/crop/tiles/corn/corn/Corn.png"
+dest_files=[ "res://.import/Corn.png-1767f25eea610542ff8dc061784a1754.stex" ]
 
 [params]
 

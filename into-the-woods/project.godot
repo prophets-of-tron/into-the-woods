@@ -39,7 +39,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://player/Player.gd"
 }, {
-"base": "Node",
+"base": "Area2D",
 "class": "Structure",
 "language": "GDScript",
 "path": "res://structure/base/Structure.gd"
