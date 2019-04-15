@@ -123,7 +123,7 @@ A and D to move, space / W for jump (TODO sneak ...?)
   - Axe
     - Obtained:
       - Assemble
-        - 2 sticks
+        - 1 stick
         - 1 stone
     - Actions:
       - Primary: Cut down
@@ -131,7 +131,7 @@ A and D to move, space / W for jump (TODO sneak ...?)
   - Hoe
     - Obtained:
       - Assemble
-        - 2 sticks
+        - 1 stick
         - 1 stone
     - Actions:
       - Primary: Till
