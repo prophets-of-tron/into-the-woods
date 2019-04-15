@@ -28,7 +28,7 @@ func _is_tree_at(x):
 	if x % spread != 0:
 		print("Invalid tree x-coord!")
 		return
-	
+
 	return forest_info.is_forest(x)
 
 func can_generate(x):
@@ -44,10 +44,13 @@ func gen_structure(x):
 	var base_elevation = terrain_info.sample_height(closest_tree_x)
 
 	var structure = TreeStructure.instance()
+	var structure_y = -base_elevation
 	# structure origin
-	structure.position = constants.tile_size * Vector2(closest_tree_x, -base_elevation)
+	structure.position = constants.tile_size * Vector2(closest_tree_x, structure_y)
 	# add to tree first (so _ready will be called)
+	structure.connect("structure_tile_generated", self, "_on_Structure_structure_tile_generated")	# redirect signal
 	structures.add_child(structure)		# register structure
 	structure.place_tiles(layer)	# populate tilemap with template
+	# should I disconnect now? it depends on whether structures can re-place_tiles, we'll see
 
-	emit_signal("structure_generated", closest_tree_x)
+	emit_signal("structure_generated", structure, closest_tree_x, structure_y)

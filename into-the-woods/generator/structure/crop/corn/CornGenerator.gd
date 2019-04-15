@@ -33,22 +33,22 @@ func _is_plant_at(x):
 	if x % spread != 0:
 		print("Invalid x value for corn plant origin!")
 		return
-	
+
 	# TEST EXISTANCE
-	
+
 	var top = terrain_layer.get_top_tile(x)
 	if top != terrain_layer.dirt and top != terrain_layer.grass:
 		return false
 	if forest_info.is_forest(x):
 		return false	# don't spawn in forest
-	
+
 	# define 'corn areas'
 	var smooth_true = state.smooth_noise.get_noise_2d(x * smooth_noise_multiplier, unique_seed) >= smooth_noise_threshold
 	# leave pseudo-random gaps
 	var harsh_true = state.harsh_noise.get_noise_2d(x * harsh_noise_multiplier + harsh_noise_offset, unique_seed) >= smooth_noise_threshold
 	if not (smooth_true and harsh_true):
 		return false
-		
+
 	return true
 
 func can_generate(x):
@@ -64,10 +64,13 @@ func gen_structure(x):
 	var base_elevation = terrain_info.sample_height(closest_plant_x)
 
 	var structure = CornStructure.instance()
+	var structure_y = -base_elevation
 	# structure origin
-	structure.position = constants.tile_size * Vector2(closest_plant_x, -base_elevation)
+	structure.position = constants.tile_size * Vector2(closest_plant_x, structure_y)
 	# add to tree first (so _ready will be called)
 	structures.add_child(structure)		# register structure
+	structure.connect("structure_tile_generated", self, "_on_Structure_structure_tile_generated")	# redirect signal
 	structure.place_tiles(layer)	# populate tilemap with template
+	# should I disconnect now? it depends on whether structures can re-place_tiles, we'll see
 
-	emit_signal("structure_generated", closest_plant_x)
+	emit_signal("structure_generated", structure, closest_plant_x, structure_y)

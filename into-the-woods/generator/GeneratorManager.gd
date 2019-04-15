@@ -27,7 +27,7 @@ func _ready():
 
 func process_stack(x):
 	if is_stack_processed(x):
-		print("probably shouldn't be re-processing stack@x="+str(x))
+		print("[WARN] Probably shouldn't be re-processing stack@x="+str(x))
 		# already generated
 		return
 		
