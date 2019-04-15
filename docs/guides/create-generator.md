@@ -36,7 +36,3 @@ Generators place content on the world when it is *first* created. The general wo
     - Populate the corresponding layer with the tiles of the structure, by calling `place_tiles(layer)` on the structure.
     - Call `StructureGenerator#structures.add_child` to add the instance to the game.
     - Emit a `structure_gneerated` signal.
-
-## Terrain Generator
-
-Though, there is only one terrain generator, it is important to have an idea of how it works. It is a tile generator, as it places tiles on the map and nothing else. It utilizes every `process_stack(x)` call, as there are no gaps in terrain, or so we hope.
