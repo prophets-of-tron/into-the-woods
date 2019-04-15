@@ -21,4 +21,4 @@ Procedural generation looks like this:
 * [Tile Map](map.md)
 
 [tilemap]: /into-the-woods/tiles
-[terrain notes]: /into-the-woods/tiles/terrain/notes.md
+[terrain notes]: /into-the-woods/generator/terrain/notes.md
