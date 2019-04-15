@@ -5,6 +5,7 @@
 
 [node name="RockGenerator" index="0" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+harsh_noise_multiplier = 1000.0
 harsh_noise_threshold = 0.27
 spread = 3
 

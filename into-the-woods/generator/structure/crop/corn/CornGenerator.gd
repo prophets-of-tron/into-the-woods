@@ -6,10 +6,10 @@ const CornStructure = preload("res://structure/crop/corn/CornPlant.tscn")
 # Trees can never overlap, so don't let that haPPEN.
 export(int) var spread
 
-export(float) var smooth_noise_multiplier
+export(float) var smooth_noise_multiplier = 1
 export(float) var smooth_noise_threshold	# lowest noise that can generate a tree
 export(int) var harsh_noise_offset	# to make unique from smooth noise calls
-export(int) var harsh_noise_multiplier
+export(int) var harsh_noise_multiplier = 1
 export(float) var harsh_noise_threshold
 
 #var max_radius
@@ -43,9 +43,9 @@ func _is_plant_at(x):
 		return false	# don't spawn in forest
 
 	# define 'corn areas'
-	var smooth_true = state.smooth_noise.get_noise_2d(x * smooth_noise_multiplier, unique_seed) >= smooth_noise_threshold
+	var smooth_true = state.smooth_noise.get_noise_2d(smooth_noise_multiplier * x, unique_seed) >= smooth_noise_threshold
 	# leave pseudo-random gaps
-	var harsh_true = state.harsh_noise.get_noise_2d(x * harsh_noise_multiplier + harsh_noise_offset, unique_seed) >= smooth_noise_threshold
+	var harsh_true = state.harsh_noise.get_noise_2d(harsh_noise_multiplier * x + harsh_noise_offset, unique_seed) >= smooth_noise_threshold
 	if not (smooth_true and harsh_true):
 		return false
 

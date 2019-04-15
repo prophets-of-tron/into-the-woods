@@ -6,7 +6,7 @@
 [node name="CornGenerator" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 spread = 3
-smooth_noise_multiplier = 1.0
+smooth_noise_multiplier = 1000.0
 smooth_noise_threshold = 0.1
 harsh_noise_threshold = -0.3
 
