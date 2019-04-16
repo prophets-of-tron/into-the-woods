@@ -1,6 +1,6 @@
 extends StructureGenerator
 
-const CornStructure = preload("res://structure/crop/corn/CornPlant.tscn")
+const CornStructure = preload("res://structure/corn/CornPlant.tscn")
 
 # distance between tree origins
 # Trees can never overlap, so don't let that haPPEN.
@@ -36,8 +36,8 @@ func _is_plant_at(x):
 
 	# TEST EXISTANCE
 
-	var top = terrain_layer.get_top_tile(x)
-	if top != terrain_layer.dirt and top != terrain_layer.grass:
+	var top = terrain_map.get_top_tile(x)
+	if top != terrain_map.dirt and top != terrain_map.grass:
 		return false
 	if forest_info.is_forest(x):
 		return false	# don't spawn in forest
@@ -67,10 +67,6 @@ func gen_structure(x):
 	var structure_y = -base_elevation
 	# structure origin
 	structure.position = constants.tile_size * Vector2(closest_plant_x, structure_y)
-	# add to tree first (so _ready will be called)
-	structures.add_child(structure)		# register structure
-	structure.connect("structure_tile_generated", self, "_on_Structure_structure_tile_generated")	# redirect signal
-	structure.place_tiles(layer)	# populate tilemap with template
-	# should I disconnect now? it depends on whether structures can re-place_tiles, we'll see
+	structures.add_child(structure)		# add to world
 
 	emit_signal("structure_generated", structure, closest_plant_x, structure_y)

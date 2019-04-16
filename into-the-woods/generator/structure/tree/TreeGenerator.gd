@@ -1,7 +1,7 @@
 extends StructureGenerator
 
 # in future, distinguish between different types of trees (Tree0, etc.)
-const TreeStructure = preload("res://structure/tree/tree0/Tree0.tscn")
+const TreeStructure = preload("res://structure/tree/Tree0.tscn")
 
 # distance between tree origins
 # Trees can never overlap, so don't let that haPPEN.
@@ -47,10 +47,6 @@ func gen_structure(x):
 	var structure_y = -base_elevation
 	# structure origin
 	structure.position = constants.tile_size * Vector2(closest_tree_x, structure_y)
-	# add to tree first (so _ready will be called)
-	structure.connect("structure_tile_generated", self, "_on_Structure_structure_tile_generated")	# redirect signal
-	structures.add_child(structure)		# register structure
-	structure.place_tiles(layer)	# populate tilemap with template
-	# should I disconnect now? it depends on whether structures can re-place_tiles, we'll see
+	structures.add_child(structure)		# add to world
 
 	emit_signal("structure_generated", structure, closest_tree_x, structure_y)

@@ -24,11 +24,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://generator/GeneratorManager.gd"
 }, {
-"base": "Node2D",
-"class": "MapManager",
-"language": "GDScript",
-"path": "res://tile/MapManager.gd"
-}, {
 "base": "Generator",
 "class": "ObjectGenerator",
 "language": "GDScript",
@@ -48,28 +43,15 @@ _global_script_classes=[ {
 "class": "StructureGenerator",
 "language": "GDScript",
 "path": "res://generator/structure/base/StructureGenerator.gd"
-}, {
-"base": "TileLayer",
-"class": "StructureLayer",
-"language": "GDScript",
-"path": "res://tile/structure/base/StructureLayer.gd"
-}, {
-"base": "TileMap",
-"class": "TileLayer",
-"language": "GDScript",
-"path": "res://tile/base/TileLayer.gd"
 } ]
 _global_script_class_icons={
 "BaseObject": "",
 "Generator": "",
 "GeneratorManager": "",
-"MapManager": "",
 "ObjectGenerator": "",
 "Player": "",
 "Structure": "",
-"StructureGenerator": "",
-"StructureLayer": "",
-"TileLayer": ""
+"StructureGenerator": ""
 }
 
 [application]

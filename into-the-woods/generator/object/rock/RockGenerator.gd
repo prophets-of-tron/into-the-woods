@@ -2,7 +2,7 @@ extends ObjectGenerator
 
 const Rock = preload("res://object/rock/Rock.tscn")
 
-export(float) var harsh_noise_multiplier = 1
+export(int) var harsh_noise_multiplier = 1
 export(float) var harsh_noise_threshold
 export(int) var spread = 1
 
@@ -15,7 +15,7 @@ func process_stack(x):
 	var submerged = terrain_info.sample_height(x) <= terrain_info.water_level
 	if x % spread != 0 or submerged:
 		return
-	print(x, " ", state.harsh_noise.get_noise_2d(harsh_noise_multiplier * x, unique_seed))
+
 	if not state.harsh_noise.get_noise_2d(harsh_noise_multiplier * x, unique_seed) >= harsh_noise_threshold:
 		return
 	

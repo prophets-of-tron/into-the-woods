@@ -16,9 +16,7 @@ script = ExtResource( 1 )
 
 [node name="TreeGenerator" parent="Structure" instance=ExtResource( 3 )]
 
-[node name="Crop" type="Node" parent="Structure"]
-
-[node name="CornGenerator" parent="Structure/Crop" instance=ExtResource( 4 )]
+[node name="CornGenerator" parent="Structure" instance=ExtResource( 4 )]
 
 [node name="Object" type="Node" parent="."]
 

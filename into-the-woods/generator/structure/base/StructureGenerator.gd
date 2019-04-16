@@ -7,18 +7,15 @@ signal structure_tile_generated(tile, x, y)
 
 var structures
 var terrain_info
-var terrain_layer
+var terrain_map
 
 func _ready():
 	structures = get_node("/root/World/Structures")
 	terrain_info = get_node("/root/World/Info").find_node("TerrainInfo", true)
-	terrain_layer = get_node("/root/World/Map").find_node("TerrainLayer", true)
+	terrain_map = get_node("/root/World/TerrainMap")
 
 func can_generate(x):
 	return false
-
-func _on_Structure_structure_tile_generated(tile, x, y):
-	emit_signal("structure_tile_generated", tile, x, y)
 
 func gen_structure(x):
 	pass
