@@ -2,7 +2,7 @@
 
 ## Overview
 
-[Structures] are entities that are visualized as structure tiles, but are stored as entities that respond to actions.
+[Structures] are clusters of tiles that act as a single entity and respond to the world.
 
 ## See Also
 
