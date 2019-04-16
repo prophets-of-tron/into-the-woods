@@ -4,19 +4,6 @@
 [ext_resource path="res://structure/corn/tile/corn-stalk/Corn-Stalk.png" type="Texture" id=2]
 [ext_resource path="res://structure/corn/tile/corn-leaf/Corn-Leaf.png" type="Texture" id=3]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 [resource]
 0/name = "Corn"
 0/texture = ExtResource( 1 )
