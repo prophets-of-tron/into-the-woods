@@ -3,7 +3,7 @@
 [ext_resource path="res://generator/GeneratorManager.gd" type="Script" id=1]
 [ext_resource path="res://generator/terrain/TerrainGenerator.tscn" type="PackedScene" id=2]
 [ext_resource path="res://generator/structure/tree/TreeGenerator.tscn" type="PackedScene" id=3]
-[ext_resource path="res://generator/structure/crop/corn/CornGenerator.tscn" type="PackedScene" id=4]
+[ext_resource path="res://generator/structure/corn/CornGenerator.tscn" type="PackedScene" id=4]
 [ext_resource path="res://generator/object/stick/StickGenerator.tscn" type="PackedScene" id=5]
 [ext_resource path="res://generator/object/rock/RockGenerator.tscn" type="PackedScene" id=6]
 

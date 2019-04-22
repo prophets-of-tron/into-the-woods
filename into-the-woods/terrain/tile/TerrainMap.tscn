@@ -4,8 +4,7 @@
 [ext_resource path="res://terrain/tile/TileSet.tres" type="TileSet" id=2]
 [ext_resource path="res://terrain/tile/TerrainMap.gd" type="Script" id=3]
 
-
-[node name="TerrainMap" index="0" instance=ExtResource( 1 )]
+[node name="TerrainMap" instance=ExtResource( 1 )]
 tile_set = ExtResource( 2 )
 script = ExtResource( 3 )
 

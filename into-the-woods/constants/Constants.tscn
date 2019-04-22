@@ -4,5 +4,5 @@
 
 [node name="Constants" type="Node"]
 script = ExtResource( 1 )
-tile_size = 8
+tile_size = 2
 

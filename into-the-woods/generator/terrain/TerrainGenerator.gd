@@ -46,7 +46,7 @@ func process_stack(x):
 	_gen_stack(x)
 
 	# apply post-generation touches (dirt -> grass) to the existing neighbor
-	# this works because in Map#gen_stack, this gen_stack is called
+	# this works because in MapManager#process_stack, this process_stack is called
 	# 	before updating left and right
 	var a_stack = gen_manager.left != +INF and gen_manager.right != -INF
 	if a_stack:
