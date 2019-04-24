@@ -1,7 +1,7 @@
 extends StructureGenerator
 
 # in future, distinguish between different types of trees (Tree0, etc.)
-const TreeStructure = preload("res://structure/tree/Tree0.tscn")
+const TreeStructure = preload("res://structure/tree/tree0/Tree0.tscn")
 
 # distance between tree origins
 # Trees can never overlap, so don't let that haPPEN.

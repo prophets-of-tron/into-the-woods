@@ -1,7 +1,0 @@
-[gd_scene format=2]
-
-[node name="CustomTileMap" type="TileMap"]
-cell_size = Vector2( 2, 2 )
-cell_quadrant_size = 4
-format = 1
-

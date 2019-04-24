@@ -10,6 +10,7 @@
 [node name="Info" parent="." instance=ExtResource( 1 )]
 
 [node name="TerrainMap" parent="." instance=ExtResource( 2 )]
+cell_quadrant_size = 16
 
 [node name="Structures" type="Node2D" parent="."]
 
@@ -19,6 +20,7 @@
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, -500 )
+load_distance = 150
 gravity = 20
 jump_height = -300
 

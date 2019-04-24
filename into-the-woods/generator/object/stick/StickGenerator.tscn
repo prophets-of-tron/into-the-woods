@@ -7,5 +7,5 @@
 script = ExtResource( 2 )
 harsh_noise_multiplier = 1000
 harsh_noise_threshold = 0.05
-spread = 4
+spread = 8
 

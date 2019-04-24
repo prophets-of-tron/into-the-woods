@@ -77,9 +77,9 @@ func gen_structure(x):
 	emit_signal(\"structure_generated\", structure, closest_plant_x, structure_y)
 "
 
-[node name="CornGenerator" instance=ExtResource( 1 )]
+[node name="CornGenerator" index="0" instance=ExtResource( 1 )]
 script = SubResource( 1 )
-spread = 3
+spread = 8
 smooth_noise_multiplier = 1000.0
 smooth_noise_threshold = 0.1
 harsh_noise_threshold = -0.4

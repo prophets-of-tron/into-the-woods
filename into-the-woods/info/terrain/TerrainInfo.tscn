@@ -6,9 +6,9 @@
 [node name="TerrainInfo" instance=ExtResource( 1 )]
 editor/display_folded = true
 script = ExtResource( 2 )
-height_harshness = 0.25
-min_height = 100
-max_height = 200
-water_level = 136
+height_harshness = 0.16
+min_height = 30
+max_height = 130
+water_level = 66
 tiles_sand_above_water = 4
 

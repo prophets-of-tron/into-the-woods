@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bark.png-601a455422a56f80501f49693a90e10e.stex"
+path="res://.import/Tree0.png-5858fb47e15f782ed4e8b24d0a0c6acd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://structure/tree/tile/bark/Bark.png"
-dest_files=[ "res://.import/Bark.png-601a455422a56f80501f49693a90e10e.stex" ]
+source_file="res://structure/tree/tree0/Tree0.png"
+dest_files=[ "res://.import/Tree0.png-5858fb47e15f782ed4e8b24d0a0c6acd.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
