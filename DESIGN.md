@@ -42,6 +42,25 @@ Open world, exploration
 ### Mechanics
 Every structure is represented on the map as a group of tiles, but internally, is a single entity. For instance, a tree structure is represented on the map as bark and leaves tiles, but it is recognized as a tree. This can be seen when you cut down the tree, it doesn't merely drop its tiles, but wood and stick objects.
 
+#### Physics
+Earth physics
+
+#### Movement in the game
+A and D to move, space / W for jump (TODO sneak ...?)
+
+#### Actions
+- Everything the player can do is an action. There are object actions (which can only be used when holding a certain object), non-object actions (which can only be used when not holding an object) and object-independent actions.
+- All object actions can be found in [Objects](#Objects).
+- List of non-object actions:
+  - Pick up object (TODO)
+  - Process / Weave (can't decide whether to make it universal or specific; TODO) (TODO)
+- List of object-independent actions:
+  - Move (`A` and `D` by default)
+  - Jump (`Space`)
+  - Eat (TODO)
+<!-- Including whatever switches and buttons are used, interacting with objects, and what means of communication are used -->
+
+#### Player
 Numerical player attributes:
 - *hunger*
   - Used by time.
@@ -63,14 +82,28 @@ Other player attributes:
   - Has finite space (objects take up this space with inventory cost).
 <!-- What are the rules to the game, both implicit and explicit.  This is the model of the universe that the game works under.  Think of it as a simulation of a world, how do all the pieces interact?  This actually can be a very large section. -->
 
-#### Physics
-Earth physics
+#### Tiles
+- Modeled after Earth
+- Tiles:
+  - **Terrain tiles**:
+    - List:
+      - *Grass*
+      - *Dirt*
+      - *Stone*
+      - *Sand*
+      - *Water*
+    - Mechanics:
+      - Indestructible, though certain terrain tiles can be transformed into other terrain tiles after terrain generation (such as grass -> dirt and dirt -> grass).
+      - Blocking (cannot be walked through)
+
+  - **Structure tiles**:
+    - (List omitted; see [Structures](#Structures))
+    - Mechanics:
+      - Destructible
+      - Not blocking (can be walked past; except water)
 
 *Note: A tile is .5 meters long.*
 <!-- How does the physical universe work? -->
-
-#### Movement in the game
-A and D to move, space / W for jump (TODO sneak ...?)
 
 #### Objects
 - Definition:
@@ -97,8 +130,7 @@ A and D to move, space / W for jump (TODO sneak ...?)
   - Corn
     - Obtained:
       - Harvest (corn plants)
-    - Actions:
-      - Primary: Eat
+    - Actions (none)
   - Kernels
     - Obtained:
       - Split
@@ -136,12 +168,13 @@ A and D to move, space / W for jump (TODO sneak ...?)
         - 1 stone
     - Actions:
       - Primary: Till
-
 <!-- how to pick them up and move them -->
 
-#### Actions
-- See [Objects](#Objects)
-<!-- Including whatever switches and buttons are used, interacting with objects, and what means of communication are used -->
+#### Structures
+List:
+- Trees
+  - Tree Model 0 (no types of trees for now, just this placeholder model)
+- Corn
 
 #### Combat
 No combat *yet*
@@ -183,43 +216,6 @@ No combat *yet*
 
 #### Areas
 <!-- Including the general description and physical characteristics as well as how it relates to the rest of the world (what levels use it, how it connects to other areas) -->
-- Modeled after Earth
-- Tiles:
-  - **Terrain tiles**:
-    - List:
-      - *Grass*
-      - *Dirt*
-      - *Stone*
-      - *Sand*
-      - *Water*
-    - Mechanics:
-      - Indestructible, though certain terrain tiles can be transformed into other terrain tiles after terrain generation (such as grass -> dirt and dirt -> grass).
-      - Blocking (cannot be walked through)
-
-  - **Structures**:
-    - List:
-      - Tree
-        - Design 0 (no types of trees until biomes):
-          - Tiles:
-            - *Log*
-            - *Leaves*
-          - Action results:
-            - Cut down:
-              - {n} wood
-              - {n} sticks
-      - Corn plants
-        - Tiles:
-          - *Corn plant*
-          - *Corn*
-        - Action results:
-          - Harvest
-            - {n} corn
-          - Cut down
-            - {n} corn plant
-            - {n} corn
-    - Tile mechanics:
-      - Destructible
-      - Not blocking (can be walked past; except water)
 
 ### Characters
 <!-- Each character should include the back story, personality, appearance, animations, abilities, relevance to the story and relationship to other characters -->
@@ -278,5 +274,7 @@ This is an open source and open asset project. If you don't feel comfortable mak
 *The game will use a pixel art style. I'm thinking, each texel should be 4px by 4px.*
 
 - Player
-- (All tiles)
+- Tiles (TODO)
+- Structures (painted with tiles; TODO)
+- Objects
 <!-- Key assets, how they are being developed.  Intended style. -->
