@@ -5,6 +5,8 @@ You reach your third decade working in your office job, and you can't do it anym
 
 ![Sample procedural generation](header.png)
 
+[WE NEED AN ARTIST]
+
 ## Overview
 
 Into the Woods is an open-world tile-based game, where spending enough time in the woods means winning the game. See the WIP [design doc](DESIGN.md) for more info.
