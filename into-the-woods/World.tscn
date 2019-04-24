@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://info/InfoManager.tscn" type="PackedScene" id=1]
-[ext_resource path="res://terrain/tile/TerrainMap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://terrain/TerrainMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://generator/GeneratorManager.tscn" type="PackedScene" id=3]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=4]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://terrain/tile/TileSet.tres" type="TileSet" id=1]
-[ext_resource path="res://terrain/tile/TerrainMap.gd" type="Script" id=2]
+[ext_resource path="res://terrain/TileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://terrain/TerrainMap.gd" type="Script" id=2]
 
 [node name="TerrainMap" type="TileMap"]
 tile_set = ExtResource( 1 )

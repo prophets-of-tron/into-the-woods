@@ -1,9 +1,10 @@
 [gd_resource type="TileSet" load_steps=6 format=2]
 
-[ext_resource path="res://terrain/tile/dirt/Dirt.png" type="Texture" id=1]
-[ext_resource path="res://terrain/tile/grass/Grass.png" type="Texture" id=2]
-[ext_resource path="res://terrain/tile/water/Water.png" type="Texture" id=3]
-[ext_resource path="res://terrain/tile/sand/Sand.png" type="Texture" id=4]
+[ext_resource path="res://terrain/dirt/Dirt.png" type="Texture" id=1]
+[ext_resource path="res://terrain/grass/Grass.png" type="Texture" id=2]
+[ext_resource path="res://terrain/water/Water.png" type="Texture" id=3]
+[ext_resource path="res://terrain/sand/Sand.png" type="Texture" id=4]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4, 4 )
