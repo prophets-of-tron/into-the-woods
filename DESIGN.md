@@ -102,7 +102,7 @@ Other player attributes:
       - Destructible
       - Not blocking (can be walked past; except water)
 
-*Note: A tile is .5 meters long.*
+*Note: A tile is .25 meters long.*
 <!-- How does the physical universe work? -->
 
 #### Objects
