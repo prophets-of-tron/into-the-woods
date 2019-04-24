@@ -4,6 +4,10 @@
 
 Welcome to Into the Woods' developer docs! Here we will lay out the basic elements of the game that all contributors should understand. If you are looking for more design details, see the WIP [game design doc].
 
+## Conventions Used in these Docs
+
+All links found in the body of a page point to game files, while those found at the bottom (in "See Also", for instance) point to other doc files.
+
 ## Tile-based Game
 
 This is a tile-based game, meaning that all terrain and structures are represented by tiles. Terrain tiles are indestructible and usually collision-solid, while structure tiles are interactable and collision-free.
@@ -19,7 +23,8 @@ The content in this game is generated procedurally. When the player traverses th
 - [Autoloaded Scenes]
 - [Player]
 - [Info nodes]
-- [Tile maps]
+- [Terrain]
+- [Sprites]
 - [Structures]
 - [Objects]
 - [Generators]
@@ -27,7 +32,7 @@ The content in this game is generated procedurally. When the player traverses th
 ### Guides
 
 - [Designing an Info Node]
-- [Designing a Tile]
+- [Designing a Terrain Tile]
 - [Designing an Object]
 - [Designing a Structure]
 - [Creating a Procedural Generator]
@@ -37,13 +42,14 @@ The content in this game is generated procedurally. When the player traverses th
 [autoloaded scenes]: overview/autoloads.md
 [player]: overview/player
 [info nodes]: overview/info
-[tile maps]: overview/tile
+[terrain]: overview/terrain
+[sprites]: overview/sprite
 [structures]: overview/structure
 [objects]: overview/object
 [generators]: overview/generator
 
 [designing an info node]: guides/create-info.md
-[designing a tile]: guides/design-tile.md
+[designing a terrain tile]: guides/design-terrain-tile.md
 [designing an object]: guides/design-object.md
 [designing a structure]: guides/design-structure.md
 [creating a procedural generator]: guides/create-generator.md
