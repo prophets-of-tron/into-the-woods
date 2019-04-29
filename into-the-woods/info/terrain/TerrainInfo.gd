@@ -28,3 +28,6 @@ func sample_height(x):
 	var height = floor(min_height + (max_height - min_height) * (nz + 1) / 2)
 	heights[x] = height
 	return height
+
+func has_water(x):
+	return sample_height(x) < water_level	# TODO: test!
