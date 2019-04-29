@@ -33,14 +33,13 @@ Open world, exploration
 
 #### Objectives
 
-- **To win**: Gain a certain amount of experience.
+- **To win**: Gain a certain amount of experience, without dying.
 <!-- What are the objectives of the game? -->
 
 #### Play Flow
 <!-- How does the game flow for the game player -->
 
 ### Mechanics
-Every structure is represented on the map as a group of tiles, but internally, is a single entity. For instance, a tree structure is represented on the map as bark and leaves tiles, but it is recognized as a tree. This can be seen when you cut down the tree, it doesn't merely drop its tiles, but wood and stick objects.
 
 #### Physics
 Earth physics
@@ -63,11 +62,14 @@ A and D to move, space / W for jump (TODO sneak ...?)
 #### Player
 Numerical player attributes:
 - *hunger*
-  - Used by time.
+  - Decreases with time.
   - Obtained by eating.
 - *energy*
   - Used by warping, walking, jumping, and sprinting.
   - Obtained by sleeping.
+- *health*
+  - Decreases when player is out in acid rain and blizzards; away from fire when it's cold.
+  - Obtained, time in healthy conditions, bandage item.
 - *experience*
   - Used for winning the game.
   - Obtained by completing most actions.
@@ -116,7 +118,8 @@ Other player attributes:
   - Have zero, one or two actions associated with it. These actions can only be performed while holding the corresponding object.
 - List:
   - String
-    - Obtained (TODO)
+    - Obtained:
+      - Weave (grass)
     - Actions:
       - Primary: Assemble
   - Bucket
