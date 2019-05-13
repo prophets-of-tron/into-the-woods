@@ -3,6 +3,8 @@
 [ext_resource path="res://info/base/Info.tscn" type="PackedScene" id=1]
 [ext_resource path="res://info/forest/ForestInfo.gd" type="Script" id=2]
 
+
+
 [node name="ForestInfo" instance=ExtResource( 1 )]
 editor/display_folded = true
 script = ExtResource( 2 )

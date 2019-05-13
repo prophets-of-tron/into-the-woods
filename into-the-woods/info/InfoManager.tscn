@@ -3,6 +3,8 @@
 [ext_resource path="res://info/terrain/TerrainInfo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://info/forest/ForestInfo.tscn" type="PackedScene" id=2]
 
+
+
 [node name="InfoManager" type="Node"]
 
 [node name="TerrainInfo" parent="." instance=ExtResource( 1 )]
