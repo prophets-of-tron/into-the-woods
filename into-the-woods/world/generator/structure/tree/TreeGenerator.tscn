@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://world/generator/structure/base/StructureGenerator.tscn" type="PackedScene" id=1]
+[ext_resource path="res://world/generator/structure/tree/TreeGenerator.gd" type="Script" id=2]
+
+
+[node name="TreeGenerator" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+spread = 20
+

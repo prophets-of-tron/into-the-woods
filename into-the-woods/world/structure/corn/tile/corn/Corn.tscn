@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://world/structure/base/tile/StructureTile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://world/structure/corn/tile/corn/Corn.png" type="Texture" id=2]
+
+
+[node name="Corn" instance=ExtResource( 1 )]
+texture = ExtResource( 2 )
+
