@@ -12,37 +12,37 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "BaseObject",
 "language": "GDScript",
-"path": "res://object/base/BaseObject.gd"
+"path": "res://world/object/base/BaseObject.gd"
 }, {
 "base": "Node",
 "class": "Generator",
 "language": "GDScript",
-"path": "res://generator/base/Generator.gd"
+"path": "res://world/generator/base/Generator.gd"
 }, {
 "base": "Node",
 "class": "GeneratorManager",
 "language": "GDScript",
-"path": "res://generator/GeneratorManager.gd"
+"path": "res://world/generator/GeneratorManager.gd"
 }, {
 "base": "Generator",
 "class": "ObjectGenerator",
 "language": "GDScript",
-"path": "res://generator/object/base/ObjectGenerator.gd"
+"path": "res://world/generator/object/base/ObjectGenerator.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
-"path": "res://player/Player.gd"
+"path": "res://world/player/Player.gd"
 }, {
 "base": "Area2D",
 "class": "Structure",
 "language": "GDScript",
-"path": "res://structure/base/Structure.gd"
+"path": "res://world/structure/base/Structure.gd"
 }, {
 "base": "Generator",
 "class": "StructureGenerator",
 "language": "GDScript",
-"path": "res://generator/structure/base/StructureGenerator.gd"
+"path": "res://world/generator/structure/base/StructureGenerator.gd"
 } ]
 _global_script_class_icons={
 "BaseObject": "",
@@ -57,13 +57,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Into the Woods"
-run/main_scene="res://World.tscn"
+run/main_scene="res://Game.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Constants="*res://constants/Constants.tscn"
-State="*res://state/State.tscn"
+State="*res://world/state/State.tscn"
 
 [input]
 
