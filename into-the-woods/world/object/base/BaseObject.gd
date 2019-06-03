@@ -1,4 +1,4 @@
-extends Node2D
+extends RigidBody2D
 # class_name may cause circular references in some cases :/
 class_name BaseObject
 

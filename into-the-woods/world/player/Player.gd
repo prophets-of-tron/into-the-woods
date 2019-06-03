@@ -20,21 +20,43 @@ var motion = Vector2()
 var jumping = false
 
 var gen_manager:GeneratorManager
+var inv
+var objects
 var state
 var constants
 
 func _ready():
 	# TODO: is it ok to reference other scenes so much? lol
 	gen_manager = get_node("/root/Game/World/Generator")
+	inv = get_node("/root/Game/HUD/InventoryUI")
 	state = get_node("/root/State")
+	objects = get_node("/root/Game/World/Objects")
 	constants = get_node("/root/Constants")
-	
-func _process(delta):
+
+func _get_config_input():
 	if Input.is_action_just_pressed("bypass_constraints"):
 		state.bypass_constraints = not state.bypass_constraints
 	if Input.is_action_just_pressed("screenshot_mode"):
 		state.screenshot_mode = not state.screenshot_mode
 		visible = not state.screenshot_mode
+
+func _check_collect_object():
+	if Input.is_action_just_pressed("collect_object"):
+		# Get closest object to player, if any within range
+		var closest_dist = INF	# doesn't exist
+		var closest_obj = null
+		for object in objects.get_children():
+			var dist = object.position.distance_to(self.position)
+			if dist < closest_dist and dist <= reach:
+				closest_dist = dist
+				closest_obj = object
+		
+		if closest_obj:
+			inv.add_object(closest_obj)
+
+func _process(delta):
+	_get_config_input()
+	_check_collect_object()
 
 func _check_load():
 	# Load chunks, if player is in semi-new territory

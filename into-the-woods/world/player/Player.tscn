@@ -3,7 +3,6 @@
 [ext_resource path="res://world/player/Player.gd" type="Script" id=1]
 [ext_resource path="res://world/player/Player.png" type="Texture" id=2]
 
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 8.0
 height = 0.0
@@ -16,7 +15,7 @@ scale = Vector2( 1.5, 1.5 )
 collision_layer = 4
 script = ExtResource( 1 )
 load_distance = 70
-reach = 4
+reach = 50
 gravity = -20
 acceleration = 50
 max_speed = 200

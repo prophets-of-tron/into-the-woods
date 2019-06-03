@@ -2,7 +2,6 @@
 
 [ext_resource path="res://world/object/base/BaseObject.gd" type="Script" id=1]
 
-
 [node name="BaseObject" type="RigidBody2D"]
 collision_layer = 2
 script = ExtResource( 1 )
