@@ -23,17 +23,19 @@ var gen_manager:GeneratorManager
 var inv
 var objects
 var state
+var util
 var constants
 
 func _ready():
 	# TODO: is it ok to reference other scenes so much? lol
 	gen_manager = get_node("/root/Game/World/Generator")
-	inv = get_node("/root/Game/HUD/InventoryUI")
+	inv = get_node("HUD/Inventory")
 	state = get_node("/root/State")
 	objects = get_node("/root/Game/World/Objects")
+	util = get_node("/root/Util")
 	constants = get_node("/root/Constants")
 
-func _get_config_input():
+func _get_settings_input():
 	if Input.is_action_just_pressed("bypass_constraints"):
 		state.bypass_constraints = not state.bypass_constraints
 	if Input.is_action_just_pressed("screenshot_mode"):
@@ -50,13 +52,26 @@ func _check_collect_object():
 			if dist < closest_dist and dist <= reach:
 				closest_dist = dist
 				closest_obj = object
-		
+
 		if closest_obj:
 			inv.add_object(closest_obj)
 
-func _process(delta):
-	_get_config_input()
+func _get_input():
+	_get_settings_input()
 	_check_collect_object()
+
+func _process(delta):
+	_get_input()
+
+func _check_switch_object(event):
+	if event is InputEventMouseButton and event.is_pressed():
+		if event.button_index == BUTTON_WHEEL_DOWN:
+			inv.selected_slot = Util.positive_mod(inv.selected_slot - 1, inv.size)
+		if event.button_index == BUTTON_WHEEL_UP:
+			inv.selected_slot = Util.positive_mod(inv.selected_slot + 1, inv.size)
+
+func _input(event):
+	_check_switch_object(event)
 
 func _check_load():
 	# Load chunks, if player is in semi-new territory
@@ -78,7 +93,7 @@ func _check_load():
 
 func _physics_process(delta):
 	motion.y += gravity
-	
+
 	var curr_max_speed = max_speed_cheat if state.bypass_constraints else max_speed
 
 	var moving = false

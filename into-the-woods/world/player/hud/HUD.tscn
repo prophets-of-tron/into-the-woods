@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://world/player/inventory/Inventory.tscn" type="PackedScene" id=1]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Inventory" parent="." instance=ExtResource( 1 )]
+

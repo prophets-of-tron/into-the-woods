@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://hud/inventory/cell/slot/InventorySlot.tscn" type="PackedScene" id=1]
-[ext_resource path="res://hud/inventory/cell/icon/InventoryIcon.tscn" type="PackedScene" id=2]
+[ext_resource path="res://world/player/inventory/cell/slot/InventorySlot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://world/player/inventory/cell/icon/InventoryIcon.tscn" type="PackedScene" id=2]
+
 
 [node name="InventoryCell" type="Node2D"]
 
