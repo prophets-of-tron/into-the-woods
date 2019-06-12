@@ -10,9 +10,17 @@ func _selected_slot_set(value):
 		print("[ERROR] Failed to set selected inventory slot to ", value, " because it's outside of the valid range.")
 		return
 
-	get_child(selected_slot).texture = normal_texture	# revert previously selected slot
+	var before = get_child(selected_slot)
+	if before != null:
+		before.texture = normal_texture	# revert previously selected slot
+		before.get_object().unequip()
+
 	selected_slot = value
-	get_child(selected_slot).texture = selected_texture # update newly selected slot
+
+	var after = get_child(selected_slot)
+	if after != null:
+		after.texture = selected_texture # update newly selected slot
+		after.get_object().equip()
 
 func _selected_slot_get():
 	return selected_slot
@@ -22,9 +30,6 @@ var size
 func _ready():
 	size = columns
 	selected_slot = 0
-
-func switch_object(idx):
-	pass
 
 func add_object(obj):
 	var n = 0
@@ -36,11 +41,15 @@ func add_object(obj):
 		return false
 	else:
 		get_child(n).set_object(obj)
+		if n == selected_slot:
+			get_child(n).equip()
 		return true
 
 func remove_object(obj):
 	for child in get_children():
 		if child.get_object() == obj:
+			if obj == get_child(selected_slot).get_object():
+				child.unequip()
 			child.clear_object()
 			return true
 	# doesn't exist in inventory

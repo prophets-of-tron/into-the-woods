@@ -1,3 +1,5 @@
+# Stores, manages and renders a single object in the inventory
+
 extends TextureRect
 
 var player
@@ -20,13 +22,34 @@ func clear_object(obj):
 		obj.position = player.position
 		objects.add_child(obj)
 
-func set_object(obj: RigidBody2D):
+func set_object(obj):
 	# drop current object, if there is one
 	clear_object(obj)
-	
+
 	objects.remove_child(obj)
 	obj.mode = RigidBody2D.MODE_STATIC
 	obj.rotation = 0
 	add_child(obj)
 	obj.position = self.texture.get_size() / 2
-	
+
+func equip():
+	var obj = get_object()
+	if obj != null:
+		obj.equip()
+
+# uses the object the primary way
+func primary():
+	var obj = get_object()
+	if obj != null:
+		obj.primary()
+
+# uses the object the primary way
+func secondary():
+	var obj = get_object()
+	if obj != null:
+		obj.secondary()
+
+func unequip():
+	var obj = get_object()
+	if obj != null:
+		obj.unequip()

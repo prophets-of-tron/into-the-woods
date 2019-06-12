@@ -64,6 +64,7 @@ func _process(delta):
 	_get_input()
 
 func _check_switch_object(event):
+	# TODO: decrease sensitivity
 	if event is InputEventMouseButton and event.is_pressed():
 		if event.button_index == BUTTON_WHEEL_DOWN:
 			inv.selected_slot = Util.positive_mod(inv.selected_slot - 1, inv.size)
