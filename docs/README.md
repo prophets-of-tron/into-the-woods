@@ -8,13 +8,13 @@ Welcome to Into the Woods' developer docs! Here we will lay out the basic elemen
 
 All links found in the body of a page point to game files, while those found at the bottom (in "See Also", for instance) point to other doc files.
 
-## Tile-based Game
+## Core Components
 
-This is a tile-based game, meaning that all terrain and structures are represented by tiles. Terrain tiles are indestructible and usually collision-solid, while structure tiles are interactable and collision-free.
+Terrain tiles, structures and objects, along with the player, make up the game world. Terrain is composed of [terrain tiles][terrain] which are static, [structures] which are static, and [objects] which are not static.
 
 ## Procedural Generation
 
-The content in this game is generated procedurally. When the player traverses the new 2d landscape, more content is generated and certain parts of the old content is unloaded (such as terrain, which can be regenerated to be exactly the same).
+The content in this game is generated procedurally. Specifically, as the player traverses the new 2d landscape, more content is generated and certain parts of the old content is unloaded (such as terrain, which can be regenerated to be exactly the same).
 
 ## Where to Go from Here
 
