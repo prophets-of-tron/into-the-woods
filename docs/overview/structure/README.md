@@ -8,4 +8,4 @@
 
 - [Designing a Structure](/docs/guides/design-structure.md)
 
-[structures]: /into-the-woods/structure
+[structures]: /into-the-woods/world/structure

@@ -9,4 +9,4 @@
 * [Terrain Generation](docs/overview/generator/terrain.md)
 * [Designing a tile](docs/guides/design-tile.md)
 
-[terrain]: /into-the-woods/terrain
+[terrain]: /into-the-woods/world/terrain

@@ -3,9 +3,9 @@
 ## Overview
 
 [Generators] are nodes that create procedural content. Generators can currently be broken down into three categories:
-- [Terrain generator](/into-the-woods/generator/terrain) - creates the terrain
-- [Structure generators](/into-the-woods/generator/structure) - place structures
-- [Object generators](/into-the-woods/generator/object) - place objects
+- [Terrain generator](/into-the-woods/world/generator/terrain) - creates the terrain
+- [Structure generators](/into-the-woods/world/generator/structure) - place structures
+- [Object generators](/into-the-woods/world/generator/object) - place objects
 
 ## Explanation
 
@@ -18,4 +18,4 @@ Ultimately, all generators work on a stack-by-stack basis. In other words, every
 - [Object Generators](object.md)
 - [Creating a Generator](/docs/guides/create-generator.md)
 
-[generators]: /into-the-woods/generator
+[generators]: /into-the-woods/world/generator

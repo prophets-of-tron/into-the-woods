@@ -8,6 +8,6 @@
 
 - [Creating an Info Node](/docs/guides/create-info.md)
 
-[info nodes]: /into-the-woods/info
-[terrain]: /into-the-woods/info/terrain
-[forest]: /into-the-woods/info/forest
+[info nodes]: /into-the-woods/world/info
+[terrain]: /into-the-woods/world/info/terrain
+[forest]: /into-the-woods/world/info/forest

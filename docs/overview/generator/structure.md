@@ -10,4 +10,4 @@ func process_stack(x):
 
 Thus, `can_generate` returns `true` when a structure based at `x` should be generated, and `gen_structure` creates the entire structure.
 
-[structures]: /into-the-woods/structure
+[structures]: /into-the-woods/world/structure

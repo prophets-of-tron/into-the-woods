@@ -8,4 +8,4 @@
 
 - [Designing an Object](/docs/guides/design-object.md)
 
-[objects]: /into-the-woods/object
+[objects]: /into-the-woods/world/object

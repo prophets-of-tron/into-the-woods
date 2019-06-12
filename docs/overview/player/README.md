@@ -4,4 +4,4 @@
 - Movement is applied manually with its script.
 - Terrain is generated (and will unload/load) as the player moves back and forth.
 
-[player]: /into-the-woods/player
+[player]: /into-the-woods/world/player
