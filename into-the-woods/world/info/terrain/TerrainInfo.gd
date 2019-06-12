@@ -25,7 +25,7 @@ func sample_height(x):
 		return heights[x]
 
 	var nz = state.smooth_noise.get_noise_2d(height_harshness * x, 0)
-	var height = floor(min_height + (max_height - min_height) * (nz + 1) / 2)
+	var height = int(floor(min_height + (max_height - min_height) * (nz + 1) / 2))
 	heights[x] = height
 	return height
 
