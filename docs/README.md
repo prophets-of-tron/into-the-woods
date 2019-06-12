@@ -10,7 +10,7 @@ All links found in the body of a page point to game files, while those found at 
 
 ## Core Components
 
-Terrain tiles, structures and objects, along with the player, make up the game world. Terrain is composed of [terrain tiles][terrain] which are static, [structures] which are static, and [objects] which are not static.
+Terrain tiles, structures and objects, along with the player, make up the game world. Terrain is composed of [terrain tiles][terrain] which are static with collisions, [structures] are static with no collisions, and [objects] have physics with collisions.
 
 ## Procedural Generation
 
