@@ -22,7 +22,7 @@ func _ready():
 	#_calc_max_radius()
 	forest_info = get_node("/root/Game/World/Info/ForestInfo")
 	layer = get_node("/root/Game/World/Map/Structure/CropLayer")
-	constants = get_node("/root/Game/Constants")
+	constants = get_node("/root/Constants")
 
 #func _calc_max_radius():
 #	max_radius = 0
