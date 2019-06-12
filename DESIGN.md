@@ -1,6 +1,6 @@
 # Game Design Doc
 
-*Note: This design doc contains all plans for current and future builds.*
+*Note: This design doc contains plans for current and future builds, but it is incomplete.*
 
 ## Game Overview
 
