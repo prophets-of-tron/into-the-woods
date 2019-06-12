@@ -62,6 +62,10 @@ func gen_structure(x):
 	# in tiles
 	var closest_plant_x = int(spread * closest_plant_plant_x)
 	var base_elevation = terrain_info.sample_height(closest_plant_x)
+	
+	# Don't generate structures in water
+	if base_elevation <= terrain_info.water_level:
+		return
 
 	var structure = CornStructure.instance()
 	var structure_y = -base_elevation
