@@ -12,15 +12,15 @@ func _selected_set(value):
 		return
 
 	var before = get_child(selected)
-	if before != null:
-		before.texture = normal_texture	# revert previously selected slot
+	before.texture = normal_texture	# revert previously selected slot
+	if before.has_object():
 		before.get_object().unequip()
 
 	selected = value
 
 	var after = get_child(selected)
-	if after != null:
-		after.texture = selected_texture # update newly selected slot
+	after.texture = selected_texture # update newly selected slot
+	if after.has_object():
 		after.get_object().equip()
 
 func _selected_get():
@@ -46,12 +46,8 @@ func add_object(obj):
 			get_child(n).equip()
 		return true
 
-func remove_object(obj):
-	for child in get_children():
-		if child.get_object() == obj:
-			if obj == get_child(selected).get_object():
-				child.unequip()
-			child.clear_object()
-			return true
-	# doesn't exist in inventory
-	return false
+func remove_object(index):
+	var slot = get_child(index)
+	if index == selected:
+		slot.unequip()
+	slot.clear_object()

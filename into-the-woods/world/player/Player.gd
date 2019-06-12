@@ -66,10 +66,20 @@ func _check_use_object():
 	elif Input.is_action_just_pressed("use_object_secondary"):
 		selected_slot.secondary()
 
+func _check_drop_object():
+	var selected_slot = inv.get_child(inv.selected)
+	if not selected_slot.has_object():
+		return
+
+	# probably better to use Input.is_action_pressed here
+	if Input.is_action_pressed("drop_object"):
+		inv.remove_object(inv.selected)
+
 func _get_input():
 	_get_settings_input()
 	_check_collect_object()
 	_check_use_object()
+	_check_drop_object()
 
 func _process(delta):
 	_get_input()

@@ -15,8 +15,9 @@ func has_object():
 func get_object():
 	return get_child(0) if has_object() else null
 
-func clear_object(obj):
+func clear_object():
 	if has_object():
+		var obj = get_object()
 		obj.mode = RigidBody2D.MODE_RIGID
 		remove_child(get_child(0))
 		obj.position = player.position
@@ -26,7 +27,7 @@ func clear_object(obj):
 
 func set_object(obj):
 	# drop current object, if there is one
-	clear_object(obj)
+	clear_object()
 
 	objects.remove_child(obj)
 	obj.mode = RigidBody2D.MODE_STATIC
