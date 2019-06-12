@@ -56,9 +56,20 @@ func _check_collect_object():
 		if closest_obj:
 			inv.add_object(closest_obj)
 
+func _check_use_object():
+	var selected_slot = inv.get_child(inv.selected)
+	if not selected_slot.has_object():
+		return
+
+	if Input.is_action_just_pressed("use_object_primary"):
+		selected_slot.primary()
+	elif Input.is_action_just_pressed("use_object_secondary"):
+		selected_slot.secondary()
+
 func _get_input():
 	_get_settings_input()
 	_check_collect_object()
+	_check_use_object()
 
 func _process(delta):
 	_get_input()
@@ -67,9 +78,9 @@ func _check_switch_object(event):
 	# TODO: decrease sensitivity
 	if event is InputEventMouseButton and event.is_pressed():
 		if event.button_index == BUTTON_WHEEL_DOWN:
-			inv.selected_slot = Util.positive_mod(inv.selected_slot - 1, inv.size)
+			inv.selected = Util.positive_mod(inv.selected - 1, inv.size)
 		if event.button_index == BUTTON_WHEEL_UP:
-			inv.selected_slot = Util.positive_mod(inv.selected_slot + 1, inv.size)
+			inv.selected = Util.positive_mod(inv.selected + 1, inv.size)
 
 func _input(event):
 	_check_switch_object(event)

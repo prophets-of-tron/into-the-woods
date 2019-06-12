@@ -1,7 +1,20 @@
 extends BaseObject
 
+func _ready():
+	pass
+
+# hold item
+func equip():
+	pass
+
+# perform primary action
 func primary():
 	pass
 
-func _ready():
+# perform secondary action
+func secondary():
+	pass
+
+# unhold item
+func unequip():
 	pass

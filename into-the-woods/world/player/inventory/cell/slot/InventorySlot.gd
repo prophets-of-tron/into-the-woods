@@ -22,6 +22,8 @@ func clear_object(obj):
 		obj.position = player.position
 		objects.add_child(obj)
 
+		obj.player = null
+
 func set_object(obj):
 	# drop current object, if there is one
 	clear_object(obj)
@@ -31,6 +33,8 @@ func set_object(obj):
 	obj.rotation = 0
 	add_child(obj)
 	obj.position = self.texture.get_size() / 2
+
+	obj.player = player
 
 func equip():
 	var obj = get_object()

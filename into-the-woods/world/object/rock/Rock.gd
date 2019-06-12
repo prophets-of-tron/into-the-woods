@@ -1,9 +1,4 @@
-extends RigidBody2D
-# class_name may cause circular references in some cases :/
-class_name BaseObject
-
-# set to the player when in inventory and null when not
-var player = null
+extends BaseObject
 
 func _ready():
 	pass
@@ -23,3 +18,4 @@ func secondary():
 # unhold item
 func unequip():
 	pass
+
