@@ -51,13 +51,12 @@ A and D to move, space / W for jump (TODO sneak ...?)
 - Everything the player can do is an action. There are object actions (which can only be used when holding a certain object), non-object actions (which can only be used when not holding an object) and object-independent actions (where it doesn't matter).
 - All object actions can be found in [Objects](#Objects).
 - List of non-object actions (the input keys can always change):
-  - Pick up object (`N`)
   - Process / Weave (can't decide whether to make it universal or specific; TODO) (TODO)
+  - Collect
 - List of object-independent actions:
+  - Pick up object (`N`)
   - Move (`A` and `D` by default)
-  - Jump (`Space`)
-  - Eat (TODO)
-  - Collect (TODO)
+  - Jump
 <!-- Including whatever switches and buttons are used, interacting with objects, and what means of communication are used -->
 
 #### Player
@@ -134,7 +133,8 @@ Other player attributes:
   - Corn
     - Obtained:
       - Harvest (corn plants)
-    - Actions (none)
+    - Actions:
+      - Eat
   - Kernels
     - Obtained:
       - Split
