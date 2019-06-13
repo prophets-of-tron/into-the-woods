@@ -63,6 +63,10 @@ func gen_structure(x):
 	var closest_plant_x = int(spread * closest_plant_plant_x)
 	var base_elevation = terrain_info.sample_height(closest_plant_x)
 
+	# Don't generate structures in water
+	if base_elevation < terrain_info.water_level:
+		return
+
 	var structure = GrassStructure.instance()
 	# structure origin
 	structure.position = constants.tile_size * Vector2(closest_plant_x, base_elevation)
