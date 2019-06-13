@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://world/player/inventory/slot/InventorySlot_normal.png" type="Texture" id=1]
+[ext_resource path="res://world/player/noa/slot/NOASlot.gd" type="Script" id=2]
+
+[node name="NOASlot" type="TextureRect"]
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+

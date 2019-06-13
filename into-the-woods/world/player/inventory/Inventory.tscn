@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://world/player/inventory/Inventory.gd" type="Script" id=1]
-[ext_resource path="res://world/player/inventory/cell/slot/InventorySlot_normal.png" type="Texture" id=2]
-[ext_resource path="res://world/player/inventory/cell/slot/InventorySlot_selected.png" type="Texture" id=3]
-[ext_resource path="res://world/player/inventory/cell/slot/InventorySlot.tscn" type="PackedScene" id=4]
+[ext_resource path="res://world/player/inventory/slot/InventorySlot_normal.png" type="Texture" id=2]
+[ext_resource path="res://world/player/inventory/slot/InventorySlot_selected.png" type="Texture" id=3]
+[ext_resource path="res://world/player/inventory/slot/InventorySlot.tscn" type="PackedScene" id=4]
 
 [node name="Inventory" type="GridContainer"]
 anchor_right = 1.0

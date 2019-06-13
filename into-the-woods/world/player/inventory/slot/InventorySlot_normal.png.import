@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/InventorySlot_selected.png-a42ca8a02abd1656dcf85279cff0c0bf.stex"
+path="res://.import/InventorySlot_normal.png-d229e3b50dfb91e94a803e326f0dd4f1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/player/inventory/cell/slot/InventorySlot_selected.png"
-dest_files=[ "res://.import/InventorySlot_selected.png-a42ca8a02abd1656dcf85279cff0c0bf.stex" ]
+source_file="res://world/player/inventory/slot/InventorySlot_normal.png"
+dest_files=[ "res://.import/InventorySlot_normal.png-d229e3b50dfb91e94a803e326f0dd4f1.stex" ]
 
 [params]
 

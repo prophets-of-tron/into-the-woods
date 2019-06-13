@@ -21,18 +21,18 @@ var jumping = false
 
 var gen_manager:GeneratorManager
 var inv
+var noa
 var objects
 var state
-var util
 var constants
 
 func _ready():
 	# TODO: is it ok to reference other scenes so much? lol
 	gen_manager = get_node("/root/Game/World/Generator")
 	inv = get_node("HUD/Inventory")
+	noa = get_node("HUD/NOAToolbar")	# non-object actions
 	state = get_node("/root/State")
 	objects = get_node("/root/Game/World/Objects")
-	util = get_node("/root/Util")
 	constants = get_node("/root/Constants")
 
 func _get_settings_input():
@@ -41,6 +41,12 @@ func _get_settings_input():
 	if Input.is_action_just_pressed("screenshot_mode"):
 		state.screenshot_mode = not state.screenshot_mode
 		visible = not state.screenshot_mode
+
+func _check_switch_noa():
+	if Input.is_action_just_pressed("switch_noa_left"):
+		noa.selected = Util.positive_mod(noa.selected - 1, noa.size)
+	if Input.is_action_just_pressed("switch_noa_right"):
+		noa.selected = Util.positive_mod(noa.selected + 1, noa.size)
 
 func _check_collect_object():
 	if Input.is_action_just_pressed("collect_object"):
@@ -56,15 +62,20 @@ func _check_collect_object():
 		if closest_obj:
 			inv.add_object(closest_obj)
 
-func _check_use_object():
+func _check_perform_action():
 	var selected_slot = inv.get_child(inv.selected)
-	if not selected_slot.has_object():
-		return
-
 	if Input.is_action_just_pressed("action_primary"):
-		selected_slot.primary()
+		if selected_slot.has_object():
+			selected_slot.primary()
+		else:
+			noa.get_child(noa.selected).perform()
 	elif Input.is_action_just_pressed("action_seconary"):
-		selected_slot.secondary()
+		if selected_slot.has_object():
+			selected_slot.secondary()
+		else:
+			# At least for now, no secondary NOA toolbar
+			# (NOA => non-object action)
+			pass
 
 func _check_drop_object():
 	var selected_slot = inv.get_child(inv.selected)
@@ -77,8 +88,9 @@ func _check_drop_object():
 
 func _get_input():
 	_get_settings_input()
+	_check_switch_noa()
 	_check_collect_object()
-	_check_use_object()
+	_check_perform_action()
 	_check_drop_object()
 
 func _process(delta):

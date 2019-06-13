@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://world/player/noa/NOAToolbar.gd" type="Script" id=1]
+[ext_resource path="res://world/player/noa/slot/NOASlot_normal.png" type="Texture" id=2]
+[ext_resource path="res://world/player/noa/slot/NOASlot_selected.png" type="Texture" id=3]
+[ext_resource path="res://world/player/noa/slot/NOASlot.tscn" type="PackedScene" id=4]
+
+[node name="NOAToolbar" type="GridContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 550.0
+margin_right = -756.0
+margin_bottom = -18.0
+columns = 2
+script = ExtResource( 1 )
+normal_texture = ExtResource( 2 )
+selected_texture = ExtResource( 3 )
+
+[node name="NOASlot" parent="." instance=ExtResource( 4 )]
+texture = ExtResource( 3 )
+
+[node name="NOASlot2" parent="." instance=ExtResource( 4 )]
+margin_left = 36.0
+margin_right = 68.0
+texture = ExtResource( 2 )
+
