@@ -61,9 +61,9 @@ func _check_use_object():
 	if not selected_slot.has_object():
 		return
 
-	if Input.is_action_just_pressed("use_object_primary"):
+	if Input.is_action_just_pressed("action_primary"):
 		selected_slot.primary()
-	elif Input.is_action_just_pressed("use_object_secondary"):
+	elif Input.is_action_just_pressed("action_seconary"):
 		selected_slot.secondary()
 
 func _check_drop_object():
