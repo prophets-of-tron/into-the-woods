@@ -56,7 +56,7 @@ A and D to move, space / W for jump (TODO sneak ...?)
 - List of object-independent actions:
   - Pick up object (`N`)
   - Move (`A` and `D` by default)
-  - Jump
+  - Jump (`SPACEBAR` and `W`)
 <!-- Including whatever switches and buttons are used, interacting with objects, and what means of communication are used -->
 
 #### Player
