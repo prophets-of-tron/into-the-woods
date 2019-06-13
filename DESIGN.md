@@ -57,6 +57,7 @@ A and D to move, space / W for jump (TODO sneak ...?)
   - Move (`A` and `D` by default)
   - Jump (`Space`)
   - Eat (TODO)
+  - Collect (TODO)
 <!-- Including whatever switches and buttons are used, interacting with objects, and what means of communication are used -->
 
 #### Player
@@ -158,7 +159,7 @@ Other player attributes:
     - Actions (none)
   - Flint
     - Obtained:
-      - Search
+      - Collect
         - Near water
     - Actions (none)
   - Sickle
