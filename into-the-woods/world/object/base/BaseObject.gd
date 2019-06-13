@@ -8,6 +8,10 @@ var player = null
 func _ready():
 	pass
 
+func _enter_tree():
+	# cancel out world being flipped vertically
+	scale.y *= -1
+
 # hold item
 func equip():
 	pass

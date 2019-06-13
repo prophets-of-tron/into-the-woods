@@ -3,7 +3,6 @@
 [ext_resource path="res://world/terrain/TileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://world/terrain/TerrainMap.gd" type="Script" id=2]
 
-
 [node name="TerrainMap" type="TileMap"]
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 4, 4 )

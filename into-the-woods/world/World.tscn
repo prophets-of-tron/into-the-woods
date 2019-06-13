@@ -6,6 +6,7 @@
 [ext_resource path="res://world/player/Player.tscn" type="PackedScene" id=4]
 
 [node name="World" type="Node2D"]
+scale = Vector2( 1, -1 )
 
 [node name="Info" parent="." instance=ExtResource( 1 )]
 
@@ -19,7 +20,7 @@ cell_quadrant_size = 16
 [node name="Generator" parent="." instance=ExtResource( 3 )]
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 0, -500 )
+position = Vector2( 0, 500 )
 load_distance = 150
 gravity = 20
 jump_height = -300

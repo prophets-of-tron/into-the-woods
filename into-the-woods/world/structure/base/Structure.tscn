@@ -3,7 +3,6 @@
 [ext_resource path="res://world/structure/base/Structure.gd" type="Script" id=1]
 [ext_resource path="res://world/sprite/CustomSprite.tscn" type="PackedScene" id=2]
 
-
 [node name="Structure" type="Area2D"]
 script = ExtResource( 1 )
 

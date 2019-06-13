@@ -10,7 +10,7 @@ var constants
 
 func _ready():
 	constants = get_node("/root/Constants")
-	
+
 func process_stack(x):
 	var submerged = terrain_info.sample_height(x) <= terrain_info.water_level
 	if x % spread != 0 or submerged:
@@ -18,7 +18,11 @@ func process_stack(x):
 
 	if not state.harsh_noise.get_noise_2d(harsh_noise_multiplier * x, unique_seed) >= harsh_noise_threshold:
 		return
-	
+
 	var node = Rock.instance()
-	node.position = constants.tile_size * Vector2(x, -(terrain_info.sample_height(x) + 1))
+	var height = terrain_info.sample_height(x)
+	# remember that the world is flipped vertically, so positive is up
+	node.position = constants.tile_size * Vector2(x, height)
 	objects.add_child(node)
+
+	emit_signal("object_generated", node, x, height)

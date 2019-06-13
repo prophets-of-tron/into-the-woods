@@ -33,7 +33,7 @@ func _is_plant_at(x):
 	if x % spread != 0:
 		print("Invalid x value for corn plant origin!")
 		return
-
+	
 	# TEST EXISTANCE
 
 	var top = terrain_map.get_top_tile(x)
@@ -68,9 +68,8 @@ func gen_structure(x):
 		return
 
 	var structure = CornStructure.instance()
-	var structure_y = -base_elevation
 	# structure origin
-	structure.position = constants.tile_size * Vector2(closest_plant_x, structure_y)
+	structure.position = constants.tile_size * Vector2(closest_plant_x, base_elevation)
 	structures.add_child(structure)		# add to world
 
-	emit_signal("structure_generated", structure, closest_plant_x, structure_y)
+	emit_signal("structure_generated", structure, closest_plant_x, base_elevation)
