@@ -12,7 +12,7 @@ height = 0.0
 length = 16.0
 
 [node name="Player" type="KinematicBody2D"]
-scale = Vector2( 1.5, 1.5 )
+scale = Vector2( 1.5, -1.5 )
 collision_layer = 4
 script = ExtResource( 1 )
 load_distance = 70
