@@ -39,8 +39,15 @@ func _post_gen_stack(x):
 
 	for y in range(0, terrain_info.heights[x]):
 		if _is_tile_exposed(x, y):
+			
+			#Create dirt collision layer
+			map.set_cell(x, y-1, map.solid_dirt)
+			map.set_cell(x, y-2, map.solid_dirt)
+			
+			#Replace top dirt with grass	
 			if map.get_cell(x, y) == map.dirt:
 				map.set_cell(x, y, map.grass)
+				
 		if _is_tile_sand(x, y):
 			map.set_cell(x, y, map.sand)
 

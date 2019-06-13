@@ -1,16 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://world/terrain/dirt/Dirt.tscn" type="PackedScene" id=1]
 [ext_resource path="res://world/terrain/grass/Grass.tscn" type="PackedScene" id=2]
 [ext_resource path="res://world/terrain/water/Water.tscn" type="PackedScene" id=3]
 [ext_resource path="res://world/terrain/sand/Sand.tscn" type="PackedScene" id=4]
-
-
-
-
-
-
-
+[ext_resource path="res://world/terrain/base/SolidTile.tscn" type="PackedScene" id=5]
+[ext_resource path="res://world/terrain/dirt/Dirt.png" type="Texture" id=6]
 
 [node name="TerrainTileSet" type="Node2D"]
 
@@ -22,3 +17,6 @@
 
 [node name="Sand" parent="." instance=ExtResource( 4 )]
 
+[node name="Solid_Dirt" parent="." instance=ExtResource( 5 )]
+modulate = Color( 0.65098, 0.647059, 0.647059, 1 )
+texture = ExtResource( 6 )
