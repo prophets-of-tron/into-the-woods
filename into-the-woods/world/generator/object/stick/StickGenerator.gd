@@ -20,6 +20,12 @@ func process_stack(x):
 	if not state.harsh_noise.get_noise_2d(harsh_noise_multiplier * x, unique_seed) >= harsh_noise_threshold:
 		return
 		
+	var base_elevation = terrain_info.sample_height(x)
+	
+	# Don't generate in water
+	if base_elevation < terrain_info.water_level:
+		return
+		
 	var node = Stick.instance()
-	node.position = constants.tile_size * Vector2(x, -(terrain_info.sample_height(x) + 1))
+	node.position = constants.tile_size * Vector2(x, -(base_elevation + 1))
 	objects.add_child(node)
