@@ -40,13 +40,13 @@ The content in this game is generated procedurally. Specifically, as the player 
 [game design doc]: /DESIGN.md
 
 [autoloaded scenes]: overview/autoloads.md
-[player]: overview/player
-[info nodes]: overview/info
-[terrain]: overview/terrain
-[sprites]: overview/sprite
-[structures]: overview/structure
-[objects]: overview/object
-[generators]: overview/generator
+[player]: overview/world/player
+[info nodes]: overview/world/info
+[terrain]: overview/world/terrain
+[sprites]: overview/world/sprite
+[structures]: overview/world/structure
+[objects]: overview/world/object
+[generators]: overview/world/generator
 
 [designing an info node]: guides/create-info.md
 [designing a terrain tile]: guides/design-terrain-tile.md
