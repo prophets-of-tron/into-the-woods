@@ -16,4 +16,4 @@ func _ready():
 	sand = tile_set.find_tile_by_name("Sand")
 
 func get_top_tile(x):
-	return get_cell(x, -(terrain_info.sample_height(x) - 1))
+	return get_cell(x, terrain_info.sample_height(x) - 1)

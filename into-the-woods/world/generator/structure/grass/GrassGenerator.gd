@@ -64,9 +64,8 @@ func gen_structure(x):
 	var base_elevation = terrain_info.sample_height(closest_plant_x)
 
 	var structure = GrassStructure.instance()
-	var structure_y = -base_elevation
 	# structure origin
-	structure.position = constants.tile_size * Vector2(closest_plant_x, structure_y)
+	structure.position = constants.tile_size * Vector2(closest_plant_x, base_elevation)
 	structures.add_child(structure)		# add to world
 
-	emit_signal("structure_generated", structure, closest_plant_x, structure_y)
+	emit_signal("structure_generated", structure, closest_plant_x, base_elevation)

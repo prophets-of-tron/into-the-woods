@@ -19,9 +19,9 @@ func is_forest(x):
 	if typeof(x) != TYPE_INT:
 		print("[WARN] Non-int input to sample_height: " + x)
 		x = int(x)
-		
+
 	var top = terrain_map.get_top_tile(x)
-	if top != terrain_map.dirt and top != terrain_map.grass:
+	if not (top == terrain_map.dirt or top == terrain_map.grass):
 		return false
-	
+
 	return state.smooth_noise.get_noise_2d(x * location_multiplier, noise_offset) >= noise_threshold

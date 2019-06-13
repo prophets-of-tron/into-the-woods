@@ -19,7 +19,10 @@ func process_stack(x):
 		return
 	if not state.harsh_noise.get_noise_2d(harsh_noise_multiplier * x, unique_seed) >= harsh_noise_threshold:
 		return
-		
+
 	var node = Stick.instance()
-	node.position = constants.tile_size * Vector2(x, -(terrain_info.sample_height(x) + 1))
+	var height = terrain_info.sample_height(x)
+	node.position = constants.tile_size * Vector2(x, height)
 	objects.add_child(node)
+
+	emit_signal("object_generated", node, x, height)
