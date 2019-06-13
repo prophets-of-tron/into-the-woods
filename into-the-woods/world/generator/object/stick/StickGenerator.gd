@@ -22,6 +22,11 @@ func process_stack(x):
 
 	var node = Stick.instance()
 	var height = terrain_info.sample_height(x)
+	
+	#Don't generate in water
+	if height < terrain_info.water_level:
+		return
+		
 	node.position = constants.tile_size * Vector2(x, height)
 	objects.add_child(node)
 
