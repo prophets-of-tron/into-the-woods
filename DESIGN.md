@@ -48,10 +48,10 @@ Earth physics
 A and D to move, space / W for jump (TODO sneak ...?)
 
 #### Actions
-- Everything the player can do is an action. There are object actions (which can only be used when holding a certain object), non-object actions (which can only be used when not holding an object) and object-independent actions.
+- Everything the player can do is an action. There are object actions (which can only be used when holding a certain object), non-object actions (which can only be used when not holding an object) and object-independent actions (where it doesn't matter).
 - All object actions can be found in [Objects](#Objects).
-- List of non-object actions:
-  - Pick up object (TODO)
+- List of non-object actions (the input keys can always change):
+  - Pick up object (`N`)
   - Process / Weave (can't decide whether to make it universal or specific; TODO) (TODO)
 - List of object-independent actions:
   - Move (`A` and `D` by default)
@@ -156,25 +156,38 @@ Other player attributes:
     - Obtained:
       - Finding in forest
     - Actions (none)
+  - Flint
+    - Obtained:
+      - Search
+        - Near water
+    - Actions (none)
+  - Sickle
+    - Obtained:
+      - Assemble
+        - 1 stick
+        - 2 flint
+    - Actions:
+      - Cut (grass)
   - Axe
     - Obtained:
       - Assemble
         - 1 stick
-        - 1 stone
+        - 1 flint
     - Actions:
-      - Primary: Cut down
+      - Primary: Cut down (trees)
       - Secondary: Take apart
   - Hoe
     - Obtained:
       - Assemble
         - 1 stick
-        - 1 stone
+        - 1 flint
     - Actions:
       - Primary: Till
 <!-- how to pick them up and move them -->
 
 #### Structures
 List:
+- Grass
 - Trees
   - Tree Model 0 (no types of trees for now, just this placeholder model)
 - Corn
