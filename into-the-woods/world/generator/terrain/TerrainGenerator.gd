@@ -41,6 +41,8 @@ func _post_gen_stack(x):
 		if _is_tile_exposed(x, y):
 			if map.get_cell(x, y) == map.dirt:
 				map.set_cell(x, y, map.grass)
+				map.set_cell(x, y-1, map.solid_dirt)
+				map.set_cell(x, y-2, map.solid_dirt)
 		if _is_tile_sand(x, y):
 			map.set_cell(x, y, map.sand)
 
