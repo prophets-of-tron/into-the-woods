@@ -52,7 +52,7 @@ A and D to move, space / W for jump (TODO sneak ...?)
 - All object actions can be found in [Objects](#Objects).
 - List of non-object actions (the input keys can always change):
   - Process / Weave (can't decide whether to make it universal or specific; TODO) (TODO)
-  - Collect
+  - Gather
 - List of object-independent actions:
   - Pick up object (`N`)
   - Move (`A` and `D` by default)
@@ -159,7 +159,7 @@ Other player attributes:
     - Actions (none)
   - Flint
     - Obtained:
-      - Collect
+      - Gather
         - Near water
     - Actions (none)
   - Sickle
