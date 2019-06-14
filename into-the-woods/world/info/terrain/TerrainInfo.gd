@@ -18,7 +18,7 @@ func _ready():
 # Excludes water in calculation
 func sample_height(x):
 	if typeof(x) != TYPE_INT:
-		print("[WARN] Non-int input to sample_height: " + x)
+		print("[WARN] Non-int input to sample_height: " + str(x))
 		x = int(x)
 	# cache
 	if heights.has(x):

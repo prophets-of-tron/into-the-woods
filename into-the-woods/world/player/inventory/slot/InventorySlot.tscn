@@ -1,75 +1,14 @@
 [gd_scene load_steps=3 format=2]
 
+[ext_resource path="res://world/player/inventory/slot/InventorySlot.gd" type="Script" id=1]
+
 [sub_resource type="StreamTexture" id=1]
 flags = 4
 load_path = "res://.import/InventorySlot_normal.png-4656e41d85313c2f377303fc31eb4b48.stex"
-
-[sub_resource type="GDScript" id=2]
-script/source = "# Stores, manages and renders a single object in the inventory
-
-extends TextureRect
-
-var player
-var objects
-
-func _ready():
-	player = get_node(\"/root/Game/World/Player\")
-	objects = get_node(\"/root/Game/World/Objects\")
-
-func has_object():
-	return get_child_count() == 1
-
-func get_object():
-	return get_child(0) if has_object() else null
-
-func clear_object():
-	if has_object():
-		var obj = get_object()
-		obj.mode = RigidBody2D.MODE_RIGID
-		remove_child(get_child(0))
-		obj.position = player.position
-		objects.add_child(obj)
-
-		obj.player = null
-
-func set_object(obj):
-	# drop current object, if there is one
-	clear_object()
-
-	objects.remove_child(obj)
-	obj.mode = RigidBody2D.MODE_STATIC
-	obj.rotation = 0
-	add_child(obj)
-	obj.position = self.texture.get_size() / 2
-
-	obj.player = player
-
-func equip():
-	var obj = get_object()
-	if obj != null:
-		obj.equip()
-
-# uses the object the primary way
-func primary():
-	var obj = get_object()
-	if obj != null:
-		obj.primary()
-
-# uses the object the primary way
-func secondary():
-	var obj = get_object()
-	if obj != null:
-		obj.secondary()
-
-func unequip():
-	var obj = get_object()
-	if obj != null:
-		obj.unequip()
-"
 
 [node name="InventorySlot" type="TextureRect"]
 margin_right = 32.0
 margin_bottom = 32.0
 texture = SubResource( 1 )
-script = SubResource( 2 )
+script = ExtResource( 1 )
 

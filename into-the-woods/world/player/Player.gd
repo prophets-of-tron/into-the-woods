@@ -20,8 +20,8 @@ var motion = Vector2()
 var jumping = false
 
 var gen_manager:GeneratorManager
-var inv
-var noa
+var inventory
+var noa_toolbar
 var objects
 var state
 var constants
@@ -29,8 +29,8 @@ var constants
 func _ready():
 	# TODO: is it ok to reference other scenes so much? lol
 	gen_manager = get_node("/root/Game/World/Generator")
-	inv = get_node("HUD/Inventory")
-	noa = get_node("HUD/NOAToolbar")	# non-object actions
+	inventory = get_node("HUD/Inventory")
+	noa_toolbar = get_node("HUD/NOAToolbar")	# non-object actions
 	state = get_node("/root/State")
 	objects = get_node("/root/Game/World/Objects")
 	constants = get_node("/root/Constants")
@@ -44,9 +44,9 @@ func _get_settings_input():
 
 func _check_switch_noa():
 	if Input.is_action_just_pressed("switch_noa_left"):
-		noa.selected = Util.positive_mod(noa.selected - 1, noa.size)
+		noa_toolbar.selected = Util.positive_mod(noa_toolbar.selected - 1, noa_toolbar.size)
 	if Input.is_action_just_pressed("switch_noa_right"):
-		noa.selected = Util.positive_mod(noa.selected + 1, noa.size)
+		noa_toolbar.selected = Util.positive_mod(noa_toolbar.selected + 1, noa_toolbar.size)
 
 func _check_collect_object():
 	if Input.is_action_just_pressed("collect_object"):
@@ -60,15 +60,15 @@ func _check_collect_object():
 				closest_obj = object
 
 		if closest_obj:
-			inv.add_object(closest_obj)
+			inventory.add_object(closest_obj)
 
 func _check_perform_action():
-	var selected_slot = inv.get_child(inv.selected)
+	var selected_slot = inventory.get_child(inventory.selected)
 	if Input.is_action_just_pressed("action_primary"):
 		if selected_slot.has_object():
 			selected_slot.primary()
 		else:
-			noa.get_child(noa.selected).perform()
+			noa_toolbar.get_child(noa_toolbar.selected).perform()
 	elif Input.is_action_just_pressed("action_seconary"):
 		if selected_slot.has_object():
 			selected_slot.secondary()
@@ -78,13 +78,13 @@ func _check_perform_action():
 			pass
 
 func _check_drop_object():
-	var selected_slot = inv.get_child(inv.selected)
+	var selected_slot = inventory.get_child(inventory.selected)
 	if not selected_slot.has_object():
 		return
 
 	# probably better to use Input.is_action_pressed here
 	if Input.is_action_pressed("drop_object"):
-		inv.remove_object(inv.selected)
+		inventory.remove_object(inventory.selected)
 
 func _get_input():
 	_get_settings_input()
@@ -100,9 +100,9 @@ func _check_switch_object(event):
 	# TODO: decrease sensitivity
 	if event is InputEventMouseButton and event.is_pressed():
 		if event.button_index == BUTTON_WHEEL_DOWN:
-			inv.selected = Util.positive_mod(inv.selected - 1, inv.size)
+			inventory.selected = Util.positive_mod(inventory.selected - 1, inventory.size)
 		if event.button_index == BUTTON_WHEEL_UP:
-			inv.selected = Util.positive_mod(inv.selected + 1, inv.size)
+			inventory.selected = Util.positive_mod(inventory.selected + 1, inventory.size)
 
 func _input(event):
 	_check_switch_object(event)

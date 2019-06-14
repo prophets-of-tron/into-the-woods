@@ -29,7 +29,9 @@ func set_object(obj):
 	# drop current object, if there is one
 	clear_object()
 
-	objects.remove_child(obj)
+	# The parent should be `objects` or `null` (if generated from action)
+	if obj.get_parent() != null:
+		obj.get_parent().remove_child(obj)
 	obj.mode = RigidBody2D.MODE_STATIC
 	obj.rotation = 0
 	add_child(obj)
