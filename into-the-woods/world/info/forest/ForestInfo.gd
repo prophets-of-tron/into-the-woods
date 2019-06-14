@@ -8,10 +8,12 @@ export(float) var noise_offset
 export(float) var noise_threshold
 #export(float) var random_threshold
 
+var terrain_info
 var terrain_map
 var state
 
 func _ready():
+	terrain_info = get_node("/root/Game/World/Info/TerrainInfo")
 	terrain_map = get_node("/root/Game/World/TerrainMap")
 	state = get_node("/root/State")
 
@@ -22,6 +24,10 @@ func is_forest(x):
 
 	var top = terrain_map.get_top_tile(x)
 	if not (top == terrain_map.dirt or top == terrain_map.grass):
+		return false
+
+	# Don't generate structures in water
+	if terrain_info.sample_height(x) < terrain_info.water_level:
 		return false
 
 	return state.smooth_noise.get_noise_2d(x * location_multiplier, noise_offset) >= noise_threshold

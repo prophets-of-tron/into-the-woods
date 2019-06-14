@@ -42,10 +42,9 @@ func gen_structure(x):
 	# in tiles
 	var closest_tree_x = int(spread * closest_tree_tree_x)
 	var base_elevation = terrain_info.sample_height(closest_tree_x)
-	
-	# Don't generate structures in water
-	if base_elevation < terrain_info.water_level:
-		return
+
+	# Don't worry about water, because forest_info doesn't
+	# register water as forest
 
 	var structure = TreeStructure.instance()
 	# structure origin
