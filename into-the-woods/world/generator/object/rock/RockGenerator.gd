@@ -20,7 +20,10 @@ func process_stack(x):
 		return
 
 	var node = Rock.instance()
-	var height = terrain_info.sample_height(x)
+	
+	# Spawn the object slightly above ground to help fix ground collision
+	var height = terrain_info.sample_height(x) + 2
+	
 	# remember that the world is flipped vertically, so positive is up
 	node.position = constants.tile_size * Vector2(x, height)
 	objects.add_child(node)

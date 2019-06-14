@@ -21,7 +21,10 @@ func process_stack(x):
 		return
 
 	var node = Stick.instance()
-	var height = terrain_info.sample_height(x)
+	
+	#Spawn the object slightly above ground to help fix ground collision
+	var height = terrain_info.sample_height(x) + 2
+	
 	node.position = constants.tile_size * Vector2(x, height)
 	objects.add_child(node)
 
