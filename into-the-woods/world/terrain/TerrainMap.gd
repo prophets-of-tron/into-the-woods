@@ -3,6 +3,7 @@ extends TileMap
 var terrain_info
 
 var dirt
+var solid_dirt
 var grass
 var water
 var sand
@@ -11,6 +12,7 @@ func _ready():
 	terrain_info = get_node("/root/Game/World/Info/TerrainInfo")
 	
 	dirt = tile_set.find_tile_by_name("Dirt")
+	solid_dirt = tile_set.find_tile_by_name("Solid_Dirt")
 	grass = tile_set.find_tile_by_name("Grass")
 	water = tile_set.find_tile_by_name("Water")
 	sand = tile_set.find_tile_by_name("Sand")
