@@ -1,6 +1,6 @@
 # Game Design Doc
 
-*Note: This design doc contains plans for current and future builds, but it is incomplete.*
+*Note: This design doc contains plans for current and future builds (but it is incomplete).*
 
 ## Game Overview
 
@@ -28,12 +28,10 @@ Open world, exploration
 #### Game Progression
 
 #### Mission/challenge Structure
-
-#### Puzzle Structure
+<!-- #### Puzzle Structure -->
 
 #### Objectives
-
-- **To win**: Gain a certain amount of experience, without dying.
+- **To win**: Gain a certain amount of experience without dying.
 <!-- What are the objectives of the game? -->
 
 #### Play Flow
@@ -47,19 +45,9 @@ Earth physics
 #### Movement in the game
 A and D to move, space / W for jump (TODO sneak ...?)
 
-#### Actions
-- Everything the player can do is an action. There are object-specific actions (which can only be used when holding a certain object), non-object actions (which can only be used when not holding an object) and object-independent actions (where it doesn't matter).
-- All object-specific actions can be found in [Objects](#Objects).
-- List of non-object actions (the input keys can always change):
-  - Process / Weave (can't decide whether to make it universal or specific; TODO) (TODO)
-  - Gather
-- List of object-independent actions:
-  - Pick up object (`N`)
-  - Move (`A` and `D` by default)
-  - Jump (`SPACEBAR` and `W`)
-<!-- Including whatever switches and buttons are used, interacting with objects, and what means of communication are used -->
 
 #### Player
+##### Attributes
 Numerical player attributes:
 - *hunger*
   - Decreases with time.
@@ -83,6 +71,18 @@ Other player attributes:
   - Used for storing objects with player.
   - Has finite space (objects take up this space with inventory cost).
 <!-- What are the rules to the game, both implicit and explicit.  This is the model of the universe that the game works under.  Think of it as a simulation of a world, how do all the pieces interact?  This actually can be a very large section. -->
+
+##### Actions
+- Everything the player can do is an action. There are object-specific actions (which can only be used when holding a certain object), non-object actions (which can only be used when not holding an object) and object-independent actions (where it doesn't matter).
+- All object-specific actions can be found in [Objects](#Objects).
+- List of non-object actions (the input keys can always change):
+  - Gather
+  - Process / Weave (can't decide whether to make it universal or specific; TODO) (TODO)
+- List of object-independent actions:
+  - Pick up object (`N`)
+  - Move (`A` and `D` by default)
+  - Jump (`SPACEBAR` and `W`)
+<!-- Including whatever switches and buttons are used, interacting with objects, and what means of communication are used -->
 
 #### Tiles
 - Modeled after Earth
@@ -117,58 +117,59 @@ Other player attributes:
   - Have an inventory cost.
   - Have zero, one or two actions associated with it. These actions can only be performed while holding the corresponding object.
 - List:
-  - String
+  - Grass
+    - Obtained:
+      - Gather (grass structure)
+  - Twine
     - Obtained:
       - Weave (grass)
     - Actions:
       - Primary: Assemble
-  - Bucket
-    - Obtained (TODO)
-    - Actions:
-      - Primary: Harvest
-  - Map
-    - Obtained (TODO)
-    - Actions:
-      - Primary: Warp
-  - Corn
+  - Log
     - Obtained:
-      - Harvest (corn plants)
-    - Actions:
-      - Eat
-  - Kernels
-    - Obtained:
-      - Split
-        - Corn
-    - Actions:
-      - Primary: Plant
-  - Wood
-    - Obtained:
-      - Cutting down tree
-    - Actions:
-      - Primary: Build
-  - Stick
+      - Cut down (tree)
+    - Used:
+      - Assemble
+        - Shelter
+        - Large trap
+  - Branch
     - Obtained:
       - Finding in forest
-      - Cutting down tree
-      - Split
-        - Wood
+      - Cut down (tree)
+    - Actions (none)
+  - Basket
+    - Obtained:
+      - Assemble
+        - 2 branches
+    - Actions:
+      - Primary: Gather
+  - Stick
+    - Obtained:
+      - Process (branch) <!-- TODO: maybe process should be more specific -->
     - Actions (none)
   - Rock
     - Obtained:
       - Finding in forest
     - Actions (none)
-  - Flint
-    - Obtained:
-      - Gather
-        - Near water
-    - Actions (none)
-  - Sickle
+  - Small trap
     - Obtained:
       - Assemble
-        - 1 stick
-        - 2 flint
+        - 2<!-- or 3--> sticks
+        - 1 rock
+  - Large trap
+    - Obtained:
+      - Assemble
+        - 2<!-- or 3--> logs
+        - 1 rock
+  - Flint
+    - Obtained:
+      - Gather (near water)
+    - Actions (none)
+  - Berries
+    - Obtained:
+      - Gather (bush structure)
     - Actions:
-      - Cut (grass)
+      - Eat
   - Axe
     - Obtained:
       - Assemble
@@ -177,13 +178,15 @@ Other player attributes:
     - Actions:
       - Primary: Cut down (trees)
       - Secondary: Take apart
-  - Hoe
-    - Obtained:
-      - Assemble
-        - 1 stick
-        - 1 flint
+  - Map
+    - Obtained (TODO)
     - Actions:
-      - Primary: Till
+      - Primary: Warp
+  <!-- - Wood
+    - Obtained:
+      - Cutting down tree
+    - Actions:
+      - Primary: Build -->
 <!-- how to pick them up and move them -->
 
 #### Structures
@@ -191,7 +194,6 @@ List:
 - Grass
 - Trees
   - Tree Model 0 (no types of trees for now, just this placeholder model)
-- Corn
 
 #### Combat
 No combat *yet*
@@ -203,8 +205,10 @@ No combat *yet*
   - Used for winning the game.
 
 #### Screen Flow
-- Main screen
-- Inventory screen
+- Main menu
+- Game
+  - Action UI
+<!-- - Inventory screen -->
 <!-- A graphical description of how each screen is related to every other and a description of the purpose of each screen. -->
 
 ### Game Options
