@@ -48,8 +48,8 @@ Earth physics
 A and D to move, space / W for jump (TODO sneak ...?)
 
 #### Actions
-- Everything the player can do is an action. There are object actions (which can only be used when holding a certain object), non-object actions (which can only be used when not holding an object) and object-independent actions (where it doesn't matter).
-- All object actions can be found in [Objects](#Objects).
+- Everything the player can do is an action. There are object-specific actions (which can only be used when holding a certain object), non-object actions (which can only be used when not holding an object) and object-independent actions (where it doesn't matter).
+- All object-specific actions can be found in [Objects](#Objects).
 - List of non-object actions (the input keys can always change):
   - Process / Weave (can't decide whether to make it universal or specific; TODO) (TODO)
   - Gather

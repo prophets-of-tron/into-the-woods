@@ -19,7 +19,7 @@ There are currently no releases of the game, as it is in very early development.
 
 ## Development setup
 
-This game is built in the [Godot game engine][godot], so you will need that installed. Then, just clone and start open-sourcing. The game's developer documentation can be found [here](/docs).
+This game is built in the [Godot game engine][godot], so you will need that installed. Then, just clone and start open-sourcing. See [Contributing](#Contributing).
 
 <!--## Release History
 
@@ -52,9 +52,11 @@ Distributed under the GNU GPLv3 license. See ``LICENSE`` for more information.
 1. Fork it (<https://github.com/prophets-of-tron/into-the-woods/fork>)
 2. Create your feature branch (`git checkout -b fooBar`)
 3. (Optional) Discuss your changes with someone on the Discord server.
-4. Commit your changes (`git commit -am ':emoji: Add some fooBar'`, [commit message emoji guide](http://gitmoji.carloscuesta.me/))
+4. Commit your changes (`git commit -am ':emoji: Add some fooBar'`). [This is our commit message emoji guide](http://gitmoji.carloscuesta.me/)), but if you have any  please ask!
 5. Push to the branch (`git push origin fooBar`)
 6. Create a new Pull Request
+
+The game's developer documentation can be found [here](/docs) and its conventions [here](/docs/conventions.md).
 
 <!-- Markdown link & img dfn's -->
 <!--[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
