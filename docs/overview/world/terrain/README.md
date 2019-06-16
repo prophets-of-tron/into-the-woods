@@ -7,6 +7,6 @@
 ## See Also
 
 * [Terrain Generation](/docs/overview/world/generator/terrain.md)
-* [Designing a tile](/docs/guides/design-tile.md)
+* [Designing a tile](/docs/guides/design-terrain-tile.md)
 
 [terrain]: /into-the-woods/world/terrain
