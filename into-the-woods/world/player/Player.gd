@@ -95,17 +95,25 @@ func _get_input():
 
 func _process(delta):
 	_get_input()
+	
+func _check_switch_object_key(event):
+	if event is InputEventKey and event.pressed:
+		# Take advantage of the continuous progression of key codes.
+		# We must change this if the inventory size changes.
+		if event.scancode >= KEY_1 and event.scancode <= KEY_9:
+			inventory.selected = event.scancode - KEY_1
 
-func _check_switch_object(event):
+func _check_switch_object_mouse(event):
 	# TODO: decrease sensitivity
-	if event is InputEventMouseButton and event.is_pressed():
+	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == BUTTON_WHEEL_DOWN:
 			inventory.selected = Util.positive_mod(inventory.selected - 1, inventory.size)
 		if event.button_index == BUTTON_WHEEL_UP:
 			inventory.selected = Util.positive_mod(inventory.selected + 1, inventory.size)
 
 func _input(event):
-	_check_switch_object(event)
+	_check_switch_object_key(event)
+	_check_switch_object_mouse(event)
 
 func _check_load():
 	# Load chunks, if player is in semi-new territory
