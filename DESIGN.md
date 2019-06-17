@@ -95,8 +95,7 @@ Other player attributes:
       - *Sand*
       - *Water*
     - Mechanics:
-      - Indestructible, though certain terrain tiles can be transformed into other terrain tiles after terrain generation (such as grass -> dirt and dirt -> grass).
-      - Blocking (cannot be walked through)
+      - Immutable
 
   - **Structure tiles**:
     - (List omitted; see [Structures](#Structures))
