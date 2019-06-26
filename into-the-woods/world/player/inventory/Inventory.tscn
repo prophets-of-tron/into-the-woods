@@ -22,33 +22,32 @@ texture = ExtResource( 3 )
 
 [node name="InventorySlot2" parent="." instance=ExtResource( 4 )]
 margin_left = 36.0
-margin_right = 68.0
+margin_right = 36.0
 
 [node name="InventorySlot3" parent="." instance=ExtResource( 4 )]
-margin_left = 72.0
-margin_right = 104.0
+margin_left = 40.0
+margin_right = 40.0
 
 [node name="InventorySlot4" parent="." instance=ExtResource( 4 )]
-margin_left = 108.0
-margin_right = 140.0
+margin_left = 44.0
+margin_right = 44.0
 
 [node name="InventorySlot5" parent="." instance=ExtResource( 4 )]
-margin_left = 144.0
-margin_right = 176.0
+margin_left = 48.0
+margin_right = 48.0
 
 [node name="InventorySlot6" parent="." instance=ExtResource( 4 )]
-margin_left = 180.0
-margin_right = 212.0
+margin_left = 52.0
+margin_right = 52.0
 
 [node name="InventorySlot7" parent="." instance=ExtResource( 4 )]
-margin_left = 216.0
-margin_right = 248.0
+margin_left = 56.0
+margin_right = 56.0
 
 [node name="InventorySlot8" parent="." instance=ExtResource( 4 )]
-margin_left = 252.0
-margin_right = 284.0
+margin_left = 60.0
+margin_right = 60.0
 
 [node name="InventorySlot9" parent="." instance=ExtResource( 4 )]
-margin_left = 288.0
-margin_right = 320.0
-
+margin_left = 64.0
+margin_right = 64.0
