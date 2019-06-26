@@ -45,9 +45,11 @@ Earth physics
 #### Movement in the game
 A and D to move, space / W for jump (TODO sneak ...?)
 
+#### Entities
+Entities are conscious things in the world.
 
-#### Player
-##### Attributes
+##### Player
+###### Attributes
 Numerical player attributes:
 - *hunger*
   - Decreases with time.
@@ -71,8 +73,7 @@ Other player attributes:
   - Used for storing objects with player.
   - Has finite space (objects take up this space with inventory cost).
 <!-- What are the rules to the game, both implicit and explicit.  This is the model of the universe that the game works under.  Think of it as a simulation of a world, how do all the pieces interact?  This actually can be a very large section. -->
-
-##### Actions
+###### Actions
 - Everything the player can do is an action. There are object-specific actions (which can only be used when holding a certain object), non-object actions (which can only be used when not holding an object) and object-independent actions (where it doesn't matter).
 - All object-specific actions can be found in [Objects](#Objects).
 - List of non-object actions (the input keys can always change):
@@ -83,6 +84,11 @@ Other player attributes:
   - Move (`A` and `D` by default)
   - Jump (`SPACEBAR` and `W`)
 <!-- Including whatever switches and buttons are used, interacting with objects, and what means of communication are used -->
+
+##### Animals
+##### Wild hog
+
+#####
 
 #### Tiles
 - Modeled after Earth
@@ -116,76 +122,81 @@ Other player attributes:
   - Have an inventory cost.
   - Have zero, one or two actions associated with it. These actions can only be performed while holding the corresponding object.
 - List:
-  - Grass
+  - Straw
     - Obtained:
-      - Gather (grass structure)
+      - Harvest (grass structure)
   - Twine
     - Obtained:
-      - Weave (grass)
+      - Weave (1 straw)
     - Actions:
       - Primary: Assemble
-  - Log
+  - Berries
     - Obtained:
-      - Cut down (tree)
-    - Used:
-      - Assemble
-        - Shelter
-        - Large trap
+      - Harvest (bush structure)
+    - Actions:
+      - Eat
   - Branch
     - Obtained:
       - Finding in forest
-      - Cut down (tree)
+      - Cut (tree)
     - Actions (none)
   - Basket
     - Obtained:
-      - Assemble
-        - 2 branches
-    - Actions:
-      - Primary: Gather
+      - Weave (1 straw + 1 twine)
+    - Actions (TODO)
   - Stick
     - Obtained:
-      - Process (branch) <!-- TODO: maybe process should be more specific -->
+      - Trim (branch)
     - Actions (none)
   - Rock
     - Obtained:
       - Finding in forest
     - Actions (none)
-  - Small trap
-    - Obtained:
-      - Assemble
-        - 2<!-- or 3--> sticks
-        - 1 rock
-  - Large trap
-    - Obtained:
-      - Assemble
-        - 2<!-- or 3--> logs
-        - 1 rock
   - Flint
     - Obtained:
-      - Gather (near water)
+      - Search (near water)
     - Actions (none)
-  - Berries
-    - Obtained:
-      - Gather (bush structure)
-    - Actions:
-      - Eat
   - Axe
     - Obtained:
       - Assemble
         - 1 stick
         - 1 flint
     - Actions:
-      - Primary: Cut down (trees)
-      - Secondary: Take apart
+      - Primary: Cut (trees)
+      - Secondary: Build
+  - Bow
+    - Obtained:
+      - Build:
+        - 1 twine
+        - 1 stick
+    - Actions:
+      - Shoot
+  - Log
+    - Obtained:
+      - Cut (tree)
+    - Used:
+      - Assemble
+        - Shelter
+        - Large trap
+  - Small trap
+    - Obtained:
+      - Build
+        - 1 twine
+        - 2<!-- or 3--> sticks
+        - 1 rock
+  - Large trap
+    - Obtained:
+      - Build
+        - 1 twine
+        - 2<!-- or 3--> logs
+        - 1 rock
   - Map
-    - Obtained (TODO)
+    - Obtained:
+      - Assemble
+        - 1 birch bark
+        - 1 charcoal
     - Actions:
       - Primary: Warp
-  <!-- - Wood
-    - Obtained:
-      - Cutting down tree
-    - Actions:
-      - Primary: Build -->
 <!-- how to pick them up and move them -->
 
 #### Structures
@@ -193,6 +204,10 @@ List:
 - Grass
 - Trees
   - Tree Model 0 (no types of trees for now, just this placeholder model)
+- Bush
+- Small trap
+- Large trap
+- Shelter
 
 #### Combat
 No combat *yet*
