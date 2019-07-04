@@ -11,7 +11,7 @@ var constants
 func _ready():
 	constants = get_node("/root/Constants")
 
-func process_stack(x):
+func init_stack(x):
 	var submerged = terrain_info.sample_height(x) <= terrain_info.water_level
 	if x % spread != 0 or submerged:
 		return

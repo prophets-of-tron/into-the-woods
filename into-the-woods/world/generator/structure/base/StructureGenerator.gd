@@ -20,6 +20,12 @@ func can_generate(x):
 func gen_structure(x):
 	pass
 
-func process_stack(x):
+func init_stack(x):
 	if can_generate(x):
 		gen_structure(x)
+
+func load_stack(x, file):
+	pass
+
+func unload_stack(x, file):
+	pass

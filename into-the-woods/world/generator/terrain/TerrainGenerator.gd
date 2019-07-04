@@ -39,24 +39,24 @@ func _post_gen_stack(x):
 
 	for y in range(0, terrain_info.heights[x]):
 		if _is_tile_exposed(x, y):
-			
+
 			#Create dirt collision layer
 			#map.set_cell(x, y-1, map.solid_dirt)
 			#map.set_cell(x, y-2, map.solid_dirt)
-			
-			#Replace top dirt with grass	
+
+			#Replace top dirt with grass
 			if map.get_cell(x, y) == map.dirt:
 				map.set_cell(x, y, map.grass)
-				
+
 		if _is_tile_sand(x, y):
 			map.set_cell(x, y, map.sand)
 
-func process_stack(x):
+func _process_stack(x):
 	# generate current stack
 	_gen_stack(x)
 
 	# apply post-generation touches (dirt -> grass) to the existing neighbor
-	# this works because in MapManager#process_stack, this process_stack is called
+	# this works because in MapManager#init_stack, this init_stack is called
 	# 	before updating left and right
 	var a_stack = gen_manager.left != +INF and gen_manager.right != -INF
 	if a_stack:
@@ -69,6 +69,15 @@ func process_stack(x):
 			# uh-oh
 			pass	# let existing_neighbor_x remain undefined
 		_post_gen_stack(existing_neighbor_x)
+
+func init_stack(x):
+	_process_stack(x)
+
+func load_stack(x, file):
+	_process_stack(x)
+
+func unload_stack(x, file):
+	pass	# don't save to disk as it can be regenerated
 
 
 """Local helpers"""

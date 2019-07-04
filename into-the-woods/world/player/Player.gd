@@ -128,10 +128,10 @@ func _check_load():
 		# 	otherwise map.left will get messed up by the calls to
 		#	map.gen_stack (which updates map.left (and map.right))
 		for x in range(gen_manager.left - 1, pos_left, -1):
-			gen_manager.process_stack(x)
+			gen_manager.init_stack(x)
 	if pos_right >= gen_manager.right:
 		for x in range(gen_manager.right + 1, pos_right, +1):
-			gen_manager.process_stack(x)
+			gen_manager.init_stack(x)
 
 func _physics_process(delta):
 	motion.y += gravity

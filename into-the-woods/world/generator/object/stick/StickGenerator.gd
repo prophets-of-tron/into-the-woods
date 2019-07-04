@@ -14,7 +14,7 @@ func _ready():
 	forest_info = get_node("/root/Game/World/Info/ForestInfo")
 	constants = get_node("/root/Constants")
 
-func process_stack(x):
+func init_stack(x):
 	if not (x % spread == 0 and forest_info.is_forest(x)):
 		return
 	if not state.harsh_noise.get_noise_2d(harsh_noise_multiplier * x, unique_seed) >= harsh_noise_threshold:

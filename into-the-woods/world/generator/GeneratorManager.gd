@@ -23,16 +23,16 @@ func _ready():
 	
 	# Generate a single stack at x=0, because Player#check_load
 	# only generates to the left and right of x=0
-	process_stack(0)
+	init_stack(0)
 
-func process_stack(x):
+func init_stack(x):
 	if is_stack_processed(x):
 		print("[WARN] Probably shouldn't be re-processing stack@x="+str(x))
 		# already generated
 		return
 		
 	for generator in generators:
-		generator.process_stack(x)
+		generator.init_stack(x)
 
 	left = min(left, x)
 	right = max(right, x)

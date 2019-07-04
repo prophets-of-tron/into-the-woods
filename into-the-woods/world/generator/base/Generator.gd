@@ -18,11 +18,17 @@ func _find_gen_manager(node:Node):
 func _ready():
 	gen_manager = _find_gen_manager(get_parent())
 	state = get_node("/root/State")
-	
+
 	unique_seed = state.get_unique_seed()
 
 # Called when the stack at x is registered as "processed"
 # Note that in the case of structures, this does not
-#	necessarily mean that the stack is generated yet.
-func process_stack(x):
+#	necessarily mean that something is generated yet.
+func init_stack(x):
+	pass
+
+func load_stack(x, file):
+	pass
+
+func unload_stack(x, file):
 	pass

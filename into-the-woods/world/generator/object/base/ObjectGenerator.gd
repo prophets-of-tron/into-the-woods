@@ -11,3 +11,9 @@ func _ready():
 	objects = get_node("/root/Game/World/Objects")
 	terrain_info = get_node("/root/Game/World/Info").find_node("TerrainInfo", true)
 	terrain_map = get_node("/root/Game/World/TerrainMap")
+
+func load_stack(x, file):
+	pass	# TODO
+
+func unload_stack(x, file):
+	pass	# TODO

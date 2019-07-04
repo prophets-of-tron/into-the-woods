@@ -11,7 +11,7 @@ Generators place content on the world when it is *first* created. The general wo
 ## Object Generator
 
 1. Create a node that inherits from *generator/object/base/ObjectGenerator.tscn*, and save it in *generator/object/OBJECT_NAME*.
-2. Attach a script that inherits from `ObjectGenerator` and implements `process_stack(x)`.
+2. Attach a script that inherits from `ObjectGenerator` and implements `init_stack(x)`.
   - To create an object:
     - Create an instance of the object's scene.
     - Set its position (and flip the y-axis, because all tile layers are flipped vertically; also remember to convert from tile grid space to world space).
