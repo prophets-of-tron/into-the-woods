@@ -24,4 +24,3 @@ position = Vector2( 0, 500 )
 load_distance = 150
 gravity = 20
 jump_height = -300
-

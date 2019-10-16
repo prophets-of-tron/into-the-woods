@@ -5,4 +5,3 @@
 [node name="Game" type="Node"]
 
 [node name="World" parent="." instance=ExtResource( 1 )]
-
