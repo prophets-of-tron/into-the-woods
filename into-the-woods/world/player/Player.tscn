@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://world/player/Player.gd" type="Script" id=1]
 [ext_resource path="res://world/player/Player.png" type="Texture" id=2]
-[ext_resource path="res://world/player/hud/HUD.tscn" type="PackedScene" id=3]
+[ext_resource path="res://world/terrain/dirt/Dirt.png" type="Texture" id=3]
+[ext_resource path="res://world/player/hud/HUD.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 8.0
@@ -40,8 +41,14 @@ texture = ExtResource( 2 )
 [node name="Camera" type="Camera2D" parent="."]
 current = true
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Camera"]
+
+[node name="Underground" type="Sprite" parent="Camera/ParallaxBackground"]
+position = Vector2( 512.099, 587.621 )
+scale = Vector2( -1023.93, 24.8512 )
+texture = ExtResource( 3 )
+
 [node name="Arms" type="Node2D" parent="."]
 position = Vector2( 0, -8 )
 
-[node name="HUD" parent="." instance=ExtResource( 3 )]
-
+[node name="HUD" parent="." instance=ExtResource( 4 )]
