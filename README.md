@@ -1,5 +1,5 @@
 # Into the Woods
-> A game about a quest from the office to the woods
+> A game about a quest from the boring 9 to 5 office to the exciting woods
 
 You reach your third decade working in your office job, and you can't do it anymore. So, you leave everything and everyone you know and enter the wilderness...
 
