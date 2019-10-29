@@ -39,6 +39,7 @@ The content in this game is generated procedurally. Specifically, as the player 
 - [Designing an Object]
 - [Designing a Structure]
 - [Creating a Procedural Generator]
+- [Designing a Non-object Action]
 
 [game design doc]: /DESIGN.md
 
@@ -58,3 +59,4 @@ The content in this game is generated procedurally. Specifically, as the player 
 [designing an object]: guides/design-object.md
 [designing a structure]: guides/design-structure.md
 [creating a procedural generator]: guides/create-generator.md
+[designing a non-object action]: guides/create-noa.md
