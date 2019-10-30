@@ -9,6 +9,7 @@ Just kidding, but thanks for looking into contributing to Into the Woods. It's p
 - [Reporting a Bug](#reporting-a-bug)
 - [Requesting a Feature](#requesting-a-feature)
 - [Submitting a Code Contribution](#submitting-a-code-contribution)
+- [Communication](#communication)
 - [Styleguides](#styleguides)
 - [Important Links](#important-links)
 
@@ -30,11 +31,16 @@ Enhancements are tracked as [GitHub issues] too:
 - Provide specific examples to demonstrate the steps
 - Explain why this enhancement would improve the game
 
+## Communication
+
+- The roadmap and all available tasks can be found on the [Taiga.io project](https://tree.taiga.io/project/clabe45-into-the-woods/kanban)
+- The [Discord server](https://discord.gg/RwvBmrd) is for casual discussion of the game and also announcements
+
 ## Submitting a Code Contribution
 
 #### Testing
 
-**todo (very soon)**
+**Todo (very soon)**
 
 #### Setting Up
 
@@ -109,8 +115,8 @@ For example:
 This resolves task #0
 ```
 
-[github issues]: https://guides.github.com/features/issues
-
 ## Important Links
 
 - [Developer documentation](docs)
+
+[github issues]: https://guides.github.com/features/issues
