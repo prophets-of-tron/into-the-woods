@@ -38,10 +38,11 @@ Enhancements are tracked as [GitHub issues] too:
 
 #### Setting Up
 
-All you will need is [Godot](https://godotengine.org/download). Then, clone
+All you will need is [Godot](https://godotengine.org/download). Then, [fork](https://github.com/prophets-of-tron/into-the-woods/fork) and clone
 
 ```
-git clone https://github.com/prophets-of-tron/into-the-woods/fork
+$ git clone https://github.com/YOUR-NAME/into-the-woods.git
+$ git remote add upstream
 ```
 
 #### Finding a Task
@@ -55,25 +56,37 @@ All user stories and tasks are posted on the [Kanban board](https://tree.taiga.i
 Create your feature branch
 
 ```
-git checkout -b fooBar
+$ git checkout -b foo-bar
 ```
 
 Commit your changes (see the [styleguide](#styleguides))
 
 ```
-git commit -m ':emoji: Add some fooBar'
+$ git commit -m ':emoji: Add some foo bar'
 ```
 
 Push to the branch
 
 ```
-git push origin fooBar
+$ git push origin foo-bar
 ```
 
 #### Submitting Changes
 
-Push the changes you made to your fork's remote repository, and then create a new pull request:
+First integrate your changes with any recent changes upstream, by rebasing:
 
+```
+$ git fetch upstream
+$ git rebase upstream/master
+```
+
+Push the changes you made to your fork's remote repository:
+
+```
+$ git push origin foo-bar
+```
+
+Then, open a pull request from your topic branch to the main repository.
 - Make the pull request's title concise and include the [the Taiga user story or task](https://tree.taiga.io/project/clabe45-into-the-woods/kanban) number. Example: _Fix foo bar (\#5)_
 - Please link to the Taiga user story or task in the description
 
