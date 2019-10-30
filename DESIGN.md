@@ -88,7 +88,7 @@ Other player attributes:
 ##### Animals
 ##### Wild hog
 
-#####
+<!-- ##### -->
 
 #### Tiles
 - Modeled after Earth
@@ -122,12 +122,9 @@ Other player attributes:
   - Have an inventory cost.
   - Have zero, one or two actions associated with it. These actions can only be performed while holding the corresponding object.
 - List:
-  - Straw
-    - Obtained:
-      - Harvest (grass structure)
   - Twine
     - Obtained:
-      - Weave (1 straw)
+      - Harvest (grass structure)
     - Actions:
       - Primary: Assemble
   - Berries
@@ -135,18 +132,14 @@ Other player attributes:
       - Harvest (bush structure)
     - Actions:
       - Eat
-  - Branch
-    - Obtained:
-      - Finding in forest
-      - Cut (tree)
-    - Actions (none)
   - Basket
     - Obtained:
-      - Weave (1 straw + 1 twine)
+      - Weave (5 twine)
     - Actions (TODO)
   - Stick
     - Obtained:
-      - Trim (branch)
+      - Finding in forest
+      - Cut (tree)
     - Actions (none)
   - Rock
     - Obtained:
