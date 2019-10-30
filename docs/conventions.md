@@ -4,7 +4,7 @@
 
 ### How the project is organized
 
-First off, this project is designed to be organized by feature, instead of by layer. This means that files are sorted by what part of the game they belong to, opposed to what type of file they are. Furthermore, features that belong to other features (i.e. when one feature does not exist outside of the other feature) are placed in child directories.
+First off, this project is organized by feature not by layer. This means that files are sorted by what part of the game they belong to, opposed to what type of file they are. Furthermore, features that belong to other features (i.e. when one feature does not exist outside of the other feature) are placed in child directories.
 
 ## Godot / Scripting
 
