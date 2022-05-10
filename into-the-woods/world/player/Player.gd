@@ -145,6 +145,12 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_right"):
 		motion.x = min(motion.x + acceleration, +curr_max_speed)
 		moving = true
+	if Input.is_action_pressed("crouch_left"):
+		motion.x = max(motion.x - acceleration, -curr_max_speed)/2
+		moving = true
+	if Input.is_action_pressed("crouch_right"):
+		motion.x = min(motion.x + acceleration, +curr_max_speed)/2
+		moving = true
 	if not moving:
 		# apply friction
 		motion.x = lerp(motion.x, 0, friction_coeff)
